@@ -31,47 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }        
 
-        public static void ClassesTheBasics()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\tClasses: The Basics\n\n" +
-                    "\t- Overview of Classes\n\t- Programs and Classes: A Quick Example\n\t- Declaring a Class" +
-                    "\n\t- Class Members\n\t- Creating Variables and Instances of a Class" +
-                    "\n\t- Allocating Memory for the Data\n\t- Instance Members\n\t- Access Modifiers" +
-                    "\n\t- Accessing Members from Inside the Class\n\t- Accessing Memebers from Outside the Class" +
-                    "\n\t- Putting It All Together\n");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-            } while (choice != 19);
-
-            ReadKey();
-
-            Clear();
-        }
-
-        public static void Methods()
-        {
-            Clear();
-            do
-            {
-                WriteLine("\tMethods\n\n");
-                WriteLine("\t- The Structure of a Method\n\t- Code Execution of the Method Body\n\t- Local Variables" +
-                    "\n\t- Local Constant\n\t- Flow of Control\n\t- Method Invocations\n\t- Return Values" +
-                    "\n\t- The Return Statement and Void Methods\n\t- Local Functions\n\t- Parameters" +
-                    "\n\t- Value Parameters\n\t- Reference Parameters\n\t- Reference Types As Value and Reference Parameters" +
-                    "\n\t- Output Parameters\n\t- Parameter Arrays\n\t- Summary of Parameter Types\n\t- Method Overloading" +
-                    "\n\t- Named Parameters\n\t- Optional Parameters\n\t- Stack Frames\n\t- Recursion");
-            } while (ReadKey() == null);
-            Clear();
-        }
-
         public static void MoreAboutClasses()
         {
             Clear();
@@ -255,10 +214,10 @@ namespace Illustrated_CSharp_7
                     Four.TypesStorageAndVariables();
                     break;
                 case 5:
-                    ClassesTheBasics();
+                    Five.ClassesTheBasics();
                     break;
                 case 6:
-                    Methods();
+                    Six.Methods();
                     break;
                 case 7:
                     MoreAboutClasses();
@@ -1308,7 +1267,7 @@ namespace Illustrated_CSharp_7
 
             do
             {
-                WriteLine("\tTypes, Storage, and Variables\n");
+                WriteLine("\n\tTypes, Storage, and Variables\n");
                 WriteLine("\t1. A C# Program Is a Set of Type Declarations\n\t2. A Type is a Template\n\t3. Instantiating a Type" +
                     "\n\t4. Data Members and Function Members\n\t5. Predefined Types\n\t6. User-Defined Types" +
                     "\n\t7. The Stack and the Heap\n\t8. Value Types and Reference Type\n\t9. Variables" +
@@ -1646,4 +1605,363 @@ namespace Illustrated_CSharp_7
         }
     }
 
+    public static class Five
+    {
+        public static void ClassesTheBasics()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tClasses: The Basics\n\n" +
+                    "\t1. Overview of Classes\n\t2. Programs and Classes: A Quick Example\n\t3. Declaring a Class" +
+                    "\n\t4. Class Members\n\t5. Creating Variables and Instances of a Class" +
+                    "\n\t6. Allocating Memory for the Data\n\t7. Instance Members\n\t8. Access Modifiers" +
+                    "\n\t9. Accessing Members from Inside the Class\n\t10. Accessing Memebers from Outside the Class" +
+                    "\n\t11. Putting It All Together\n\t12. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                FiveDecision(ref choice);
+
+            } while (choice != 12);
+
+            Clear();
+        }
+
+        static void FiveDecision(ref int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    OverviewOfClasses();
+                    break;
+                case 2:
+                    ProgramAndClasses();
+                    break;
+                case 3:
+                    DeclaringAClass();
+                    break;
+                case 4:
+                    ClassMembers();
+                    break;
+                case 5:
+                    CreatingVariablesAndInstancesOfAClass();
+                    break;
+                case 6:
+                    AllocatingMemoryForTheData();
+                    break;
+                case 7:
+                    InstanceMembers();
+                    break;
+                case 8:
+                    AccesModifiers();
+                    break;
+                case 9:
+                    AccessingMembersFromInsideTheClass();
+                    break;
+                case 10:
+                    AccessingMembersFromOutsideTheClass();
+                    break;
+                case 11:
+                    PuttingItAllTogether();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
+
+        static void OverviewOfClasses()
+        {
+            Clear();
+
+            WriteLine("\nOverview of Classes\n" +
+                "\t- C# provides six user-defined types. The most important of these is the class.\n");
+            WriteLine("\nA Class Is an Active Data Structure\n" +
+                "\t- Before the days of object-oriented analysis and design, programmers thought of a program as just a " +
+                "sequence of instructions. The focus at that time was on structuring and optimizing those instructions.\n" +
+                "\t- With the advent of the object-oriented paradigm, the focus changed from optimizing instructions to " +
+                "organizing a program's data and functions into encapsulated sets of logically related data items and functions, " +
+                "called 'classes'.\n" +
+                "\t- A class is a data structure that can store data and execute code. It contains data members and function members.\n" +
+                "\t\t- 'Data members' store data associated with the class or an instance of the class. Data members generally " +
+                "model the attributes of the real-world object the class represents.\n" +
+                "\t\t- Function members execute code. These generally model the functions and actions of the real-world object that the " +
+                "class represents.\n" +
+                "\t- A C# class can have any number of data and function members. The members can be any combination of nine possible " +
+                "member types.\n");
+            WriteLine("\nTypes of Class Members\n\n" +
+                "\tData Members Store Data\t\tFunction Members Execute Code\n\n" +
+                "\tFields\t\t\t\tMethods\t\tOperators\n" +
+                "\tConstants\t\t\tProperties\tIndexers\n" +
+                "\t\t\t\t\tConstructors\tEvents\n" +
+                "\t\t\t\t\tDestructors\n\n" +
+                "\t- Classes are encapsulated sets of logically related data items and functions that generally represent objects " +
+                "in the real world or a conceptual world.");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ProgramAndClasses()
+        {
+            Clear();
+
+            WriteLine("\nProgram and Classes: A Quick Example\n" +
+                "\t- A running C# program is a group of interacting type objects, most of which are instances of classes.\n" +
+                "\t- A real program would be undoubtedly contain dozens of other class.\n" +
+                "\t- A running program is a set of objects interacting with each other.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void DeclaringAClass()
+        {
+            Clear();
+
+            WriteLine("\nDeclaring a Class\n" +
+                "\t- Although types 'int', 'double', and 'char' are defined in the C# language, classes are not defined by " +
+                "the language.\n" +
+                "\t- If you want to use them in a program, you'll have to define them yourself. You do this by writing a " +
+                "'class declaration'.\n" +
+                "\t- A 'class declaration' defines the characteristics and members of a new class. It does not create an " +
+                "instance of the class but creates the template from which class instances will be created.\n" +
+                "\t- The class declaration provides the following:\n" +
+                "\t\t- The class name\n" +
+                "\t\t- The members of the class\n" +
+                "\t\t- The characteristics of the class\n\n" +
+                "\tclass MyExcellentClass\n" +
+                "\t{\n" +
+                "\t\tMemberDeclarations\n" +
+                "\t}\n\n" +
+                "\t- The following is an example of the minimum syntax for a class declaration.\n" +
+                "\t\t- The curly braces contain the member declarations that make up the 'class body'.\n" +
+                "\t\t- Class members can be declared in any order inside the class body.\n" +
+                "\t\t- This means it is perfectly fine for the declaration of a member to refer to another member that " +
+                "is not yet defined until further down in the class declaration.\n\n" +
+                "\t- Since a class declaration 'defines' a new class, you will often see a class declaration referred to as a" +
+                " 'class definition' both in the literature and in common usage among programmers.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ClassMembers()
+        {
+            Clear();
+
+            WriteLine("\nClass Members\n" +
+                "\t- Two of the most important class member types are fields and methods. Fields are data memers, and methods " +
+                "are function members.\n");
+            WriteLine("\nFields\n" +
+                "\t- A 'field' is a variable that belongs to a class.\n" +
+                "\t\t- It can be of any type, either predefined or user-defined.\n" +
+                "\t\t- Like all variables, fields store data and have the following characteristics:\n" +
+                "\t\t\t- They can be written to.\n" +
+                "\t\t\t- They can be read from.\n\n" +
+                "\tThe minimum syntax for declaring a field is the following:\n\n" +
+                "\tType Identifier;\n\n" +
+                "\t- Unlike C and C++, in C# there are 'no global variables' (that is, variables or fields) declared outside of " +
+                "a type. All fields belong to a type and must be declared within their type declaration.\n");
+            WriteLine("\nExplicit and Implicit Field Initialization\n" +
+                "\t- Since a field is a kind of variable, the syntax for a field initializer is the same as that of the variable " +
+                "intializer.\n" +
+                "\t\t- A 'field initializer' is part of the field declaration and consists of an equal sign followed by an " +
+                "expression that evaluates to a value.\n" +
+                "\t\t- The initialization value must be determinable at compile time.\n" +
+                "\t\t- If no initializer is used, the compiler sets the value of a field to a default value, determined by " +
+                "the type of the field. The default value for each type is '0' and is 'false' for 'bool'. The default for reference types is 'null'.\n");
+            WriteLine("\nDeclarations with Multiple Fields\n" +
+                "\t- You can declare multiple fields 'of the same type' in the same statement by separating the names with commas.\n" +
+                "\t- You cannot mix different types in a single declaration.\n");
+            WriteLine("\nMethods\n" +
+                "\t- A method is a named block of executable code that can be executed from many different parts of the program, and even from " +
+                "other programs. (There are also anonymous methods, which aren't named).\n" +
+                "\t- When a method is 'called', or 'invoked', it executes the method's code and then returns to the code that called it " +
+                "continues executing the calling code.\n" +
+                "\t- Some methods return a value to the position from which they were called; others do not. Methods " +
+                "correspond to member functions in C++.\n" +
+                "\t- The minimum syntax for declaring a method includes the following components:\n" +
+                "\t\t- 'Return type': This states the type of value the method returns. If a method doesn't return a " +
+                "value, the return type is specified as 'void'.\n" +
+                "\t\t- 'Name': This is the name of the method.\n" +
+                "\t\t- 'Parameter list': This consists of at least an empty set of matching parentheses. If there " +
+                "are parameters, they are listed between the parentheses.\n" +
+                "\t\t- 'Method body': This consists of a matching set of curly braces containing the executable code.\n" +
+                "\t- Unlike C and C++, in C# there are 'no global functions' (that is, method or functions) declared outside " +
+                "of a type declaration. Also unlike C and C++, in C# there is no \"default\" return type for a method.\n" +
+                "\t- All methods must include a return type or list it as 'void'.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void CreatingVariablesAndInstancesOfAClass()
+        {
+            Clear();
+
+            WriteLine("\nCreating Variables and Instances of a Class\n" +
+                "\t- The class declaration is just the blueprint from which instances of the class are created.\n" +
+                "\t- Once a class is declared, you can create instances of the class.\n" +
+                "\t\t- Classes are reference types, which means that they require memory both for the reference " +
+                "to the data and for the actual data.\n" +
+                "\t\t- The reference to the data is stored in a variable of the class type. So, to create an " +
+                "instance of the class, you need to start by declaring a variable of the class type. If the variable " +
+                "isn't initialized, its value is undefined.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AllocatingMemoryForTheData()
+        {
+            Clear();
+
+            WriteLine("\nAllocating Memory for the Data\n" +
+                "\t- Declaring the variable of the class type allocates the memory to hold the reference, but not the " +
+                "memory to hold the actual data of the class object.\n" +
+                "\t- To allocate memory for the actual data, you use the 'new' operator.\n" +
+                "\t\t- The 'new' operator allocates and initializes memory for an instance of the specified type. It " +
+                "allocates the memory from either the stack or the heap, depending on the type.\n" +
+                "\t\t- Use the 'new' operator to form an object-creation expression, which consists of the following:\n" +
+                "\t\t\t- The keyword 'new'.\n" +
+                "\t\t\t- The name of the type of the instance for which memory is to be allocated.\n" +
+                "\t\t\t- Matching parentheses - which may or may not included parameters.\n" +
+                "\t\t- If the memory allocated is for a reference type, the object-creation expression returns a reference " +
+                "to the allocated and initialized instance of the object in the heap.\n\n" +
+                "\t- This is exactly what you need to allocate and initialize the memory to hold the class instance data. " +
+                "Use the 'new' operator to create an object-creation expression and assign the value returned by it to the " +
+                "class variable.\n\n" +
+                "\tHere's an example\n\n" +
+                "\t\tnew TypeName();\n");
+            WriteLine("\nCombining the Steps\n" +
+                "\t- You can combine the two steps by 'initializing' the variable with the object-creation expression.\n\n" +
+                "\t\tTypeName Identifier = new TypeName();\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InstanceMembers()
+        {
+            Clear();
+
+            WriteLine("\nInstance Members\n" +
+                "\t- A class declaration acts as a blueprint from which you can create as many instances of the class as you like.\n" +
+                "\t\t- 'Instance member': Each instance of a class is a separate entity that has its own set of data members, distinct " +
+                "from the other instances of the same class. These are called 'instance members' since they are associated with an " +
+                "instance of the class.\n" +
+                "\t\t- 'Static members': Instance members are the default, but you can also declare members called static members, which " +
+                "are associated with the class, not the instance.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AccesModifiers()
+        {
+            Clear();
+
+            WriteLine("\nAccess Modifiers\n" +
+                "\t- From within a class, any function member can access any other member of the class by simply using that member's name.\n" +
+                "\t- The 'access modifier' is an optional part of a member declaration that specifies what other parts of the program have " +
+                "access to the member.\n" +
+                "\t- The access modifier is placed before the simple declaration forms.\n" +
+                "\t- The following is the syntax for fields and methods:\n\n" +
+                "\tFields\n" +
+                "\t\tAccesModifier Type Identifier;\n\n" +
+                "\tMethods\n" +
+                "\t\tAccessModifier ReturnType MethodName()\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n");
+            WriteLine("\nThe Five Categories of Member Access\n" +
+                "\t- Private\n" +
+                "\t- Public\n" +
+                "\t- Protected\n" +
+                "\t- Internal\n" +
+                "\t- Protected Internal\n");
+            WriteLine("\nPrivate and Public Access\n" +
+                "\t- Private members are accesible only from which the class in which they are declared - other classes cannot see or " +
+                "access them.\n" +
+                "\t\t- Private access is the default access level, so if a member is declared without an access modifier, it is a " +
+                "private member.\n" +
+                "\t\t- You can also use the 'private' access modifier to explicitly declare a member as private. There's no semantic difference " +
+                "between declaring a private member implicitly as opposed to explicitly. The forms are equivalent.\n\n" +
+                "\t- Public members of an instance are accesible to other objects in the program. You must use the 'public' access modifier to " +
+                "specify public access.");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AccessingMembersFromInsideTheClass()
+        {
+            Clear();
+
+            WriteLine("\nAccessing Members from Inside the Class\n" +
+                "\t- Members of a class can access the other class members by just using their names.\n" +
+                "\t- Even though the fields and methods are declared 'private', all members of a class can be " +
+                "accessed by any method (or any function member) of the class.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AccessingMembersFromOutsideTheClass()
+        {
+            Clear();
+
+            WriteLine("\nAccessing Members from Outside the Class\n" +
+                "\t- To access public instance member from outside the class, you must include the variable name and the member " +
+                "name, separated by a period (dot). This is called 'dot-syntax notation'.\n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void PuttingItAllTogether()
+        {
+            Clear();
+
+            WriteLine("\nPutting It All Together\n" +
+                "\t- Declaring a class\n" +
+                "\t- Creating instances of the class\n" +
+                "\t- Accessing the class members (that is, writing to a field and reading from a field).");
+            ReadKey();
+
+            Clear();
+        }
+    }
+
+    public static class Six
+    {
+        public static void Methods()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\tMethods\n\n");
+                WriteLine("\t1. The Structure of a Method\n\t2. Code Execution of the Method Body\n\t3. Local Variables" +
+                    "\n\t4. Local Constant\n\t5. Flow of Control\n\t6. Method Invocations\n\t7. Return Values" +
+                    "\n\t8. The Return Statement and Void Methods\n\t9. Local Functions\n\t10. Parameters" +
+                    "\n\t11. Value Parameters\n\t12. Reference Parameters\n\t13. Reference Types As Value and Reference Parameters" +
+                    "\n\t14. Output Parameters\n\t15. Parameter Arrays\n\t16. Summary of Parameter Types\n\t17. Method Overloading" +
+                    "\n\t18. Named Parameters\n\t19. Optional Parameters\n\t20. Stack Frames\n\t21. Recursion\n\t22. Exit");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+            } while (choice != 22);
+            Clear();
+        }
+    }
 }
