@@ -2041,107 +2041,233 @@ namespace Illustrated_CSharp_7
 
         static void TheStructureOfAMethod()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void CodeExecutionInTheMethodBody()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void LocalVariables()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void LocalConstants()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void FlowOfControl()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void MethodInvocations()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ReturnValues()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void TheReturnStatementAndVoidMethods()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void LocalFunctions()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void Parameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ValueParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ReferenceParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ReferenceTypesAsValueAndReferenceParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OutputParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ParameterArrays()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void SummaryOfParameterTypes()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void MethodOverloading()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
         
         static void NamedParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OptionalParameters()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void StackFrames()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void Recursion()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
     }
 }
