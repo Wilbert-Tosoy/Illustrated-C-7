@@ -1949,19 +1949,199 @@ namespace Illustrated_CSharp_7
 
             do
             {
-                WriteLine("\tMethods\n\n");
-                WriteLine("\t1. The Structure of a Method\n\t2. Code Execution of the Method Body\n\t3. Local Variables" +
-                    "\n\t4. Local Constant\n\t5. Flow of Control\n\t6. Method Invocations\n\t7. Return Values" +
+                WriteLine("\n\tMethods\n");
+                WriteLine("\t1. The Structure of a Method\n\t2. Code Execution in the Method Body\n\t3. Local Variables" +
+                    "\n\t4. Local Constants\n\t5. Flow of Control\n\t6. Method Invocations\n\t7. Return Values" +
                     "\n\t8. The Return Statement and Void Methods\n\t9. Local Functions\n\t10. Parameters" +
                     "\n\t11. Value Parameters\n\t12. Reference Parameters\n\t13. Reference Types As Value and Reference Parameters" +
                     "\n\t14. Output Parameters\n\t15. Parameter Arrays\n\t16. Summary of Parameter Types\n\t17. Method Overloading" +
-                    "\n\t18. Named Parameters\n\t19. Optional Parameters\n\t20. Stack Frames\n\t21. Recursion\n\t22. Exit");
+                    "\n\t18. Named Parameters\n\t19. Optional Parameters\n\t20. Stack Frames\n\t21. Recursion\n\t22. Exit\n");
 
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
+                SixDecision(ref choice);
+
             } while (choice != 22);
             Clear();
+        }
+
+        static void SixDecision(ref int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    TheStructureOfAMethod();
+                    break;
+                case 2:
+                    CodeExecutionInTheMethodBody();
+                    break;
+                case 3:
+                    LocalVariables();
+                    break;
+                case 4:
+                    LocalConstants();
+                    break;
+                case 5:
+                    FlowOfControl();
+                    break;
+                case 6:
+                    MethodInvocations();
+                    break;
+                case 7:
+                    ReturnValues();
+                    break;
+                case 8:
+                    TheReturnStatementAndVoidMethods();
+                    break;
+                case 9:
+                    LocalFunctions();
+                    break;
+                case 10:
+                    Parameters();
+                    break;
+                case 11:
+                    ValueParameters();
+                    break;
+                case 12:
+                    ReferenceParameters();
+                    break;
+                case 13:
+                    ReferenceTypesAsValueAndReferenceParameters();
+                    break;
+                case 14:
+                    OutputParameters();
+                    break;
+                case 15:
+                    ParameterArrays();
+                    break;
+                case 16:
+                    SummaryOfParameterTypes();
+                    break;
+                case 17:
+                    MethodOverloading();
+                    break;
+                case 18:
+                    NamedParameters();
+                    break;
+                case 19:
+                    OptionalParameters();
+                    break;
+                case 20:
+                    StackFrames();
+                    break;
+                case 21:
+                    Recursion();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
+
+        static void TheStructureOfAMethod()
+        {
+
+        }
+
+        static void CodeExecutionInTheMethodBody()
+        {
+
+        }
+
+        static void LocalVariables()
+        {
+
+        }
+
+        static void LocalConstants()
+        {
+
+        }
+
+        static void FlowOfControl()
+        {
+
+        }
+
+        static void MethodInvocations()
+        {
+
+        }
+
+        static void ReturnValues()
+        {
+
+        }
+
+        static void TheReturnStatementAndVoidMethods()
+        {
+
+        }
+
+        static void LocalFunctions()
+        {
+
+        }
+
+        static void Parameters()
+        {
+
+        }
+
+        static void ValueParameters()
+        {
+
+        }
+
+        static void ReferenceParameters()
+        {
+
+        }
+
+        static void ReferenceTypesAsValueAndReferenceParameters()
+        {
+
+        }
+
+        static void OutputParameters()
+        {
+
+        }
+
+        static void ParameterArrays()
+        {
+
+        }
+
+        static void SummaryOfParameterTypes()
+        {
+
+        }
+
+        static void MethodOverloading()
+        {
+
+        }
+        
+        static void NamedParameters()
+        {
+
+        }
+
+        static void OptionalParameters()
+        {
+
+        }
+
+        static void StackFrames()
+        {
+
+        }
+
+        static void Recursion()
+        {
+
         }
     }
 }
