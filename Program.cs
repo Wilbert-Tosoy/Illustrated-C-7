@@ -2069,8 +2069,14 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nCode Execution in the Method Body\n" +
+                "\t- The method body is a 'block', which is a sequence of statements between curly braces.\n" +
+                "\t- A block can contain the following items:\n" +
+                "\t\t- Local variables\n" +
+                "\t\t- Flow-of-control constructs\n" +
+                "\t\t- Method invocations\n" +
+                "\t\t- Blocks nested within it\n" +
+                "\t\t- Other methods, known as local functions\n");
             ReadKey();
 
             Clear();
