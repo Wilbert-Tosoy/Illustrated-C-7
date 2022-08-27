@@ -2043,8 +2043,23 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe Structure of a Method\n" +
+                "\t- A 'method' is a block of code with a name.\n" +
+                "\t- You can execute the code from somewhere else in the program by using the method's name.\n" +
+                "\t- You can also pass data into a method and recieve data back as output.\n" +
+                "\t- Methods have two major sections - the method header and the method body.\n" +
+                "\t\t- The 'method header' specifies the method's characteristics, including the following:\n" +
+                "\t\t\t- Whether the method returns data and, if so, what type\n" +
+                "\t\t\t- The name of the method\n" +
+                "\t\t\t- What types of data can be passed to and from the method and how that data should be treated\n" +
+                "\t\t-The 'method body' contains the sequence of executable code statements. Execution starts at the first " +
+                "statement in the method body and continues sequentially through the method.\n\n" +
+                "\tMethod Header\t->\tvoid MethodName()\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t\tStatement1;\n" +
+                "\tMethod Body\t->\t\tStatement2;\n" +
+                "\t\t\t\t\t...\n" +
+                "\t\t\t\t}\n");
             ReadKey();
 
             Clear();
