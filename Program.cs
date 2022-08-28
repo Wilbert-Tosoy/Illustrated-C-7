@@ -2221,8 +2221,16 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nReturn Values\n" +
+                "\t- A method can return a value to the calling code. \n" +
+                "\t- The returned value is inserted into the calling code at the position in the expression where the invocation occured.\n" +
+                "\t- To return a value, the method must declare a 'return type' before the method name.\n" +
+                "\t\t- If a method doesn't return a value, it must declare a return type of 'void'.\n" +
+                "\t- A method that declares a return type must return a value from the method by using the following form of the return " +
+                "statement, which includes an expression after the keyword 'return'.\n" +
+                "\t- Every path through the method must end with a 'return' statement of this form.\n\n" +
+                "\t\treturn Expression;\n\n" +
+                "\t- You can returns a value type and you can also returns objects of user-defined types.\n");
             ReadKey();
 
             Clear();
