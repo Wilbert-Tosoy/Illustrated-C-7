@@ -2240,8 +2240,25 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe Return Statement and Void Methods\n" +
+                "\t- Methods that return a value must contain return statements. Void methods do not require return statements.\n" +
+                "\t- When the flow of control reaches the closing curly brace of the method body, control returns to the calling code, " +
+                "and no value is inserted back into the calling code.\n" +
+                "\t- Often, however, you can simplify your program logic by exiting the method early when certain conditions apply.\n" +
+                "\t\t- You can exit a 'void' method at any time by using the following form of the 'return' statement, with no parameters.\n\n" +
+                "\t\t\treturn;\n\n" +
+                "\t\t- This form of the 'return' statement can be used only with methods declared 'void'.\n");
+            WriteLine("\n\tExample:\n\n" +
+                "\t\tvoid MethodName()\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t\tif ( SomeCondition )\n" +
+                "\t\t\t\treturn;\n" +
+                "\t\t\t...\n" +
+                "\t\t\tif ( OtherCondition )\n" +
+                "\t\t\t\treturn;\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n");
             ReadKey();
 
             Clear();
