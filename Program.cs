@@ -2203,8 +2203,15 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nMethod Invocations\n" +
+                "\t- You can call other methods from inside a method body.\n" +
+                "\t\t- The phrases 'call a method' and 'invoke a method' are synonymous.\n" +
+                "\t\t- You call a method by using its name, along with parameter list.\n\n" +
+                "\t- The sequence of actions when a method is called.\n" +
+                "\t\t- Execution of the current method suspends at that point of the invocation.\n" +
+                "\t\t- Control transfers to the beginning of the invoked method.\n" +
+                "\t\t- The invoked method executes until it completes.\n" +
+                "\t\t- Control returns to the calling method.\n");
             ReadKey();
 
             Clear();
