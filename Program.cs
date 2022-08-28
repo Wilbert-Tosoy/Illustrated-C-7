@@ -2174,8 +2174,26 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nFlow of Control\n" +
+                "\t- Methods contain most of the code for the actions that comprise a program. The remainder is in other function " +
+                "members, such as properties and operators.\n" +
+                "\t- The term 'flow of control' refers to the flow of execution through a program. By default, program execution moves " +
+                "sequentially from one statement to the next.\n" +
+                "\t- The flow-of-control statements allow you to modify the order of execution.\n\n" +
+                "\t- 'Selection statements' : These statements allow you to select which statement or block of statements to execute.\n" +
+                "\t\t- 'if'\t\t\t: Conditional execution of a statement\n" +
+                "\t\t- 'if ... else'\t\t: Conditional execution of one statement or another\n" +
+                "\t\t- 'switch'\t\t: Conditional execution of one statement from a set.\n\n" +
+                "\t- 'Iteration statements' : These statements allow you to loop, or iterate, on a block of statements.\n" +
+                "\t\t- 'for'\t\t\t: Loop - testing at the top\n" +
+                "\t\t- 'while'\t\t: Loop - testing at the top\n" +
+                "\t\t- 'do'\t\t\t: Loop - testing at the bottom\n" +
+                "\t\t- 'foreach'\t\t: Executes once for each member of a set.\n\n" +
+                "\t- 'Jump statements' : These statements allow you to jump from one place in the block or method to another.\n" +
+                "\t\t- 'break'\t\t: Exits the current loop\n" +
+                "\t\t- 'continue'\t\t: Goes to the bottom of the current loop\n" +
+                "\t\t- 'goto'\t\t: Goes to a named statement\n" +
+                "\t\t- 'return'\t\t: Returns execution to the calling method.\n");
             ReadKey();
 
             Clear();
