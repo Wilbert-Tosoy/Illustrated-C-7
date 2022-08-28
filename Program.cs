@@ -2092,7 +2092,7 @@ namespace Illustrated_CSharp_7
                 "created to store data for local, or transitory, computations.\n" +
                 "\n\t- The following line of code shows the syntax of local variable declarations. The optional intializer " +
                 "consists of an equal sign followed by a value to be used to intialize the variable.\n\n" +
-                "\tType Identifier = Value;\n\n" +
+                "\t\tType Identifier = Value;\n\n" +
                 "\t\t- The existence and lifetime of a local variable is limited to the block in which it is created and the " +
                 "blocks nested within that block.\n" +
                 "\t\t\t- The variable comes into existence at the point at which it is declared.\n" +
@@ -2147,8 +2147,24 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nLocal Constants\n" +
+                "\t- A local constant is much like a local variable, except that once initialized, its value cannot be changed.\n" +
+                "\t- Like a local variable, a local constant must be declared inside a block.\n\n" +
+                "\t- The two most impotant characteristics of a constant are the following:\n" +
+                "\t\t- A constant 'must be intialized' at its declaration.\n" +
+                "\t\t- A constant 'cannot be changed' after its declaration.\n\n" +
+                "\t- The core declaration for a syntax is the following:\n\n" +
+                "\t\tconst Type Indentifier = Value;\n\n" +
+                "\t- The syntax is the same as that of a field or variable declaration, except for the following:\n" +
+                "\t\t- The addition of the keyword 'const' before the type.\n" +
+                "\t\t- The mandatory initializer. The initializer value must be determinable at compile time and usually " +
+                "one of the predefined simple types or an expression made up of them.\n" +
+                "\t\t- The intializer can also be the 'null' reference, but it cannot be a reference to an object " +
+                "because references to objects are determined at run time.\n\n" +
+                "\t- The keyword 'const' is not a modifier but part of the core declaration. It must be placed immediately before " +
+                "the type.\n\n" +
+                "\t- A local constant, like a local variable, is declared in a method body or code block, and it goes out of scope " +
+                "at the end of the block in which it is declared.\n");
             ReadKey();
 
             Clear();
