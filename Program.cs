@@ -2086,8 +2086,58 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nLocal Variables\n" +
+                "\t- Like fields, local variables also store data.\n" +
+                "\t- While fields usually store data about the state of the object, local variables are usually " +
+                "created to store data for local, or transitory, computations.\n" +
+                "\n\t- The following line of code shows the syntax of local variable declarations. The optional intializer " +
+                "consists of an equal sign followed by a value to be used to intialize the variable.\n\n" +
+                "\tType Identifier = Value;\n\n" +
+                "\t\t- The existence and lifetime of a local variable is limited to the block in which it is created and the " +
+                "blocks nested within that block.\n" +
+                "\t\t\t- The variable comes into existence at the point at which it is declared.\n" +
+                "\t\t\t- It goes out of existence when the block completes execution.\n" +
+                "\t\t- You can declare local variables at any position in the method body, but you must declare them before " +
+                "you can use them.\n");
+            WriteLine("\nInstance Fields vs. Local Variables\n" +
+                "\t- Instance Fields\n" +
+                "\t\t- The lifetime of instance fields starts when the class instance is created. Ends when the class instance is no " +
+                "longer accessible.\n" +
+                "\t\t- Implicit initialization is initialized to a default value for the type.\n" +
+                "\t\t- Because instance fields are members of a class, all instance fields are stored in the heap, regardless of whether " +
+                "they are value types or reference types.\n\n" +
+                "\t- Local Variables\n" +
+                "\t\t- The lifetime of local variables starts at the point in the block where it is declared. Ends when the block " +
+                "completes execution.\n" +
+                "\t\t- No implicit intialization. The compiler produces an error message if nothing is assigned to the variable before " +
+                "it is used.\n" +
+                "\t\t- Value types are stored in the stack, while the reference of reference types are stored on the stack and data are stored " +
+                "in the heap.\n");
+            WriteLine("\nType Inference and the var Keyword\n" +
+                "\t- Supplying information that the compiler can already infer from the right side of the intialization, including the " +
+                "explicit type name at the beginning of the declaration is redundant.\n" +
+                "\t- To avoid this redundancy, C# allows you to use the keyword 'var' in place of the explicit type name at the beginning " +
+                "of the variable declaration.\n" +
+                "\t- The 'var' keyword does 'not' signal a special kind of variable. It is just a syntactic shorthand for whatever type can " +
+                "be inferred from the initialization on the right side of the statement.\n" +
+                "\t- The preceding code segment with the explicit type names and the code segment with the 'var' keywords are semantically " +
+                "equivalent.\n\n" +
+                "\t- Some important conditions on using the 'var' keyword are the following:\n" +
+                "\t\t- You can use it only local variables - not with fields.\n" +
+                "\t\t- You can use it only when the variable declaration includes an initialization.\n" +
+                "\t\t- Once the compiler infers the type of a variable, it is fixed and unchangeable.\n\n" +
+                "\t- The 'var' keyword is 'not' like the JavaScript 'var' that can reference different types. It is shorthand for the actual " +
+                "type inferred from the right side of the equal sign. The 'var' keyword 'does not change the strongly typed nature of C#'.\n");
+            WriteLine("\nLocal Variables Inside Nested Blocks\n" +
+                "\t- Method bodies can have other blocks nested inside them.\n" +
+                "\t\t- There can be any number of blocks, and they can be sequential or nested further. Blocks can be nested to any level.\n" +
+                "\t\t- Local variables can be declared inside nested blocks, and like all local variables, their lifetime and visibility are " +
+                "limited to the block in which they are declared and the blocks nested within it.\n" +
+                "\t\t- When control passes out of the nested block, its local variables are popped from the stack.\n\n" +
+                "\t- In C and C++ you can declare a local variable, and then within a nested block you can declare another local variable " +
+                "with the same name. The inner masks the outer name while within the inner scope.\n" +
+                "\t- In C#, however, you cannot declare another local variable with the same name within the scope of the first name, regardless " +
+                "of the level of nesting.\n");
             ReadKey();
 
             Clear();
