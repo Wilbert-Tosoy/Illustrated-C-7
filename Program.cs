@@ -2365,8 +2365,21 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nReference Type As Value and Reference Parameters\n" +
+                "\t- For a reference type object, you can modify its members inside the method call, regardless of whether you send the object in as " +
+                "a value parameter or as a reference parameter.\n" +
+                "\t- What happens when you assign to the formal parameter of a reference type inside the method is the following:\n" +
+                "\t\t- 'Passing a reference type object as a value parameter': If you create a new object inside the method and assign it to the formal " +
+                "parameter, it breaks the connection between the formal parameter and actual parameter, and the new object does not persist after the " +
+                "method call.\n" +
+                "\t- 'Passing a reference type object as a reference parameter': If you create a new object inside the method and assign it to the " +
+                "formal parameter, that new object persists after the method is ended and is the value referenced by the actual parameter.\n\n" +
+                "\t- A reference parameter acts as an alias for the formal parameter.\n" +
+                "\t\t- When the method is invoked, the formal and actual parameters point at the same object in the heap.\n" +
+                "\t\t- The modification of the member value is seen by both the formal and actual parameters.\n" +
+                "\t\t- When the method creates a new object and assigns it to the formal parameter, the references of both the formal and actual parameters " +
+                "point to the new object.\n" +
+                "\t\t- After the method, the actual parameter is left pointing at the object that was created inside the method.\n");
             ReadKey();
 
             Clear();
