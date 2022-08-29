@@ -2424,8 +2424,56 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nParameter Arrays\n" +
+                "\t- 'Parameter arrays' are different in that they allow 'zero or more' actual parameters of a particular type for a " +
+                "particular formal parameter.\n" +
+                "\t- Important points about parameter arrays are the following:\n" +
+                "\t\t- There can be only one parameter array in a parameter list.\n" +
+                "\t\t- If there is one, it must be the last parameter in the list.\n" +
+                "\t\t- All the parameters represented by the parameter array must be of the same type.\n\n" +
+                "\t- To declare a parameter array, you must do the following:\n" +
+                "\t\t- Use the 'params' modifier before the data type.\n" +
+                "\t\t- Place a set of empty square brackets after the data type.\n\n" +
+                "\t- The following method header shows the syntax for the declaration of a parameter array of type 'int'.\n\n" +
+                "\t\tvoid MethodName( params int[] ParameterName ) { ... }\n\n" +
+                "\t- The empty set of square brackets after the type name specifies that the parameter will be an array of 'ints'.\n" +
+                "\t- For our purposes here, though, all you need to know is the following:\n" +
+                "\t\t- An array is ordered set of data items of the same type.\n" +
+                "\t\t- An array is accessed by using a numerical index.\n" +
+                "\t\t- An array is a reference type and therefore stores all its data items in the heap.\n");
+            WriteLine("\nMethod Invocation\n" +
+                "\t- You can supply the actual parameters for a parameter array in two ways.\n" +
+                "\t\t- A comma-separated list of elements of the data type. All the elements must be of the specified in the method " +
+                "declaration.\n\n" +
+                "\t\t\tMethodName( 10, 20, 30, );\n\n" +
+                "\t\t- A one-dimensional array of elements of the data type.\n\n" +
+                "\t\t\tint[] Identifier = { 10, 20, 30 };\n" +
+                "\t\t\tMethodName( Identifier );\n\n" +
+                "\t- Notice in these examples that you do 'not' use the 'params' modifier in the 'invocation'.\n" +
+                "\t- The usage of the modifier in parameter arrays doesn't fit the pattern of the other parameter types.\n" +
+                "\t\t- The other parameter types are consistent in that they either use a modifier or not use a modifier.\n" +
+                "\t\t\t- Value parameters take no modifier in either the declaration or the invocation.\n" +
+                "\t\t\t- Reference and output parameters require the modifier in both places.\n\n" +
+                "\t\t- The summary for the usage of the 'params' modifier is the following:\n" +
+                "\t\t\t- It is required in the declaration.\n" +
+                "\t\t\t- It is not allowed in the invocation.\n");
+            WriteLine("\nExpanded Form\n" +
+                "\t- The first form of method invocation, where you use separate actual parameters in the invocation, is " +
+                "sometimes called the 'expanded form'.\n\n" +
+                "\t- When you use an invocation with separate actual parameters for a parameter array, the compiler does the following:\n" +
+                "\t\t- It takes the list of actual parameters and uses them to create and initialize an array in the heap.\n" +
+                "\t\t- It stores the reference to the array in the formal parameter on the stack.\n" +
+                "\t\t- If there are no actual parameters at the position corresponding to the formal parameter array, the compiler creates " +
+                "an array with zero elements and uses that.\n\n" +
+                "\t- An important thing to remember about parameter arrays is that when an array is created in the heap, the values of " +
+                "the actual parameters are 'copied' to the array. In this way, they are like value parameters.\n" +
+                "\t\t- If the array parameter is a value type, the 'values' are copied, and the actual parameters 'cannot be affected' " +
+                "inside the method.\n" +
+                "\t\t- If the array parameter is a reference type, the 'references' are copied, and the objects referenced by the actual " +
+                "parameters 'can be affected' inside the method.\n");
+            WriteLine("\nArray As Actual Parameters\n" +
+                "\t- You can also create and populate an array before the method call and pass the single array variable as the actual parameter.\n" +
+                "\t- In this case, the compiler uses 'your array', rather than creating one.");
             ReadKey();
 
             Clear();
