@@ -2527,8 +2527,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nStack Frames\n" +
+                "\t- When a method is called, memory is allocated at the top of the stack to hold a number of data items " +
+                "associated with the method.\n" +
+                "\t- This chunk of memory is called the 'stack frame' for the method.\n" +
+                "\t\t- The stack frame contains memory to hold the following:\n" +
+                "\t\t\t- The return address - that is, where to resume execution when the method exits.\n" +
+                "\t\t\t- Thos parameters that allocate memory - that is, the value parameters of the method, and the " +
+                "parameter array if there is one.\n" +
+                "\t\t\t- Various other administrive data items relevant to the method call.\n" +
+                "\t\t- When a method is called, its entire stack frame is pushed into the stack.\n" +
+                "\t\t- When the method exits, its entire stack frame is popped from the stack. Popping a stack frame is " +
+                "sometimes called 'unwinding' the stack.");
             ReadKey();
 
             Clear();
