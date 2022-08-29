@@ -2344,8 +2344,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nReference Parameters\n" +
+                "\t- The second type of parameters is called a 'reference parameters'.\n" +
+                "\t\t- When using a reference parameter, you must use the 'ref' modifier in both the declaration and the invocation of the method.\n" +
+                "\t\t- The actual parameter 'must' be a variable, and it must be assigned to before being used as the actual parameter. If it is a " +
+                "reference type variable, it can be assigned either an actual parameter or the value 'null'.\n\n" +
+                "\t- The System allocates memory on the stack for the formal parameters. In contrast, reference parameters have the following " +
+                "characteristics:\n" +
+                "\t\t- They do not allocate memory on the stack for the formal parameters.\n" +
+                "\t\t- Instead, a formal parameter name acts as an alias for the actual parameter variable, referring to the same memory location.\n\n" +
+                "\t- Since the formal parameter name and the actual parameter name are referencing the same memory location, clearly any changes made " +
+                "to the formal parameter during method execution are visible after the method is complete, through the actual parameter variable.\n" +
+                "\t- Remember to use the 'ref' keyword in both the method declaration 'and' the invocation.\n");
             ReadKey();
 
             Clear();
