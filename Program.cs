@@ -2390,7 +2390,7 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nOutput Parameters\n" +
-                "\t- 'Output parameters' are used to pass data from inside the method back to the calling code. Their behavior is simial to " +
+                "\t- 'Output parameters' are used to pass data from inside the method back to the calling code. Their behavior is similar to " +
                 "reference parameters.\n" +
                 "\t- Like reference parameters, output parameters have the following requirements:\n" +
                 "\t\t- You must use a modifier in both the method declaration and the invocation. With output parameters, the modifier is 'out', " +
