@@ -2483,8 +2483,52 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nSummary of Parameter Types\n" +
+                "\t- Since there are four parameter types, it is sometimes difficult to remember their various characteristics.\n\n" +
+                "\tParameter Type\t\tModifier\t\tUsed at Declaration?\t\tUsed at Invocation?\t\tImplementation\n\n" +
+                "\tValue\t\t\tNone\t\t\t\t\t\t\t\t\t\t\tThe system copies the value of the actual parameter to the formal parameter.\n" +
+                "\tReference\t\tref\t\t\tYes\t\t\t\tYes\t\t\t\tThe formal parameter is an alias for the actual parameter.\n" +
+                "\tOutput\t\t\tout\t\t\tYes\t\t\t\tYes\t\t\t\tThe parameter contains only a returned value. The formal parameter is an " +
+                "alias for the actual parameter.\n" +
+                "\tArray\t\t\tparams\t\t\tYes\t\t\t\tNo\t\t\t\tThe parameter allows passing a variable number of actual parameter to a " +
+                "method.\n");
+            WriteLine("\nRef Local and Ref Return\n" +
+                "\t- Passing a reference to an object into a method call using the 'ref' keyword and any changes made to the object would " +
+                "be visible in the calling context when the method returned.\n" +
+                "\t- The 'ref return' feature goes the other direction and lets you send a reference 'out of a method' where it can be used " +
+                "in the calling context.\n" +
+                "\t- A related feature, the 'ref local' feature, allows a variable to be an alias for another variable.\n\n" +
+                "\t- We'll start by looking at the 'ref local' feature. The important things to know about the ref local are the following:\n" +
+                "\t\t- Using this feature, you can create an alias of a variable even if the referenced object is a value type!\n" +
+                "\t\t- Any assignment made to either variable are reflected in the other since they refer to the same object - again, even " +
+                "if it is a value type.\n\n" +
+                "\t- The syntax to create the alias requires two uses of the keyword 'ref', one in front of the type of the alias declaration " +
+                "and the other on the right side of the assignment operator.\n\n" +
+                "\t\tref Type VariableName = ref VariableName;\n\n" +
+                "\t- But the aliasing feature is not the most common use of the 'ref local' feature. Instead, it is usually used in conjunction " +
+                "with the 'ref return' feature.\n" +
+                "\t- The 'ref return' feature gives you the means to have a method return a reference to a variable, rather than return the " +
+                "variable's value.\n" +
+                "\t- The additional syntax required here, again, consists of the following uses of the keyword 'ref':\n" +
+                "\t\t- One before the type declaration of the method.\n" +
+                "\t\t- The other inside the method after the 'return' keyword and before the variable name of the object being returned.\n\n" +
+                "\t- Some additional constraints on these features are the following:\n" +
+                "\t\t- You cannot declare a method with a return type of 'void' as a ref return method.\n" +
+                "\t\t- A 'ref return' expression cannot return the following:\n" +
+                "\t\t\t- The null value\n" +
+                "\t\t\t- A constant\n" +
+                "\t\t\t- An enumeration member\n" +
+                "\t\t\t- A property of either a class or a struct\n" +
+                "\t\t\t- A pointer to a read-only location\n" +
+                "\t\t- A 'ref return' expression can only point either to a location that originated in the calling scope or to a field. " +
+                "Hence, it cannot be a variable local to a method.\n" +
+                "\t\t- A 'ref local' variable can be assigned only one time. That is, it cannot be pointer to a 'different' storage location " +
+                "after having once been initialized.\n" +
+                "\t\t- Even if a method is declared as a 'ref return' method, if a 'call' to that method omits the 'ref' keyword, the value " +
+                "returned will be the value, rather than a pointer to the value's memory location.\n" +
+                "\t\t- If you pass a 'ref local' variable as a regular actual parameter to some other method, that other method gets only a " +
+                "copy of the variable. Even though the ref local variabl holds a pointer to a storage location, when it's used in this way, " +
+                "it passes the value rather than the reference.\n");
             ReadKey();
 
             Clear();
