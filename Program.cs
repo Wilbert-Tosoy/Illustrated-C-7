@@ -2305,7 +2305,7 @@ namespace Illustrated_CSharp_7
                 "\t- When your code calls a method, the values of the formal parameters must be initialized before the code in the methods begins " +
                 "execution.\n" +
                 "\t- The expressions or variables used to initialize the formal parameters are called the 'actual parameters'. They are also " +
-                "sometimes called arguments.\n" +
+                "sometimes called 'arguments'.\n" +
                 "\t\t- The actual parameters are placed in the parameter list of the method invocation.\n" +
                 "\t\t- Each actual parameter must match the type of the corresponding formal parameter, or the compiler must be able to implicitly " +
                 "convert the actual parameter to that type.\n\n" +
@@ -2322,8 +2322,19 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nValue Parameters\n" +
+                "\t- There are several kinds of parameters, each of which passes data to and from the method in slightly different ways. The " +
+                "default type and is called a 'value parameters'.\n" +
+                "\t- When using value parameters, data is passed to the method by copying the value of the actual parameter to the formal parameter. " +
+                "When a method is called, the system does the following:\n" +
+                "\t\t- It allocates space on the stack for the formal parameters.\n" +
+                "\t\t- It copies the values of the actual parameters to the formal parameters.\n" +
+                "\t- An actual parameter for a value parameter doesn't have to be a variable. It can be any expression evaluating to the matching " +
+                "data type.\n" +
+                "\t- Before you can use a variable as an actual parameter, that variable must be assigned a value (except in the case of the " +
+                "'ouput parameters'). For reference types, the variable can be assigned either an actual reference or 'null'.\n\n" +
+                "\t- 'Value typee' are types that contain their own data, 'value parameters' are parameters where the value of the actual parameter " +
+                "is copied to the formal parameters. Don't be confused about the two, they are entirely different.\n");
             ReadKey();
 
             Clear();
