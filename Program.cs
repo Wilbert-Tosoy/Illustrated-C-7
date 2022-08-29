@@ -2268,8 +2268,17 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nLocal Functions\n" +
+                "\t- The code inside a method block can call another method. If that other method is in the same class, it can be called simply " +
+                "by using its name and passing any required parameters.\n" +
+                "\t- If that method is in another class, it must generally be called using an object instance of the other class. Methods in " +
+                "other classes also must have been declared using the 'public' access modifier.\n" +
+                "\t- Beginning with C# 7.0 you can declare a separate method directly inside another method. This isolates the contained " +
+                "method from other code as it can only be called from within the method in which it is contained.\n" +
+                "\t- When used properly, this can also lead to clearer code and easier maintenance. These contained methods are called " +
+                "'local functions'.\n" +
+                "\t- Unlike local variables, which must be declared before they can be used, you can declare a local function ay any point " +
+                "within its containing method.\n");
             ReadKey();
 
             Clear();
