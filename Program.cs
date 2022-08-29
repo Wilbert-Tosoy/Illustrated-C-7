@@ -2288,8 +2288,31 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nParameters\n" +
+                "\t- Methods are named units of code that can be called from many places in a program and can return a single value to the " +
+                "calling code.\n" +
+                "\t- Returning a single value is certainly valuable, but what if you need to return multiple values? Also, it would be useful " +
+                "to be able to pass data into a method when it starts execution.\n" +
+                "\t- 'Parameters' are a special kind of variable that can allow you to do both these things.\n");
+            WriteLine("\nFormal Parameters\n" +
+                "\t- 'Formal Parameters' are local variables that are declared in the method declaration's parameter list, rather than in the " +
+                "body of the method.\n" +
+                "\t\t- Because formal parameters are variables, they have a data type and a name, and they can be written to and read from.\n" +
+                "\t\t- Unlike a method's other local variables, the parameters are defined outside the method body and are intialized before " +
+                "the method starts (except for one type, called 'output parameters').\n" +
+                "\t\t- The parameter list can have any number of formal parameter declarations, and the declarations must be separated by commas.\n");
+            WriteLine("\nActual Parameters\n" +
+                "\t- When your code calls a method, the values of the formal parameters must be initialized before the code in the methods begins " +
+                "execution.\n" +
+                "\t- The expressions or variables used to initialize the formal parameters are called the 'actual parameters'. They are also " +
+                "sometimes called arguments.\n" +
+                "\t\t- The actual parameters are placed in the parameter list of the method invocation.\n" +
+                "\t\t- Each actual parameter must match the type of the corresponding formal parameter, or the compiler must be able to implicitly " +
+                "convert the actual parameter to that type.\n\n" +
+                "\t- When the method is called, the value of each actual parameter is used to initialize the corresponding formal parameter. The " +
+                "method is then executed.\n" +
+                "\t- The number of actual parameters matches the number of formal parameters, and each actual parameters matches the type of the " +
+                "corresponding formal parameter. Parameters that follow this pattern are called 'positional parameters'.\n");
             ReadKey();
 
             Clear();
