@@ -2389,8 +2389,32 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOutput Parameters\n" +
+                "\t- 'Output parameters' are used to pass data from inside the method back to the calling code. Their behavior is simial to " +
+                "reference parameters.\n" +
+                "\t- Like reference parameters, output parameters have the following requirements:\n" +
+                "\t\t- You must use a modifier in both the method declaration and the invocation. With output parameters, the modifier is 'out', " +
+                "rather than 'ref'.\n" +
+                "\t\t- Like a reference parameters, the actual parameter 'must' be a variable - it cannot be another type of expression. This " +
+                "makes sense since the method needs a memory location to store the value it's returning.\n\n" +
+                "\t- Like reference parameters, the formal parameters of output parameters act as aliases for the actual parameters.\n" +
+                "\t- Both the formal parameter and actual parameter are names for the same memory location.\n" +
+                "\t- Clearly, then, any changes made to a formal parameter inside the method are visible through the actual parameter variable " +
+                "after the method completes execution.\n\n" +
+                "\t- Unlike the reference parameters, ouput parameters require the following:\n" +
+                "\t\t-Inside the method, an output parameter must be assigned to before it can be read from, This means that the intial values of " +
+                "the parameters are irrelevant and that you don't have to assign values to the actual parameters before the method call.\n" +
+                "\t\t- Inside the method, every possible path through the code must assign a value to every output parameter before the method " +
+                "can exit.\n\n" +
+                "\t- Since the code inside the method must write to an output parameter before it can read from it, it is 'impossible' to send " +
+                "data 'into' a method using output parameters.\n" +
+                "\t- In fact, if there is any execution path through the method that attempts to read the value of an output parameter before the " +
+                "method assigns it a value, the compiler produces an error message.\n\n" +
+                "\t- Starting with C# 7.0 you no longer need to predeclare a variable to be used as an 'out' parameter. You can add a variable type " +
+                "to the parameter listing in the method call itself, and it will act as the variable declaration.\n\n" +
+                "\t- Using the new syntax, however, you can do the following:\n" +
+                "\t\t- Omit the explicit variable declarations.\n" +
+                "\t\t- Add the types of the variable directly in the method call.\n");
             ReadKey();
 
             Clear();
