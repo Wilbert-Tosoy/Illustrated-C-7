@@ -2726,97 +2726,211 @@ namespace Illustrated_CSharp_7
 
         static void ClassMembers()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OrderOfMemberModifiers()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void InstanceClassMembers()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void StaticFields()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void AccessingStaticMembersFromOutsideTheClass()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void StaticFunctionMembers()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OtherStaticClassMemberTypes()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void MemberConstants()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ConstantsAreLikeStatics()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void Properties()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void InstanceConstructors()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void StaticConstructors()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ObjectInitializer()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void Destructors()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ThereadonlyModifier()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ThethisKeyword()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void AccessModifierOnAccessors()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void PartialClassesAndPartialTypes()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void PartialMethods()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
     }
 }
