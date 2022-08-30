@@ -2580,8 +2580,32 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOptional Parameters\n" +
+                "\t- C# also allows 'optional parameters'. An optional parameter is a parameter that you can either include " +
+                "or omit when invoking the method.\n" +
+                "\t- To specify that a parameter is optional, you need to include a default value for that parameter in the " +
+                "method declaration.\n" +
+                "\t- The syntax for specifying the default value is the same as that of initializing a local variable.\n\n" +
+                "\t- There are several important things to know about declaring optional parameters.\n" +
+                "\t\t- Not all types of parameters can be used as optional parameters.\n" +
+                "\t\t\t- You can use value types as optional parameters as long as the default value is determinable at compile " +
+                "time.\n" +
+                "\t\t\t- You can use a reference type as an optional parameter only if the default value is 'null'.\n" +
+                "\t- All required parameters must be declared before any optional parameters are declared. If there is a 'params' " +
+                "parameter, it must be declared after all the optional parameters.\n" +
+                "\t- In the method declaration, optional parameters must be declared after alll the required parameters and before the " +
+                "params parameter, if one exits.\n\n" +
+                "\t- Instruct the program to use the default value of an optional parameter by leaving out the corresponding actual " +
+                "parameter from the method invocation.\n" +
+                "\t- You can't, however, omit just any combination of optional parameters because in many situations it would be " +
+                "ambigous as to which optional parameters the method is supposed to use.\n" +
+                "\t\t- You must omit parameters starting starting from the end of the list of optional parameters and work toward " +
+                "the beginning.\n" +
+                "\t\t- That is, you can omit the last optional parameter, or the last 'n' optional parameters, but you can't pick " +
+                "and choose to omit any arbitrary optional parameters; they must be taken off the end.\n\n" +
+                "\t- To omit optional parameters from arbitrary positions within the list of optional parameters, rather than from the " +
+                "end of the list, you must use the names of the optional parameters to diambiguate the assignments.\n" +
+                "\t- In this case, you are using both the named-parameters and optional-parameters features.\n");
             ReadKey();
 
             Clear();
