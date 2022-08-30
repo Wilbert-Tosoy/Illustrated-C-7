@@ -2636,8 +2636,11 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nRecursion\n" +
+                "\t- Besides calling other methods, a method can also call 'itself'. This is called 'recursion'.\n" +
+                "\t- Recursion can produce some very elegant code.\n" +
+                "\t- The mechanics of a method calling itself are the same as if it had called another, different method. A " +
+                "new stack frame is pushed onto the stack for each call to the method.\n");
             ReadKey();
 
             Clear();
