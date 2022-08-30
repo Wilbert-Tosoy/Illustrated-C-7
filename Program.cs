@@ -2769,8 +2769,12 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nInstance Class Members\n" +
+                "\t- Class members can be associated with an instance of the class or with the class as a whole, that is, to all the instances " +
+                "of the class. By default, members are associated with an instance.\n" +
+                "\t- You can think of each instance of a class as having its own copy of each class member. These members are called 'instance " +
+                "members'.\n" +
+                "\t- Changes to the value of one instance field do not affect the values of the members in any other instance.\n");
             ReadKey();
 
             Clear();
