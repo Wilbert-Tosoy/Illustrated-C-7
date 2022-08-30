@@ -31,22 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }        
 
-        public static void MoreAboutClasses()
-        {
-            Clear();
-            do
-            {
-                WriteLine("\tMore About Classes\n\n");
-                WriteLine("\t- Class Members\n\t- Order of Member Modifiers\n\t- Instance Class Members\n\t- Static Fields" +
-                    "\n\t- Accessing Static Members form Outside the Class\n\t- Static Function Members" +
-                    "\n\t- Other Static Class Member Types\n\t- Member Constants\n\t- Constant Are Like Statics" +
-                    "\n\t- Properties\n\t- Instance Constructors\n\t- Static Constructors\n\t- Object Initializers" +
-                    "\n\t- Destructors\n\t- The readonly Modifier\n\t- The this Keyword\n\t- Access Modifiers on Accessors" +
-                    "\n\t- Partial Classes and Partial Types\n\t- Partial Methods");
-            } while (ReadKey() == null);
-            Clear();
-        }
-
         public static void ClassesAndInheritance()
         {
             Clear();
@@ -2645,5 +2629,40 @@ namespace Illustrated_CSharp_7
 
             Clear();
         }
+    }
+
+    public static class Seven
+    {
+        public static void MoreAboutClasses()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tMore About Classes\n");
+                WriteLine("\t1. Class Members\n\t2. Order of Member Modifiers\n\t3. Instance Class Members\n\t4. Static Fields" +
+                    "\n\t5. Accessing Static Members form Outside the Class\n\t6. Static Function Members" +
+                    "\n\t7. Other Static Class Member Types\n\t8. Member Constants\n\t9. Constant Are Like Statics" +
+                    "\n\t10. Properties\n\t11. Instance Constructors\n\t12. Static Constructors\n\t13. Object Initializers" +
+                    "\n\t14. Destructors\n\t15. The readonly Modifier\n\t16. The this Keyword\n\t17. Access Modifiers on Accessors" +
+                    "\n\t18. Partial Classes and Partial Types\n\t19. Partial Methods\n\t20. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                SevenDecision(ref choice);
+
+            } while (choice != 20);
+
+            Clear();
+        }
+
+        static void SevenDecision(ref int choice)
+        {
+            
+        }
+
     }
 }
