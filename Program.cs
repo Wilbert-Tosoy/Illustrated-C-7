@@ -2557,8 +2557,20 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nNamed Parameters\n" +
+                "\t- Positional parameters means that the position of each actual parameter matches the position of the corresponding " +
+                "formal parameter.\n" +
+                "\t- Alternatively, C# allows you to use 'named parameters'. Named parameters allow you to list the actual parameters in your " +
+                "method invocation in any order, as long as you explicitly specify the names of the parameters.\n" +
+                "\t\t- Nothing changes in the declaration of the method. The formal parameters already have names.\n" +
+                "\t\t- In the method invocation, however, you use the formal parameter name, followed by a colon, in front of the actual " +
+                "parameter value or expression.\n" +
+                "\t- When using named parameters, include the parameter name in the method invocation. No changes are needed in the " +
+                "method declaration.\n" +
+                "\t- You can use both positional and named parameters in an invocation, but if you do, all the 'positional parameters " +
+                "must be listed first'.\n" +
+                "\t- Named parameters are useful as a means of self-documenting a program in that they can show, at the position of the " +
+                "method call, what values are being assigned to which formal parameters.\n");
             ReadKey();
 
             Clear();
