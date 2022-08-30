@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Serialization;
 using static System.Console;
 using static System.Convert;
 
@@ -204,7 +205,7 @@ namespace Illustrated_CSharp_7
                     Six.Methods();
                     break;
                 case 7:
-                    MoreAboutClasses();
+                    Seven.MoreAboutClasses();
                     break;
                 case 8:
                     ClassesAndInheritance();
@@ -2661,8 +2662,161 @@ namespace Illustrated_CSharp_7
 
         static void SevenDecision(ref int choice)
         {
-            
+            switch (choice)
+            {
+                case 1:
+                    ClassMembers();
+                    break;
+                case 2:
+                    OrderOfMemberModifiers();
+                    break;
+                case 3:
+                    InstanceClassMembers();
+                    break;
+                case 4:
+                    StaticFields();
+                    break;
+                case 5:
+                    AccessingStaticMembersFromOutsideTheClass();
+                    break;
+                case 6:
+                    StaticFunctionMembers();
+                    break;
+                case 7:
+                    OtherStaticClassMemberTypes();
+                    break;
+                case 8:
+                    MemberConstants();
+                    break;
+                case 9:
+                    ConstantsAreLikeStatics();
+                    break;
+                case 10:
+                    Properties();
+                    break;
+                case 11:
+                    InstanceConstructors();
+                    break;
+                case 12:
+                    StaticConstructors();
+                    break;
+                case 13:
+                    ObjectInitializer();
+                    break;
+                case 14:
+                    Destructors();
+                    break;
+                case 15:
+                    ThereadonlyModifier();
+                    break;
+                case 16:
+                    ThethisKeyword();
+                    break;
+                case 17:
+                    AccessModifierOnAccessors();
+                    break;
+                case 18:
+                    PartialClassesAndPartialTypes();
+                    break;
+                case 19:
+                    PartialMethods();
+                    break;
+            }
         }
 
+        static void ClassMembers()
+        {
+
+        }
+
+        static void OrderOfMemberModifiers()
+        {
+
+        }
+
+        static void InstanceClassMembers()
+        {
+
+        }
+
+        static void StaticFields()
+        {
+
+        }
+
+        static void AccessingStaticMembersFromOutsideTheClass()
+        {
+
+        }
+
+        static void StaticFunctionMembers()
+        {
+
+        }
+
+        static void OtherStaticClassMemberTypes()
+        {
+
+        }
+
+        static void MemberConstants()
+        {
+
+        }
+
+        static void ConstantsAreLikeStatics()
+        {
+
+        }
+
+        static void Properties()
+        {
+
+        }
+
+        static void InstanceConstructors()
+        {
+
+        }
+
+        static void StaticConstructors()
+        {
+
+        }
+
+        static void ObjectInitializer()
+        {
+
+        }
+
+        static void Destructors()
+        {
+
+        }
+
+        static void ThereadonlyModifier()
+        {
+
+        }
+
+        static void ThethisKeyword()
+        {
+
+        }
+
+        static void AccessModifierOnAccessors()
+        {
+
+        }
+
+        static void PartialClassesAndPartialTypes()
+        {
+
+        }
+
+        static void PartialMethods()
+        {
+
+        }
     }
 }
