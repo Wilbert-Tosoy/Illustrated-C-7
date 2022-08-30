@@ -2784,8 +2784,11 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nStatic Fields\n" +
+                "\t- Besides instance fields, classes can have what are called 'static fields'.\n" +
+                "\t\t- A static field is 'shared' by 'all the instances of the class', and all the instances access the same memory location. " +
+                "Hence, if the value of the memory location is changed by one instance, the change is visible to all the instances.\n" +
+                "\t\t- Use the 'static' modifier to declare a field static.\n");
             ReadKey();
 
             Clear();
