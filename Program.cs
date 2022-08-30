@@ -2737,9 +2737,7 @@ namespace Illustrated_CSharp_7
                 "\t\t\t\t\t\t\tDestructors\n" +
                 "\t\t\t\t\t\t\tOperators\n" +
                 "\t\t\t\t\t\t\tIndexers\n" +
-                "\t\t\t\t\t\t\tEvents\n" +
-                "" +
-                "");
+                "\t\t\t\t\t\t\tEvents\n");
             ReadKey();
 
             Clear();
@@ -2749,8 +2747,19 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOrder of Member Modifiers\n" +
+                "\t- Class member declaration statements consist of the following: the core declaration, an optional set of 'modifiers', " +
+                "and an optional set of 'attributes'.\n\n" +
+                "\t- The syntax used to describe this structure is the following. The square brackets indicate that the enclosed set of " +
+                "components is optional.\n\n" +
+                "\t\t[ attributes ] [ modifiers ] CoreDeclaration\n\n" +
+                "\t- The optional components are the following:\n" +
+                "\t\t- Modifiers\n" +
+                "\t\t\t- If there are any modifiers, they must be placed before the core declaration.\n" +
+                "\t\t\t- If there are multiple modifiers, they can be in any order.\n\n" +
+                "\t\t- Attributes\n" +
+                "\t\t\t- If there are any attributes, they must be placed before the modifiers and core declaration.\n" +
+                "\t\t\t- If there are multiple attributes, they can be in any order.\n");
             ReadKey();
 
             Clear();
