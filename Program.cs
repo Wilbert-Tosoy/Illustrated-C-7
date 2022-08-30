@@ -2728,8 +2728,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nClass Members\n" +
+                "\t- Types of Class Members\n\n" +
+                "\t\tData Members (Store Data)\t\tFunction Members (Execute Code)\n\n" +
+                "\t\tFields\t\t\t\t\tMethods\n" +
+                "\t\tConstants\t\t\t\tProperties\n" +
+                "\t\t\t\t\t\t\tConstructors\n" +
+                "\t\t\t\t\t\t\tDestructors\n" +
+                "\t\t\t\t\t\t\tOperators\n" +
+                "\t\t\t\t\t\t\tIndexers\n" +
+                "\t\t\t\t\t\t\tEvents\n" +
+                "" +
+                "");
             ReadKey();
 
             Clear();
