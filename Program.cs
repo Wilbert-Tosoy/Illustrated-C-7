@@ -2538,8 +2538,16 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nMethod Overloading\n" +
+                "\t- A class can have more than one method with same name. This is called 'method overloading'.\n" +
+                "\t- Each method with the same name must have a different 'signature' than the others.\n" +
+                "\t\t- The signature of a method consists of the following information from the method header of the method declaration:\n" +
+                "\t\t\t- The name of the method\n" +
+                "\t\t\t- The number of parameters\n" +
+                "\t\t\t- The data types and order of the parameters\n" +
+                "\t\t\t- The parameter modifiers\n" +
+                "\t\t- The return type is not part of the signature - although it is a common mistake to believe that it is.\n" +
+                "\t\t- Notice that the 'names' of the formal parameters are 'not' part of the signature.\n");
             ReadKey();
 
             Clear();
