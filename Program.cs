@@ -2873,8 +2873,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nConstants Are Like Statics\n" +
+                "\t- Member constants, however, are more interesting than local constants, in that they act like static values.\n" +
+                "\t- They're 'visible' to every instance of the class, and they're available even if there are no instances of the class.\n" +
+                "\t- Unlike actual statics, constants do not have their own storage locations and are substituted in by the compiler at compile " +
+                "time in a manner similar to '#define' values in C and C++.\n" +
+                "\t- Constants fields act like static fields but do not have a storage location in memory.\n" +
+                "\t- Although a constant member acts like a static, you cannot declare a constant as 'static'.");
             ReadKey();
 
             Clear();
