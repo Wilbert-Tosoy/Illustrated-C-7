@@ -2889,8 +2889,93 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nProperties\n" +
+                "\t- A 'property' is a member that represents an item of data in a class instance. \n" +
+                "\t- Using a property appears very much like writing to, or reading from, a field. The syntax is the same.\n\n" +
+                "\t- A property, like a field, has the following characteristics:\n" +
+                "\t\t- It is a named class member.\n" +
+                "\t\t- It has a type.\n" +
+                "\t\t- It can be assigned to and read from.\n\n" +
+                "\t- Unlike a field, however, a property is a function member; hence:\n" +
+                "\t\t- It does not necessarily allocate memory for data storage.\n" +
+                "\t\t- It executes code.\n\n" +
+                "\t- A property is a named set of two matching methods called 'accessors'.\n" +
+                "\t\t- The 'set' accessor is used for assigning a value to the property.\n" +
+                "\t\t- The 'get' accessor is used for retrieving a value from the property.\n");
+            WriteLine("\nProperty Declarations and Accessors\n" +
+                "\t- The 'set' and 'get' accessors have predefined syntax and semantics.\n" +
+                "\t- You can think of the 'set' accessor as a method with a single parameter taht 'sets' the value of the property.\n" +
+                "\t- The 'get' accessor has no parameters and returns the value of the property.\n\n" +
+                "\t\t- The 'set' accesor always has the following:\n" +
+                "\t\t\t- A single, implicit value parameter named 'value', of the same type as the property\n" +
+                "\t\t\t- A return type of 'void'\n\n" +
+                "\t\t- The 'get' accessor always has the following:\n" +
+                "\t\t\t- No parameters\n" +
+                "\t\t\t- A return type of the same type as the property.\n\n" +
+                "\t- Neither accessor declaration has 'explicit' parameter or return type declarations. They don't need them because " +
+                "they are 'implicit' in the type of the property.\n\n" +
+                "\t- The implicit parameter 'value' in the 'set' accessor is a normal value parameter. Like other value parameters, " +
+                "you can use it to send data into a method body - or in the accessor block.\n" +
+                "\t- Once inside the block, you can use 'value' like a normal variable, including assigning values to it.\n\n" +
+                "\t- Other important points about the accessors are the following:\n" +
+                "\t\t- All paths through the implementation of a 'get' accessor 'must' include a 'return' statement that returns a value " +
+                "of the property type.\n" +
+                "\t\t- The 'set' and 'get' accessors can be declared in either order, and no methods other than the two accessors are " +
+                "allowed on a property.\n");
+            WriteLine("\nUsing a Property\n" +
+                "\t- You write to and read from a property in the same way you access a field. The accessors are called implicitly.\n" +
+                "\t\t- To write to a property, use the property's name on the left side of an assignment statement.\n" +
+                "\t\t- To read from a property, use the property's name in an expression.\n\n" +
+                "\t- The appropriate accessor is called implicitly depending on whether you are writing to or reading from the property. " +
+                "You cannot explicitly call the accessors. Attempting to do so produces a compiler error.\n");
+            WriteLine("\nProperties and Associated Fields\n" +
+                "\t- A property is often associated with fields. \n" +
+                "\t- A common practice is to encapsulate a field in a class by declaring the field 'private' and declaring a 'public' property " +
+                "to give controlled access to the field from outside the class. The field associated with a property is called the 'backing field' " +
+                "or 'backing store'.\n\n" +
+                "\t- There are several conventions for naming properties and their backing fields. \n" +
+                "\t- One convention is to use the same string for both names but use 'camel casing' for the field and 'Pascal casing' for the property. \n" +
+                "\t- Another convention is to use Pascal casing for the property, and then for the field, use the camel case version of the same " +
+                "identifier, with an underscore in front.\n");
+            WriteLine("\nPerforming Other Calculations\n" +
+                "\t- Property accessors are not limited to just passing values back and forth from an associated backing field; the 'get' and 'set' accessors " +
+                "can perform any, or no, computations. The only action 'required' is that the 'get' accessor return a value of the property type.\n" +
+                "\t- C# 7.0 introduced an alternate syntax for property getters and setters that uses 'expression bodies'. Expresion bodies are also known " +
+                "as 'lambda expressions'. This alternate syntax can be used only if the accessor body consists of a single expression.\n");
+            WriteLine("\nRead-Only and Write-Only Properties\n" +
+                "\t- You can leave one or the other (but not both) of a property's accessors undefined by omitting its declaration.\n" +
+                "\t\t- A property with only a 'get' accessor is called a 'read-only' property. A read-only property is a safe way of passing an item of " +
+                "data out from a class or class instance without allowing the caller to modify the value of the property.\n" +
+                "\t\t- A property with only a 'set' accessor is called a 'write-only' property. Write-only properties are rarely seen because there are very " +
+                "few practical uses for them. If the intention is to trigger a side effect when the value is assigned, you should use a method rather than a " +
+                "property.\n" +
+                "\t\t- At least one of the two accessors must be defined, or the compiler will produce an error message.\n");
+            WriteLine("\nProperties vs. Public Fields\n" +
+                "\t- As a matter of preferred coding practice, properties are preferred over public fields for several reasons.\n" +
+                "\t\t- Since properties are function members, as opposed to data members, they allow you to process the input and output, which " +
+                "you cannot do with public fields.\n" +
+                "\t\t- You can have read-only or write-only properties, but you cannot have these characteristics with a field.\n" +
+                "\t\t- The semantics of a compiled variable and a compiled property are different.\n\n" +
+                "\t- The third point has implications when you release an assembly that is accessed by other code.");
+            WriteLine("\nAutomatically Implemented Properties - Auto-properties\n" +
+                "\t- Because properties are so often associated with backing fields, C# provides 'automatically implemented properties', also called " +
+                "'auto-implemented properties' or, more commonly, just 'auto-properties', which allow you to declare the property without declaring a " +
+                "backing field.\n" +
+                "\t- The compiler creates a hidden backing field for you and automatically hooks up the 'get' and 'set' accessors to it.\n\n" +
+                "\t- The important points about auto-implemented properties are the following:\n" +
+                "\t\t- You do not declare the backing field - the compiler allocates the storage for you, based on the type of the property.\n" +
+                "\t\t- You cannot supply the bodies of the accessors - they must be declared simply as semicolons. The 'get' acts as a simple read of the memory, " +
+                "and the 'set' as a simple write. However, because you can't access the bodies of auto-properties, it's difficult to debug your code " +
+                "when using auto-properties.\n" +
+                "\t\t- Beginning with C# 6.0, you can now use read-only auto-properties. Also, it is now possible to initialize auto-properties as part of their " +
+                "declaration.\n\n" +
+                "\t- Besides being convenient, auto-implemented properties allow you to easily insert a property where you might be tempted to declare a public field.\n");
+            WriteLine("\nStatic Properties\n" +
+                "\t- Properties can also be declared 'static'. Accessors of static properties, like all static members, have the following characteristics:\n" +
+                "\t\t- They cannot access instances members of a class - although they can be accessed by them.\n" +
+                "\t\t- They exist regardless of whether there are instances of the class.\n" +
+                "\t\t- From inside the class, you reference the static property using just its name.\n" +
+                "\t\t- From outside the class, you must reference the property either using its class name or using the 'using static' construct.\n");
             ReadKey();
 
             Clear();
