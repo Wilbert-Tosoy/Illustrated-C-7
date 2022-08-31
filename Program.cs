@@ -2985,8 +2985,28 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nInstance Constructors\n" +
+                "\t- An 'instance constructors' is a special method that is executed whenever a new instance of a class is created.\n" +
+                "\t\t- A constructor is used to initialize the state of the class instance.\n" +
+                "\t\t- If you want to be able to create instances of you class from outside the class, you need to declare the constructor 'public'.\n\n" +
+                "\t- A constructor looks like the other methods in a class declaration, with the following exceptions:\n" +
+                "\t\t- The name of the constructor is the same as the name of the class.\n" +
+                "\t\t- A constructor cannot have a return type.\n");
+            WriteLine("\nConstructors with Parameters\n" +
+                "\t- Constructors are like other methods in the following ways:\n" +
+                "\t\t- A constructor can have parameters. The syntax for the parameters is exactly the same a for other methods.\n" +
+                "\t\t- A constructor can be overloaded.\n\n" +
+                "\t- When using an object-creation expression to create a new instance of a class, you use the 'new' operator followed by one of the class's " +
+                "constructors. The 'new' operator uses that constructor to create the instance of the class.\n");
+            WriteLine("\nDefault Constructors\n" +
+                "\t- If no instance constructors is explicitly supplied in the class declaration, then the compiler supplies an implicit, default constructors, " +
+                "which has the following:\n" +
+                "\t\t- It takes no parameteres.\n" +
+                "\t\t- It has an empty body.\n\n" +
+                "\t- If you declare any constructors 'at all' for a class, then the compiler does not define the default constructor for the class.\n\n" +
+                "\t- You can assign access modifiers to instance constructors just as you can to other members. \n" +
+                "\t- You'll also want to declare the constructos 'public' so that you can create instances from outside the class.\n" +
+                "\t- You can also create 'private' constructors, which cannot be called from outside the class but can be used from within the class.\n");
             ReadKey();
 
             Clear();
