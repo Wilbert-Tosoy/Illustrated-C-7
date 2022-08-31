@@ -2838,8 +2838,17 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOther Static Class Member Types\n\n" +
+                "\t- Class Member Types That Can Be Declared Static\n\n" +
+                "\t\tData Members (Store Data)\t\tFunction Members (Execute Code)\n\n" +
+                "\t\tFields\t\t\t\t\tMethods\n" +
+                "\t\tTypes\t\t\t\t\tProperties\n" +
+                "\t\t\t\t\t\t\tConstructors\n" +
+                "\t\t\t\t\t\t\tOperators\n" +
+                "\t\t\t\t\t\t\tEvents\n\n" +
+                "\t- Class Member Types That Cannot Be Declared Static\n\n" +
+                "\t\tData Members (Store Data)\t\tFunction Members (Execute Code)\n\n" +
+                "\t\tConstants\t\t\t\tIndexers\n");
             ReadKey();
 
             Clear();
