@@ -2858,8 +2858,12 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nMember Constants\n" +
+                "\t- Member constants are like the local constants except that they are declared in the class declaration rather than in a method.\n" +
+                "\t- Like local constants, the value used to initialize a member constant must be computable at compile time and is usually one " +
+                "of the predefined simple types or an expression composed of them.\n" +
+                "\t- Like local constants, you cannot assign to a member constant after its declaration.\n\n" +
+                "\t- Unlike C and C++, in C# there are no global constants. Every constant must be declared within a type.\n");
             ReadKey();
 
             Clear();
