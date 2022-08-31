@@ -3016,8 +3016,27 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nStatic Constructors\n" +
+                "\t- Constructors can also be declared 'static'. While an instance constructor initializes each new instance of a class, a 'static' constructor " +
+                "initializes items at the class level.\n" +
+                "\t- Generally, static constructors initialize the static fields of the class.\n\n" +
+                "\tClass-level items are initialized at the following times:\n" +
+                "\t\t- Before any static member is referenced\n" +
+                "\t\t- Before any instance of the class is created\n\n" +
+                "\tStatic constructors are like instance constructor in the following ways:\n" +
+                "\t\t- The name of the static constructor must be the same as the name of the class.\n" +
+                "\t\t- The constructor cannot return a value.\n\n" +
+                "\tStatic constructors are unlike instance constructors in the following ways:\n" +
+                "\t\t- Static constructors use the 'static' keyword in the declaration.\n" +
+                "\t\t- There can be only a single static constructor for a class, and it cannot have parameters.\n" +
+                "\t\t- Static constructors cannot have accessibility modifiers.\n\n" +
+                "\t- Other important things you should know about static constructors are the following:\n" +
+                "\t\t- A class can have both a static constructor and instance constructors.\n" +
+                "\t\t- Like static methods, a static constructor cannot access instance members of its class and cannot use the 'this' accessor.\n" +
+                "\t\t- You cannot explicitly call static constructors from your program. They are called automatically by the system,at some " +
+                "indeterminate time.\n" +
+                "\t\t\t- Before any instance of the class is created.\n" +
+                "\t\t\t- Before any static members of the class is referenced.\n");
             ReadKey();
 
             Clear();
