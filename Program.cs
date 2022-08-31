@@ -2824,8 +2824,11 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nStatic Function Members\n" +
+                "\t- Besides static fields, there are also static function members.\n" +
+                "\t\t- Static function members, like static fields, are independent of any class instance. Even if there are no instance of class, you can " +
+                "still call a static method.\n" +
+                "\t\t- Static function members 'cannot access instance members'. They can, however, access other static members.\n");
             ReadKey();
 
             Clear();
