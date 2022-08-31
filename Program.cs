@@ -2798,8 +2798,23 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAccessing Static Members from Outside the Class\n" +
+                "\t- Dot-syntax notation is used to access 'public' instance members from outside the class.\n" +
+                "\t- Dot-syntax notation consists of listing the instance name, followed by a dot, followed by the member name.\n" +
+                "\t- Static members, like instance members, can also be accessed from outside the class using dot-syntax notation.\n" +
+                "\t- But since there is no instance, the most common technique for accessing static members uses the 'class name'.\n\n" +
+                "\t- Another option to access the member doesn't use any prefix at all, provided that you have included a 'using static' declaration " +
+                "for the specific class to which that member belongs.\n\n" +
+                "\t- You should choose between two forms of accessing a static member based on which approach makes your code clearer and more " +
+                "understandable to you and to others responsible for maintaining your code.\n");
+            WriteLine("\nLifetimes of Static Members\n" +
+                "\t- The lifetimes for static members are different from those of instance members.\n" +
+                "\t\t- Instance members come into existence when the instance is created and go out of existence when the instance is destroyed.\n" +
+                "\t\t- Static members, however, exist and are accessible 'even if there are no instances' of the class.\n" +
+                "\t\t- Static fields with no class instances can still be assigned to and read from because the field is associated with the class, not " +
+                "an instance.\n\n" +
+                "\t- Static members exist even if there are no instances of the class. If a static field has an initializer, the field is initialized before " +
+                "the use of any class's static fields, but not necessarily at the beginning of program execution.\n");
             ReadKey();
 
             Clear();
