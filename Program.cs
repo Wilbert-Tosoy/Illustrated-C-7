@@ -3081,8 +3081,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe readonly Modifier\n" +
+                "\t- A field can be declared with the 'readonly' modifier. The effect is similar to declaring a field as 'const', in that once the value " +
+                "is set, it cannot be changed.\n" +
+                "\t\t- While a 'const' field can be initialized only in the field's declaration statement, a 'readonly' field can have its value set in any " +
+                "of the following places:\n" +
+                "\t\t\t- The field declaration statement - like a 'const'.\n" +
+                "\t\t\t- Any of the class constructors. If it is a 'static' field, then it must be done in the 'static' constructor.\n" +
+                "\t\t- While the value of a 'const' field must be determinable at compile time, the value of a 'readonly' field can be determined at run time. " +
+                "This additional freedom allows you to set different values under different circumstances or in different constructors!\n" +
+                "\t\t- Unlike a 'const', which always acts like a static, the following is true of a 'readonly' field:\n" +
+                "\t\t\t- It can be either an instance field or a static field.\n" +
+                "\t\t\t- It has a storage location in memory.");
             ReadKey();
 
             Clear();
