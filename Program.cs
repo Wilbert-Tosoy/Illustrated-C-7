@@ -3102,8 +3102,111 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe this Keyword\n" +
+                "\t- The 'this' keyword, used in a clas, is a reference to the current instance. It can be used only in the 'blocks' of the following class members:\n" +
+                "\t\t- Instance constructors\n" +
+                "\t\t- Instance methods\n" +
+                "\t\t- Instance accessors of properties and indexers\n\n" +
+                "\tClearly, since static members are not part of an instance, you cannot use the 'this' keyword inside the code of any static function member. Rather, " +
+                "it is used for the following:\n" +
+                "\t\t- To distinguish between class members and local variables or parameters.\n" +
+                "\t\t- As an actual parameter when calling a method.\n\n" +
+                "\t- While it is important to understand the purpose and functionality of the 'this' keyword, its actual usage in your code will be likely " +
+                "relatively rare.\n");
+            WriteLine("\nIndexers\n" +
+                "\t- There are times, however, when it would be convenient to be able to access them with an index, as if the instance were an array of fields. " +
+                "This is exactly what 'indexers' allow you to do.\n" +
+                "\t- Instead of using dot-syntax notation, indexers use 'index notation', which consists of an index between square brackets.\n");
+            WriteLine("\nWhat Is an Indexer?\n" +
+                "\t- An indexer is a pair of 'get' and 'set' accessors, similar to those of properties.\n");
+            WriteLine("\nIndexers and Properties\n" +
+                "\t- Indexers and properties are similar in many ways.\n" +
+                "\t\t- Like property, an indexer does not allocate memory for storage.\n" +
+                "\t\t- Both indexers and properties are used primarily for giving access to 'other' data members with which they are associated and for which they " +
+                "provide get and set access.\n" +
+                "\t\t\t- A 'property' usually represents a 'single' data member.\n" +
+                "\t\t\t- An 'indexer' usually represents 'multiple' data members.\n\n" +
+                "\t- You can think of an 'indexer' as a 'property' that gives get and set access to 'multiple data members' of the class. You select which of the many " +
+                "possible data members by supplying an index, which itself can be of any type - not just numeric.\n\n" +
+                "\t- Some additional points you should know about indexers are the following:\n" +
+                "\t\t- Like a property, an indexer can have either one or both of the accessors.\n" +
+                "\t\t- Indexers are always instance members; hence, an index cannot be declared 'static'.\n" +
+                "\t\t- Like properties, the code implementing the 'get' and 'set' accessors does not have to be associated with any fields or properties. The code can " +
+                "do anything, or nothing, as long as the 'get' accessor returns some value of the specified type.\n");
+            WriteLine("\nDeclaring an Indexer\n" +
+                "\t- The syntax for declaring an indexer is shown next. Notice the following about indexers:\n" +
+                "\t\t- An indexer 'does not have a name'. In place of the name is the keyword 'this'.\n" +
+                "\t\t- The parameter list is between 'square' brackets.\n" +
+                "\t\t- There must be at least one parameter declaration in the parameter list.\n\n" +
+                "\t\t\tReturnType this [ Type param1, ... ]\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tget\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t\t...\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t\tset\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t\t...\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t}\n\n" +
+                "\t- Declaring an indexer is similar to declaring a property.\n");
+            WriteLine("\nThe Indexer set Accessor\n" +
+                "\t- When the indexer is the target of an assignment, the 'set' accessor is called and recieves two items of data, as follows:\n" +
+                "\t\t- An implicit parameter, named 'value', which holds the data to be stored.\n" +
+                "\t\t- One or more index parameters that represent where it should be stored.\n\n" +
+                "\t- Your code in the 'set' accessor must examine the index parameters, determine where the data should be stored, and then store it.\n\n" +
+                "\t- The different syntax and meaning of the 'set' accessor.\n\n" +
+                "\t\t- This figure shows the actual syntax of the accessor declaration.\n\n" +
+                "\t\t\tReturnType this [ ParameterList ] \n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tset\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t\tAccessorBody\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t\tget { ... }\n" +
+                "\t\t\t}\n\n" +
+                "\t\t- This figure shows the semantics of the accessor if it were written using the syntax of a normal method.\n\n" +
+                "\t\t\tvoid set ( ParameterList, Type value )\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tAccessorBody\n" +
+                "\t\t\t}\n\n" +
+                "\t- The figure shows that the 'set' accessor has the following:\n" +
+                "\t\t- It has a void return type.\n" +
+                "\t\t- It uses the same parameter list as that in the indexer declaration.\n" +
+                "\t\t- It has an implicit value parameter named 'value', of the same type as the indexer.\n");
+            WriteLine("\nThe Indexer get Accessor\n" +
+                "\t- When the indexer is used to retrieve a value, the 'get' accessor is called with one or more index parameters.\n" +
+                "\t- The index parameters represents which value to retrieve.\n\n" +
+                "\t- The code in the 'get' accessor body must examine the index parameters, determine which field they represents, and return the value of that field.\n\n" +
+                "\t- The different syntax and meaning of the 'get' accessor.\n\n" +
+                "\t\t- This figure shows the actual syntax of the accessor declaration.\n\n" +
+                "\t\t\tReturnType this [ ParameterList ]\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tget\n" +
+                "\t\t\t\t{\n" +
+                "\t\t\t\t\tAccessorBody\n" +
+                "\t\t\t\t\treturn ValueOfType;\n" +
+                "\t\t\t\t}\n" +
+                "\t\t\t\tset { ... }\n" +
+                "\t\t\t}\n\n" +
+                "\t\t- This figure shows the semantics of the accessor if it were written using the syntax of a normal method. \n\n" +
+                "\t\t\tReturnType get ( ParameterList )\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tAccessorBody\n" +
+                "\t\t\t\treturn ValueOfType;\n" +
+                "\t\t\t}\n\n" +
+                "\t- The semantics of the 'get' accessor are as follows:\n" +
+                "\t\t- It has the same parameter list as in the indexer declaration.\n" +
+                "\t\t- It returns a value of the same type as the indexer.\n");
+            WriteLine("\nMore About Indexers\n" +
+                "\t- As with properties, the 'get' and 'set' accessors cannot be called explicitly. Instead, the 'get' accessor is called automatically when the indexer is used " +
+                "in an expression for a value. \n" +
+                "\t- The 'set' accessor is called automatically when the indexer is assigned a value with the assignment statement.\n" +
+                "\t- When an indexer is 'called', the parameters are supplied between the square brackets.\n");
+            WriteLine("\nIndexer Overloading\n" +
+                "\t- A class can have any number of indexers, as long as the parameter lists are different; however, it isn't sufficient for the indexer 'type' to be different.\n" +
+                "\t- This is called 'indexer overloading' because all the indexers have the same 'name' - the 'this' access reference.\n\n" +
+                "\t- Remember that the overloaded indexers of a class must have different parameter lists.\n");
             ReadKey();
 
             Clear();
