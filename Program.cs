@@ -3216,8 +3216,27 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAccess Modifiers on Accessors\n" +
+                "\t- There are two types of function members that have 'get' and 'set' accessors: properties and indexers. By default, both a member's accessor have the same " +
+                "access level as the member itself.\n" +
+                "\t That is, if a property has an access level of 'public', then both its accessor have that same access level. The same is true of indexers.\n" +
+                "\t- You can, however, assign different access levels to the two accessors.\n\n" +
+                "\t- There are several restrictions on the access modifiers of accessors. The most important ones are the following:\n" +
+                "\t\t- An accessor can have an access modifier only if the member (property or indexer) has both a 'get' accessor and a 'set' accessor.\n" +
+                "\t\t- Although both accessor must be present, only one of them can have an access modifier.\n" +
+                "\t\t- The access modifier of the accessor must be 'strictly more restrictive' than the access level of the member.\n\n" +
+                "\tHeirarchy of strictly restrictive accessor levels\n\n" +
+                "\t\t      public\n" +
+                "\t\t         |\n" +
+                "\t\t         |\n" +
+                "\t\tprotected internal\n" +
+                "\t\t    /        \\\n" +
+                "\t\t   /          \\\n" +
+                "\t\tprotected   internal\n" +
+                "\t\t   \\          /\n" +
+                "\t\t    \\        / \n" +
+                "\t\t      private\n\n" +
+                "\t- The access level of an accessor must be strictly lower in the chart than the access level of the member.");
             ReadKey();
 
             Clear();
