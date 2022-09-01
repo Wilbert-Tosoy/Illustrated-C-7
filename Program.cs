@@ -3046,8 +3046,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nObject Initializers\n" +
+                "\t- An object-creation expression consists of the keyword 'new' followed by a class constructor and its parameter list. An " +
+                "'object initializer' extends that syntax by placing a list of member initializations at the end of the expression.\n" +
+                "\t- An object initializer allows you to set the values of fields and properties when creating a new instance of an object.\n\n" +
+                "\t- The syntax has two forms. One form includes the constructor's argument list, and the other doesn't. Notice the first form " +
+                "doesn't even use the parentheses that would enclose the argument list.\n\n" +
+                "\t\tnew TypeName\t\t{ FieldOrProp = InitExpr, FieldOrProp = InitExpr, ... }\n" +
+                "\t\tnew TypeName(ArgList)\t{ FieldOrProp = InitExpr, FieldOrProp = InitExpr, ... }\n\n" +
+                "\t- Important things to know about object initializers are the following:\n" +
+                "\t\t- The fields and properties being initialized must be 'public' and accessible to code creating the object.\n" +
+                "\t\t- The initialization occurs 'after' the constructor has finished execution, so the values might have been set in the " +
+                "constructor and then reset to the same or a different value in the object initializer.");
             ReadKey();
 
             Clear();
