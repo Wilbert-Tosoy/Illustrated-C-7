@@ -32,21 +32,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }        
 
-        public static void ClassesAndInheritance()
-        {
-            Clear();
-            do
-            {
-                WriteLine("\tClasses and Inheritance\n\n");
-                WriteLine("\t- Class Inheritance\n\t- Accessing the Inherited Members\n\t- All Classes Are Derived from Class object" +
-                    "\n\t- Masking Members of a Base Class\n\t- Base Access\n\t- Using Reference to a Base Class" +
-                    "\n\t- Constructor Execution\n\t- Inheritance Between Assemblies\n\t- Member Access Modifiers" +
-                    "\n\t- Abstract Members\n\t- Abstract Classes\n\t- Sealed Classes\n\t- Static Classes" +
-                    "\n\t- Extension Methods\n\t- Naming Conversions");
-            } while (ReadKey() == null);
-            Clear();
-        }
-
         public static void ExpressionsAndOperators()
         {
             Clear();
@@ -3294,6 +3279,31 @@ namespace Illustrated_CSharp_7
                 "the method made inside the class. You cannot have an implementing partial method without a defining partial method.\n");
             ReadKey();
 
+            Clear();
+        }
+    }
+
+    static class Eight
+    {
+        public static void ClassesAndInheritance()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tClasses and Inheritance\n");
+                WriteLine("\t1. Class Inheritance\n\t2. Accessing the Inherited Members\n\t3. All Classes Are Derived from Class object" +
+                    "\n\t4. Masking Members of a Base Class\n\t5. Base Access\n\t6. Using Reference to a Base Class" +
+                    "\n\t7. Constructor Execution\n\t8. Inheritance Between Assemblies\n\t9. Member Access Modifiers" +
+                    "\n\t10. Abstract Members\n\t11. Abstract Classes\n\t12. Sealed Classes\n\t13. Static Classes" +
+                    "\n\t14. Extension Methods\n\t15. Naming Conversions\n\t16. Exit");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+            } while (choice != 16);
             Clear();
         }
     }
