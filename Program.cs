@@ -3303,8 +3303,65 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
+                EightDecision(ref choice);
+
             } while (choice != 16);
             Clear();
+        }
+
+        static void EightDecision(ref int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    ClassInheritance();
+                    break;
+                case 2:
+                    AccessingTheInheritedMembers();
+                    break;
+                case 3:
+                    AllClassesAreDerivedFromClassObject();
+                    break;
+                case 4:
+                    MaskingMembersOfABaseClass();
+                    break;
+                case 5:
+                    BaseAccess();
+                    break;
+                case 6:
+                    UsingReferenceToABaseClass();
+                    break;
+                case 7:
+                    ConstructorExecution();
+                    break;
+                case 8:
+                    InheritanceBetweenAssemblies();
+                    break;
+                case 9:
+                    MemberAccessModifiers();
+                    break;
+                case 10:
+                    AbstractMembers();
+                    break;
+                case 11:
+                    AbstractClasses():
+                    break;
+                case 12:
+                    SealedClasses();
+                    break;
+                case 13:
+                    StaticClasses();
+                    break;
+                case 14:
+                    ExtensionMethods();
+                    break;
+                case 15:
+                    NamingConventions();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
         }
 
         static void ClassInheritance()
