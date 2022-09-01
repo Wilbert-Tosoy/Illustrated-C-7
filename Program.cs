@@ -3067,8 +3067,11 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nDestructors\n" +
+                "\t- Destructors performs actions required to clean up or release unmanaged resources after an instance of a class is no longer referenced.\n" +
+                "\t- Unmanaged resources are such things as file handles that you have gotten using the Win32 API, or chunks of unmanaged memory.\n" +
+                "\t- These aren't things you will get by using .NET resources, so if you stick to the .NET classes, you won't likely have to write destructors " +
+                "for your classes.\n");
             ReadKey();
 
             Clear();
