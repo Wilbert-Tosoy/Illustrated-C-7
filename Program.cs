@@ -3274,8 +3274,24 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nPartial Methods\n" +
+                "\t- Partial methods are methods that are declared in different parts of a partial class. The different parts of the partial method can be declared in " +
+                "different parts of the partial class or in the same part.\n\n" +
+                "\t- The two parts of the partial method are the following:\n" +
+                "\t\t- The defining partial method declaration\n" +
+                "\t\t\t- Lists are signature and return type.\n" +
+                "\t\t\t- The implementatiom part of the declaration syntax consists of only a semicolon.\n\n" +
+                "\t\t- The implementing partial method declaration\n" +
+                "\t\t\t- Lists the signature and return type.\n" +
+                "\t\t\t- The implementation is in the normal format, which, as you know, is a statement block.\n\n" +
+                "\t- The important things to know about partial methods are the following:\n" +
+                "\t\t- The defining and implementing declarations must match in signature and return type. The signature and return type have the following characteristics:\n" +
+                "\t\t\t- The return type must be 'void'.\n" +
+                "\t\t\t- The signature cannot include access modifiers, 'making partial methods implicitly private'.\n" +
+                "\t\t\t- The parameter list cannot contain 'out' parameters.\n" +
+                "\t\t\t- The contextual keyword 'partial' must be included in both the defining and implementing declarations immediately before the keyword 'void'.\n" +
+                "\t\t- You can have a defining partial method without an implementing partial method. In this case, the compiler removes the declaration and any calls to " +
+                "the method made inside the class. You cannot have an implementing partial method without a defining partial method.\n");
             ReadKey();
 
             Clear();
