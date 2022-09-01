@@ -193,7 +193,7 @@ namespace Illustrated_CSharp_7
                     Seven.MoreAboutClasses();
                     break;
                 case 8:
-                    ClassesAndInheritance();
+                    Eight.ClassesAndInheritance();
                     break;
                 case 9:
                     ExpressionsAndOperators();
@@ -3304,6 +3304,171 @@ namespace Illustrated_CSharp_7
                 choice = ToInt32(ReadLine());
 
             } while (choice != 16);
+            Clear();
+        }
+
+        static void ClassInheritance()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AccessingTheInheritedMembers()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AllClassesAreDerivedFromClassObject()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void MaskingMembersOfABaseClass()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void BaseAccess()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void UsingReferenceToABaseClass()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ConstructorExecution()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InheritanceBetweenAssemblies()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void MemberAccessModifiers()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AbstractMembers()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AbstractClasses()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void SealedClasses()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void StaticClasses()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ExtensionMethods()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void NamingConventions()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
             Clear();
         }
     }
