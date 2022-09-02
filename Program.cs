@@ -3431,8 +3431,29 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nMasking Members of a Base Class\n" +
+                "\t- A derived class cannot delete any of the members it has inherited; it can, however, mask a base class member with a member of the same name. This is " +
+                "extremely useful, and one of the major features of inheritance.\n" +
+                "\t- You might want to inherit from a base class that has a particular method. That method, although perfect for the class in which it is declared, may " +
+                "not do exactly what you want in the derived class. If so, what you want to do is mask the base class method with a new member declared in the derived class.\n\n" +
+                "\t- Some important aspects of masking a base class member in a derived class are the following:\n" +
+                "\t\t- To mask an inherited 'data' member, declare a new member of the same type and with the same 'name'.\n" +
+                "\t\t- To mask an inherited 'function' member, declare a new function member with the same signature. Remember that the signature consists of the name and " +
+                "parameter list but does not include the return type.\n" +
+                "\t\t- To let the compiler know that you're purposely masking an inherited member, use the 'new' modifier. Without it, the program will compile succesfully, " +
+                "but the compiler will warn you that you're hiding an inherited member.\n" +
+                "\t\t- You can also mask static members.\n\n" +
+                "\t- The keyword 'new' is used to explicitly tell the compiler to mask the base class member.\n\n" +
+                "\t\tclass BaseClass\n" +
+                "\t\t{\n" +
+                "\t\t\tAccessModifier Type TypeName;\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t\tclass DerivedClass : BaseClass\n" +
+                "\t\t{\n" +
+                "\t\t\tnew AccessModifier Type TypeName;\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n");
             ReadKey();
 
             Clear();
