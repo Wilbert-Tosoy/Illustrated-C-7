@@ -3479,8 +3479,45 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nUsing References to a Base Class\n" +
+                "\t- An instance of a derived class consists of an instance of the base class plus the additional members of the derived class. A " +
+                "reference to the derived class points to the whole class object, including the base class part.\n" +
+                "\t- If you have a reference to a derived class object, you can get a reference to just the base class part of the object by 'casting' " +
+                "the reference to the type of the base class by using the 'cast operator'.\n" +
+                "\t- The cast operator is placed in front of the object reference and consists of a set of parentheses containing the name of the " +
+                "class being cast to.\n" +
+                "\t- The effect of casting a derived class object to the base class object is that the resulting variable has access only to members " +
+                "of the base class (except in the case of an overriden method).\n");
+            WriteLine("\nVirtual and Override Methods\n" +
+                "\t- When accessing an object of a derived class by using a reference to the base class, you get only the members from the base class. " +
+                "'Virtual methods' allow a reference to the base class to access 'up into' the derived class.\n\n" +
+                "\t- You can use a reference to a base class to call a method in the 'derived class' if the following are true:\n" +
+                "\t\t- The method in the derived class and the method in the base class each have the same signature and return type.\n" +
+                "\t\t- The method in the base class is labeled 'virtual'.\n" +
+                "\t\t- The method in the derived class is labeled 'override'.\n\n" +
+                "\t- The following code shows the 'virtual' and 'override' modifiers on the methods in the base class and derived class\n\n" +
+                "\t\tclass BaseClass\n" +
+                "\t\t{\n" +
+                "\t\t\tvirtual AccessModifier ReturnType MethodName();\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t\tclass DerivedClass : BaseClass\n" +
+                "\t\t{\n" +
+                "\t\t\toverride AccessModifier ReturnType MethodName();\n" +
+                "\t\t\t..\n" +
+                "\t\t}\n\n" +
+                "\t- Other important things to know about the 'virtual' and 'override' modifiers are the following:\n" +
+                "\t\t- The overriding and overriden methods must have the same accessibility. In other words, the overriden method cannot be, " +
+                "for example, 'private', and the overriding method 'public'.\n" +
+                "\t\t- You cannot override a method that is 'static' or is not declared as 'virtual'.\n" +
+                "\t\t- Methods, properties, and indexers, another member type, called an 'event', can all be declared 'virtual' and 'override'.\n");
+            WriteLine("\nOverriding a Method Marked Override\n" +
+                "\t- Overriding methods can occur between any levels of inheritance.\n" +
+                "\t\t- When you use a reference to the base class part of an object to call an overidden method, the method call is passed up " +
+                "the derivation heirarchy for execution to the 'most derived' version of the method marked as 'override'.\n" +
+                "\t\t- If there are other declarations of the method at higher levels of derivations that are not marked as 'override', they " +
+                "are not invoked.\n" +
+                "\t\t- The only difference is whether the method is declared with the modifier 'override' or modifier 'new'.\n");
             ReadKey();
 
             Clear();
