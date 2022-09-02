@@ -3446,12 +3446,12 @@ namespace Illustrated_CSharp_7
                 "\t- The keyword 'new' is used to explicitly tell the compiler to mask the base class member.\n\n" +
                 "\t\tclass BaseClass\n" +
                 "\t\t{\n" +
-                "\t\t\tAccessModifier Type TypeName;\n" +
+                "\t\t\tAccessModifier Type Identifier;\n" +
                 "\t\t\t...\n" +
                 "\t\t}\n\n" +
                 "\t\tclass DerivedClass : BaseClass\n" +
                 "\t\t{\n" +
-                "\t\t\tnew AccessModifier Type TypeName;\n" +
+                "\t\t\tnew AccessModifier Type Identifier;\n" +
                 "\t\t\t...\n" +
                 "\t\t}\n");
             ReadKey();
@@ -3463,8 +3463,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nBase Access\n" +
+                "\t- If you're derived class absolutely must access a hidden member, you can access it by using a 'base access' expression.\n" +
+                "\t- This expression consists of the keyword 'base', followed immediately by a period and the name of the member.\n\n" +
+                "\t\tbase.Identifier;\n\n" +
+                "\t- If you find that your program's code is frequently using this feature - that is, accessing a hidden inherited member - you " +
+                "might want to reevaluate the design of your classes.\n" +
+                "\t- Generally there are more elegant designs, but the feature is there if there is a situation where nothing else will do.\n");
             ReadKey();
 
             Clear();
