@@ -3393,8 +3393,9 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAccessing the Inherited Members\n" +
+                "\t- Inherited members are accessed just as if they had been declared in the derived class itself. Inherited constructors are a bit different.\n" +
+                "\t- The code can be seamlessly accessed, regardless of whether they are declared in the base class or the derived class.\n");
             ReadKey();
 
             Clear();
