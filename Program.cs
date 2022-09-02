@@ -3527,8 +3527,78 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nConstructor Execution\n" +
+                "\t- A constructor executes code that prepares a class for use. This includes initializing both the static and instance members " +
+                "of the class, and a part of a derived class object is an object of the base class.\n" +
+                "\t\t- To create the base class part of an object, a constructor for the base class is implicitly called as part of the " +
+                "process of creating the instance.\n" +
+                "\t\t- Each class in the inheritance heirarchy chain executes its base class constructor before it executes its own constructor " +
+                "body.\n\n" +
+                "\t- When an instance is being created, one of the first things that is done is the initialization of all the instance members " +
+                "of the object. After that, the base class constructor is called. Only then is the body of the constructor of the class itself executed.\n\n" +
+                "\t- Calling a virtual method in a constructor is 'strongly discouraged'. The virtual method in the base class would call the override " +
+                "method in the derived class while the base class constructor is being executed.\n" +
+                "\t- But that would be before the derived constructor's body is executed. It would, therefore, be calling up into the derived class before " +
+                "the class is completely initialized.\n");
+            WriteLine("\nConstructor Initializers\n" +
+                "\t- By default, the parameterless constructor of the base class is called when an object is being constructed. But constructor can be " +
+                "overloaded, so a base class might have more than one.\n" +
+                "\t- If you want your derived class to use a specific base class constructor other than the parameterless constructor, you must specify " +
+                "it in a 'construct initializer'.\n" +
+                "\t\t- There are two forms of constructor initializers.\n" +
+                "\t\t\t- The first form uses the keyword 'base' and specifies which base class constructor to use.\n" +
+                "\t\t\t- The second form uses the keyword 'this' and specifies which other constructor from this class should be used.\n\n" +
+                "\t- A base class constructor initializer is placed after a colon following the parameter list in a class's constructor declaration. " +
+                "The constructor initializer consists of the keyword 'base' and the parameter list of the base constructor to call.\n\n" +
+                "\t\tAccessModifier DerivedClass( Type Identifier, Type Identifier ) : base( Identifier, Identifier ) \n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t- The constructor initializer specifies that the construction process should call the base class constructor with two parameters.\n" +
+                "\t- The parameters in the base parameter list must match the 'intended base constructor's' parameter list in type and order.\n\n" +
+                "\t- When you declare a constructor without a constructor initializer, it is a shortcut for the form with a constructor initializer " +
+                "consisting of 'base()'. The two forms are semantically equivalent.\n\n" +
+                "\t\tclass DerivedClass : BaseClass\t\t\tclass DerivedClass : BaseClass\n" +
+                "\t\t{\t\t\t\t\t\t{\n" +
+                "\t\t\tDerivedClass()\t\t\t\t\tDerivedClass() : base()\n" +
+                "\t\t\t{\t\t\t\t\t\t{\n" +
+                "\t\t\t\t...\t\t\t\t\t\t...\n" +
+                "\t\t\t}\t\t\t\t\t\t}\n" +
+                "\t\t}\t\t\t\t\t\t}\n\n" +
+                "\t- The other forms of constructor initializer instructs the construction process (actually, the compiler) to use a different constructor " +
+                "from the same class. \n\n" +
+                "\t- The following shows a constructor with a single parameter. That single-parameter constructor, however, uses a constructor from the " +
+                "same clas, but with two parameters, supplying a default parameter as the second one.\n\n" +
+                "\t\tAccessModifier DerivedClass( Type Identifier ) : this( Identifier, \"Default Parameter\")\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t- Another situation where this comes in particularly handy is where you have several constructors for a class and they have common code " +
+                "that should always be performed at the beginnig of the object construction process.\n" +
+                "\t- In this case, you can factor out the common code and place it in a constructor that is used as a constructor initilizer by all " +
+                "the other constructors. In fact, this is a recommended practice since it reduces code duplication.\n\n" +
+                "\t- You might think that you could just declare another method that performs those common initializations and have all the constructors " +
+                "call that method. This is not as good for several reasons.\n" +
+                "\t- The first is that the compiler can optimize certain things when it knows a method is a constructor. \n" +
+                "\t- The second is that there are some things that can be done only in a constructor and not elsewhere.\n" +
+                "\t- For example, in the previous chapter you learned that 'readonly' fields can be initialized only inside a constructor. You will get " +
+                "a compiler error if you attempt to initialize a 'readonly' field in another method, even if that method is only called by a constructor.\n" +
+                "\t- Note, however, that this constraints only applies to 'readonly' fields and not to 'readonly' properties.\n\n" +
+                "\t- Going back to that common constructor, if it can stand on its own as a valid constructor that initializes everything in the class that " +
+                "needs to be initialized, then it's perfectly fine to leave it as a 'public' constructor.\n" +
+                "\t- What if, however, it doesn't completely initialize an object? If so, you mustn't allow that constructor to be callable from outside the " +
+                "class since it would then create incompletely initialized objects.\n" +
+                "\t- To avoid that problem, you can declare tha constructor 'private' instead of 'public' and have it used only by other constructors.\n");
+            WriteLine("\nClass Access Modifiers\n" +
+                "\t- A class can be seen and accessed by other classes in the system.\n" +
+                "\t- The term 'visible' is sometimes used for the term 'accessible'. They can be used interchangeably. There are two levels of class " +
+                "accessibility: 'public' and 'internal'.\n" +
+                "\t\t- A class marked 'public' can be accessed by code from any assembly in the system. To make a class visible to other assemblies, " +
+                "use the 'public' access modifier.\n" +
+                "\t\t- A class marked 'internal' can be seen only by classes within its own assembly. \n" +
+                "\t\t\t- This is the default accessiblity level, so unless you explicitly specify the modifier 'public' in the class declaration, code " +
+                "outside the assembly cannot access the class.\n" +
+                "\t\t\t- You can explicitly declare a class internal by using the 'internal' access modifier.\n");
             ReadKey();
 
             Clear();
