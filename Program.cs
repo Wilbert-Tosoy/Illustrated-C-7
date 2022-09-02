@@ -3298,7 +3298,7 @@ namespace Illustrated_CSharp_7
                     "\n\t4. Masking Members of a Base Class\n\t5. Base Access\n\t6. Using Reference to a Base Class" +
                     "\n\t7. Constructor Execution\n\t8. Inheritance Between Assemblies\n\t9. Member Access Modifiers" +
                     "\n\t10. Abstract Members\n\t11. Abstract Classes\n\t12. Sealed Classes\n\t13. Static Classes" +
-                    "\n\t14. Extension Methods\n\t15. Naming Conversions\n\t16. Exit");
+                    "\n\t14. Extension Methods\n\t15. Naming Conversions\n\t16. Exit\n");
 
                 Write("-> ");
                 choice = ToInt32(ReadLine());
@@ -3368,8 +3368,22 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nClass Inheritance\n" +
+                "\t- Inheritance allows you to define a new class that incorporates and extends an already declared class.\n" +
+                "\t\t- You can use an existing class, called the 'base class', as the basis for a new class, called the 'derived class'. The members of the derived class consists " +
+                "of the following:\n" +
+                "\t\t\t- The members in its own declaration.\n" +
+                "\t\t\t- The members of the base class.\n" +
+                "\t\t- To declare a derived class, you add a class-base specification after the class name. The class-base specification consists of a colon, followed by the " +
+                "name of the class to be used as the base class. The derived class is said to directly inherit from the base class listed.\n" +
+                "\t\t- A derived class is said to extend its base class because it includes the members of the base class plus any additional functionality provided in its " +
+                "own declaration.\n" +
+                "\t\t- A derived class 'cannot delete' any of the members it has inherited.\n\n" +
+                "\t- Syntax for class inheritance\n\n" +
+                "\t\tclass DerivedClass : BaseClass\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n");
             ReadKey();
 
             Clear();
