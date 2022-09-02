@@ -3608,8 +3608,17 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nInheritance Between Assemblies\n" +
+                "\t- C# also allows you to derive a class from a base class defined in a different assembly.\n" +
+                "\t- To have your classes derive from a base class in another assembly, the following must be true:\n" +
+                "\t\t- The base class must be declared 'public' so that it can be accessed from outside its assembly.\n" +
+                "\t\t- You must include a reference to the assembly containing the base class in the Reference section " +
+                "of your Visual Studio project. You can find the heading in Solution Explorer.\n\n" +
+                "\t- To make it easier to refer to the classes and types in the other assembly without constantly using their fully qualified names, " +
+                "place a 'using' directive at the top of the source file, with the namespace containing the classes or types you want to access.\n\n" +
+                "\t- Note, adding a reference to the other assembly and adding a 'using' directive are two separate things. Adding the reference to " +
+                "the other assembly tells the compiler where the required types are defined.\n" +
+                "\t- Adding the 'using' directive allows you to reference other classes without having to use their fully qualified names.\n");
             ReadKey();
 
             Clear();
