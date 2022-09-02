@@ -3628,8 +3628,59 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nMember Access Modifiers\n" +
+                "\t- With class accessibility, there are only two modifiers - 'internal' and 'public'. Class accessiblity describes the visibility " +
+                "of a class; 'member accessibility' describes the visibility of the members of a class object.\n" +
+                "\t- Each member declared in a class is visible to various parts of the system, depending on the access modifier assigned to it in " +
+                "its class declaration.\n\n" +
+                "\t- Before looking at the specifics of member accessibility, there are some general things we need to mention first:\n" +
+                "\t\t- All members explicitly declared in a class's declaration are visible to each other, regardless of their accessibility specification.\n" +
+                "\t\t- Inherited members are explicitly declared in a class's declaration, inherited members might or might not be visible to " +
+                "members of a derived class.\n" +
+                "\t\t- The following are the names of the five member access levels.\n" +
+                "\t\t\t- public" +
+                "\t\t\t- private\n" +
+                "\t\t\t- protected\n" +
+                "\t\t\t- internal\n" +
+                "\t\t\t- protected internal\n" +
+                "\t\t- You must specify member access levels on a per-member basis. If you don't specify an access level for a member, its implicit " +
+                "access level is 'private'.\n" +
+                "\t\t- A member cannot be more accessible that its class. That is, if a class has an accessibility level limiting it to the assembly, " +
+                "individual members of the class cannot be seen outside the assembly, regardless of their access modifiers, even 'public'.\n");
+            WriteLine("\nRegions Accessing a Member\n" +
+                "\t- A class specifies which of its members can be accessed by other classes by labeling its members with access modifiers.\n");
+            WriteLine("\nPublic Member Accessibility\n" +
+                "\t- The 'public' access level is the least restrictive. All classes both inside and outside the assembly have free access to the member.\n" +
+                "\t- To declare a member public, use the 'public' access modifier.\n" +
+                "\t- A public member of a public class is visible to all classes in the same assembly and other assemblies.\n");
+            WriteLine("\nPrivate Member Accessibility\n" +
+                "\t- The 'private' access level is the most restrictive.\n" +
+                "\t\t- A 'private' class member can be accessed only by members of its own class. It cannot be accessed by other classes, including classes " +
+                "that are derived from it.\n" +
+                "\t\t- A 'private' member can, however, be accessed by members of classes nested in its class.\n" +
+                "\t\t- A private member of any class is visible only to member of its own class or nested classes.\n");
+            WriteLine("\nProtected Member Accessibility\n" +
+                "\t- The 'protected' access level is like the 'private' access level except that it also allows classes derived from the class to access the " +
+                "member.\n" +
+                "\t- The protected member of a public class is visible to members of its own class and classes derived from it. The derived classes can " +
+                "even be in other assemblies.\n");
+            WriteLine("\nInternal Member Accessibility\n" +
+                "\t- Members marked 'internal' are visible to all the classes in the assembly, but not to classes outside the assembly.\n" +
+                "\t- An internal member of a public class is visible to members of any class in the same assembly, but not to classes outside the assembly.\n");
+            WriteLine("\nProtected Internal Member Accessibility\n" +
+                "\t- Members marked 'protected internal' are visible to all classes that inherit from the class and also to all classes inside the assembly.\n" +
+                "\t- The set of classes allowed access is the combined set of classes allowed by the 'protected' modifier plus the set of classes allowed " +
+                "by the 'internal' modifier. Notice that this is the 'union' of 'protected' and 'internal' - not the intersection.\n" +
+                "\t- A protected internal member of a public class is visible to members of classes in the same assembly and to members of classes derived " +
+                "from that class. It's not visible to classes in other assemblies that are not derived from the class.\n");
+            WriteLine("\nSummary of Member Access Modifier\n" +
+                "\t- The following summarize the characteristics of the five member access levels.\n\n" +
+                "\tMember Access Modifiers\n\n" +
+                "\t\tprivate\t\t\t\tAccessible only within the class\n" +
+                "\t\tinternal\t\t\tAccessible to all classes within this assembly\n" +
+                "\t\tprotected\t\t\tAccessible to all classes derived from this class\n" +
+                "\t\tprotected internal\t\tAccessible to all classes that are either derived from this class or declared within this assembly\n" +
+                "\t\tpublic\t\t\t\tAccessible to any class\n");
             ReadKey();
 
             Clear();
