@@ -3405,8 +3405,23 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAll Classes Are Derived from Class Object\n" +
+                "\t- 'All' classes, except the special class 'object', are derived class, even if they don't have a class-base specification. Class 'object' " +
+                "is the only class that is not derived since it is the base of the inheritance heirarchy.\n" +
+                "\t- Classes without a class-base specification are implicitly derived directly from class 'object'. Leaving off the class-base specification " +
+                "is just shorthand for specifying that 'object' is the base class.\n\n" +
+                "\t- The two forms are semantically equivalent.\n\n" +
+                "\t\tclass BaseClass\t\t\tclass BaseClass : object\n" +
+                "\t\t{\t\t\t\t{\n" +
+                "\t\t\t...\t\t\t\t...\n" +
+                "\t\t}\t\t\t\t}\n\n" +
+                "\t- The class declaration on the left implicitly derives from class object, while the one on the right explicitly derives from object.\n\n" +
+                "\t- Other important facts about class derivation are the following:\n" +
+                "\t\t- A class declaration can have only a single class listed in its class-base specification. This is called 'single inheritance'.\n" +
+                "\t\t- Although a class can directly inherit from only a single base class, there is no limit to the 'level' of derivation. That is, the class " +
+                "listed as the base class might be derived from another class, which is derived from another class, and so forth, until you eventually reach 'object'.\n\n" +
+                "\t- 'Base class' and 'derived class' are relative terms. All classes are derived class, either from 'object' or from another class - so generally when we " +
+                "call a class derived class, we mean that it is immediately derived from some class other than 'object'.");
             ReadKey();
 
             Clear();
