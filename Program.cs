@@ -3891,92 +3891,200 @@ namespace Illustrated_CSharp_7
 
         static void Expressions()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void Literals()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OrderOfEvaluations()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void SimpleArithmeticOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void TheRemainderOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void RelationalAndEqualityComparisonOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void IncrementAndDecrementOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ConditionalLogicalOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void LogicalOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ShiftOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void AssignmentOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void TheConditionalOperator()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void UnaryArithmeticOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void UserDefinedTypeConversions()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OperatorOverloading()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ThetypeofOperator()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ThenameofOperator()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OtherOperators()
         {
+            Clear();
 
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
     }
 
