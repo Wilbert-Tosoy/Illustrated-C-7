@@ -3724,8 +3724,16 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAbstract Classes\n" +
+                "\t- Abstract classes are designed to be inherited from. An 'abstract class' can be used only as the base class of " +
+                "another class.\n" +
+                "\t\t- You cannot create instances of abstract class.\n" +
+                "\t\t- An abstract class is declared using the 'abstract' modifier.\n" +
+                "\t\t- An abstract class can contain abstract members of regular, nonabstract members. The members of an abstract class " +
+                "can be any combination of abstract members and normal members with implementations.\n" +
+                "\t\t- An abstract class can be itself be derived from another abstract class.\n" +
+                "\t\t- Any class derived from an abstract class must implement all the abstract members of the class by using the 'override' " +
+                "keyword, unless the derived class is itself abstract.\n");
             ReadKey();
 
             Clear();
