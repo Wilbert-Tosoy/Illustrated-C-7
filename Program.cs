@@ -3743,8 +3743,11 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nSealed Classes\n" +
+                "\t- An abstract class must be used as a base class - it cannot be instantiated as a stand-alone class object. The opposite " +
+                "is true of a 'sealed class'.\n" +
+                "\t\t- A sealed class can be initiated only as a stand-alone class object - it cannot be used as a base class.\n" +
+                "\t\t- A sealed class is labeled with the 'sealed' modifier.\n");
             ReadKey();
 
             Clear();
