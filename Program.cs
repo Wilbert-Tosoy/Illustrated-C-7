@@ -3757,8 +3757,19 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nStatic Classes\n" +
+                "\t- A static class is a class where all the members are static. Static classes are used to group data and functions that are not " +
+                "affected by instance data. \n" +
+                "\t- A common use of a static class might be to create a math library containing sets of mathematical methods and values.\n\n" +
+                "\t- The important things to know about a static class are the following:\n" +
+                "\t\t- The class itself must be marked 'static'.\n" +
+                "\t\t- All the members of the class must be static.\n" +
+                "\t\t- The class can have a static constructor, but it cannot have an instance constructor since you cannot create an instance of the " +
+                "class.\n" +
+                "\t\t- Static classes are implicitly sealed. That is, you cannot inherit from a static class.\n\n" +
+                "\t- Access the members of a static class just as you would access any static member - by using the class name and the member name. \n" +
+                "\t- Also, starting with C# 6.0 you can access members of a static class without the class name provided that you have a 'using' static " +
+                "directive.");
             ReadKey();
 
             Clear();
