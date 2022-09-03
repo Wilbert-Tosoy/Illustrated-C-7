@@ -3779,8 +3779,14 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nExtension Methods\n" +
+                "\t- The 'extension method' feature allows you to write methods associated with classes 'other that the class in which they are declared'.\n" +
+                "\t- In real-world development, extension methods are an incredibly useful tool. In fact, almost the entire library of LINQ queries is " +
+                "implemented via extension methods.\n\n" +
+                "\t- The important requirements for an extension method are the following:\n" +
+                "\t\t- The class in which the extension method is declared must be declared 'static'.\n" +
+                "\t\t- The extension method itself must be declared 'static'.\n" +
+                "\t\t- The extension method must contain as its first parameter type the keyword 'this', followed by the name of the class it is extending.\n");
             ReadKey();
 
             Clear();
