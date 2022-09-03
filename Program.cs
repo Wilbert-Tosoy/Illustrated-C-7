@@ -3796,8 +3796,26 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nNaming Conventions\n" +
+                "\t- Writing programs requires coming up with lots of names - names for classes, variables, methods, properties, and lots.\n" +
+                "\t- When you are reading through a program, using naming conventions is an important method of giving you a clue as to the kinds of objects " +
+                "you are dealing with.\n\n" +
+                "\t- Commonly Used Identifier Naming Styles\n\n" +
+                "\t\t- Pascal Casing\n" +
+                "\t\t\t- Each word in the identifier is capitalized.\n" +
+                "\t\t\t- Use for type names and member names visible outside the class. These include the name of the following: classes, methods, namespaces, " +
+                "properties, and public fields.\n\n" +
+                "\t\t- CamelCasing\n" +
+                "\t\t\t- Each word in the identifier, except the first, is capitalized.\n" +
+                "\t\t\t- Use for local variable names and the names of formal parameters in methdod declarations.\n\n" +
+                "\t\t- Camel case with leading underscore\n" +
+                "\t\t\t- This is a camel-cased identifier that starts with an underscore.\n" +
+                "\t\t\t- Use for the names of private and protected fields.\n\n" +
+                "\t- One major pillar of maintainable code is the use of accurate, self-descriptive variable names. When it comes to variable names, brevity needs " +
+                "to bow to the adage that 'haste makes waste'.\n" +
+                "\t- Not everyone with these conventions, especially the leading-underscore part. Some find the leading underscore very useful, while others " +
+                "find it exceedingly ugly.\n" +
+                "\t- One last word about underscores is that they aren't generally used in the body of an identifier, except in the names of event handlers.\n");
             ReadKey();
 
             Clear();
