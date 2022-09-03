@@ -3816,11 +3816,167 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
+                NineDecision(ref choice);
+
             } while (choice != 19);
 
             ReadKey();
 
             Clear();
+        }
+
+        static void NineDecision(ref int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    Expressions();
+                    break;
+                case 2:
+                    Literals();
+                    break;
+                case 3:
+                    OrderOfEvaluations();
+                    break;
+                case 4:
+                    SimpleArithmeticOperators();
+                    break;
+                case 5:
+                    TheRemainderOperators();
+                    break;
+                case 6:
+                    RelationalAndEqualityComparisonOperators();
+                    break;
+                case 7:
+                    IncrementAndDecrementOperators();
+                    break;
+                case 8:
+                    ConditionalLogicalOperators();
+                    break;
+                case 9:
+                    LogicalOperators();
+                    break;
+                case 10:
+                    ShiftOperators();
+                    break;
+                case 11:
+                    AssignmentOperators();
+                    break;
+                case 12:
+                    TheConditionalOperator();
+                    break;
+                case 13:
+                    UnaryArithmeticOperators();
+                    break;
+                case 14:
+                    UserDefinedTypeConversions();
+                    break;
+                case 15:
+                    OperatorOverloading();
+                    break;
+                case 16:
+                    ThetypeofOperator();
+                    break;
+                case 17:
+                    ThenameofOperator();
+                    break;
+                case 18:
+                    OtherOperators();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
+
+        static void Expressions()
+        {
+
+        }
+
+        static void Literals()
+        {
+
+        }
+
+        static void OrderOfEvaluations()
+        {
+
+        }
+
+        static void SimpleArithmeticOperators()
+        {
+
+        }
+
+        static void TheRemainderOperators()
+        {
+
+        }
+
+        static void RelationalAndEqualityComparisonOperators()
+        {
+
+        }
+
+        static void IncrementAndDecrementOperators()
+        {
+
+        }
+
+        static void ConditionalLogicalOperators()
+        {
+
+        }
+
+        static void LogicalOperators()
+        {
+
+        }
+
+        static void ShiftOperators()
+        {
+
+        }
+
+        static void AssignmentOperators()
+        {
+
+        }
+
+        static void TheConditionalOperator()
+        {
+
+        }
+
+        static void UnaryArithmeticOperators()
+        {
+
+        }
+
+        static void UserDefinedTypeConversions()
+        {
+
+        }
+
+        static void OperatorOverloading()
+        {
+
+        }
+
+        static void ThetypeofOperator()
+        {
+
+        }
+
+        static void ThenameofOperator()
+        {
+
+        }
+
+        static void OtherOperators()
+        {
+
         }
     }
 
