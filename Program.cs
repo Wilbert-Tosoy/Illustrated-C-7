@@ -3690,8 +3690,31 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAbstract Members\n" +
+                "\t- An 'abstract member' is a function member that is designed to be ovverridden. \n" +
+                "\t- An abstract member has the following characteristics:\n" +
+                "\t\t- It must be a function member. That is, fields and constants cannot be abstract members.\n" +
+                "\t\t- It must be marked with the 'abstract' modifier.\n" +
+                "\t\t- It must not have an implementation code block. The code of an abstract member is represented by a semicolon.\n\n" +
+                "\t- Abstract members can be declared only in 'abstract classes'. Four types of members can be declared as abstract.\n" +
+                "\t\t- Methods\n" +
+                "\t\t- Properties\n" +
+                "\t\t- Events\n" +
+                "\t\t- Indexers\n\n" +
+                "\t- Other important facts about abstract members are the following:\n" +
+                "\t\t- Abstract members, although they must be overriden by a corresponding member in a derived class, 'cannot' use the " +
+                "'virtual' modifier in addition to the 'abstract' modifier.\n" +
+                "\t\t- As with virtual members, the implementation of an abstract member in a derived class must specify the 'override' " +
+                "modifier.\n\n" +
+                "\tComparing Virtual and Abstract Members\n\n" +
+                "\t\t\t\t\tVirtual Member\t\t\t\tAbstract Member\n\n" +
+                "\tKeyword\t\t\t\t'virtual'\t\t\t\t'abstract'\n" +
+                "\tImplementation body\t\tHas an implementation body\t\tNo implementation body - semicolon instead\n" +
+                "\tOverriden in a derived class\t'Can' be overriden - using 'override'\t'Must' be overriden - using 'override'\n" +
+                "\tTypes of members\t\tMethods\t\t\t\t\tMethods\n" +
+                "\t\t\t\t\tProperties\t\t\t\tProperties\n" +
+                "\t\t\t\t\tEvents\t\t\t\t\tEvents\n" +
+                "\t\t\t\t\tIndexers\t\t\t\tIndexers\n");
             ReadKey();
 
             Clear();
