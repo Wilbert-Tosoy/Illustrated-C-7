@@ -4089,8 +4089,10 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe Remainder Operator\n" +
+                "\t- The remainder operator (%) divides the first operand by the second operand, ignores the qoutient, and returns the remainder.\n" +
+                "\t- The remainder operator is binary and left-associative.\n\n" +
+                "\t- The remainder operator can also be used with real numbers to give 'real reminders'.\n");
             ReadKey();
 
             Clear();
