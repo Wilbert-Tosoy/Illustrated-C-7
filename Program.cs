@@ -4240,8 +4240,37 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nAssignment Operators\n" +
+                "\t- The assignment operators evaluate the expression on the right side of the operator and use the value to set the value of the variable " +
+                "expression on the left side of the operator.\n" +
+                "\t- The assignment operators are binary and right-associative.\n\n" +
+                "\t- The Assignment Operators\n\n" +
+                "\t\tOperator\tDescription\n\n" +
+                "\t\t=\t\tSimple assignment; evaluate the expression on the right, and assign the returned value to the variable or expression on the left.\n" +
+                "\t\t*=\t\tCompound assignment; var = var * expr.\n" +
+                "\t\t/=\t\tCompound assignment; var = var / expr.\n" +
+                "\t\t%=\t\tCompound assignment; var = var % expr.\n" +
+                "\t\t+=\t\tCompound assignment; var = var + expr.\n" +
+                "\t\t-=\t\tCompound assignment; var = var - expr.\n" +
+                "\t\t<<=\t\tCompound assignment; var = var << expr.\n" +
+                "\t\t>>=\t\tCompound assignment; var = var >> expr.\n" +
+                "\t\t&=\t\tCompound assignment; var = var & expr.\n" +
+                "\t\t^=\t\tCompound assignment; var = var ^ expr.\n" +
+                "\t\t|=\t\tCompound assignment; var = var | expr.\n\n" +
+                "\t- The syntax is as follows:\n\n" +
+                "\t\tVariableExpression Operator Expression\n\n" +
+                "\t- Remember that an assignment expression is an 'expression' and therefore returns a value to its position in the statement. The value of an " +
+                "assignment expression is the value of the left operand, after the assignment is performed.\n\n" +
+                "\t- The types of objects that can be on the left side of an assignment operator are the following:\n" +
+                "\t\t- Variables (local fields, fields, parameters)\n" +
+                "\t\t- Properties\n" +
+                "\t\t- Indexers\n" +
+                "\t\t- Events\n");
+            WriteLine("\nCompound Assignment\n" +
+                "\t- Frequently, you want to evaluate an expression and add the resutls to the current value of a variable.\n" +
+                "\t- The compound assignment operators allow a shorthand method for avoiding the repetition of the left-side variable on the right side under " +
+                "certain common circumstances.\n" +
+                "\t- Other compound assignment statements are analogous.\n");
             ReadKey();
 
             Clear();
