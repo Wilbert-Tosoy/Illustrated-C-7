@@ -4161,8 +4161,18 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nConditional Logical Operators\n" +
+                "\t- The logical operators are used for comparing or negating the logical values of their operands and returning the resulting " +
+                "logical value.\n" +
+                "\t- The logical AND and logical OR operators are binary and left-associative. The logical NOT is unary.\n\n" +
+                "\t- The Conditional Logical Operators\n\n" +
+                "\t\tOperator\tName\t\t\tDescription\n\n" +
+                "\t\t&&\t\tLogical AND\t\t'true' if both operands are 'true'; 'false' otherwise.\n" +
+                "\t\t||\t\tLogical OR\t\t'true' if at least one operand is 'true'; 'false' otherwise.\n" +
+                "\t\t!\t\tLogical NOT\t\t'true' if the operand is 'false'; 'false' otherwise.\n\n" +
+                "\t- The conditional logical operators operate in 'short-circuit' mode, meaning that, if after evaluating Expression1 the result " +
+                "can already be determined, then it skips the evaluation of Expression2.\n" +
+                "\t- Because of the short-circuit behavior, do not place expressions with desired side effects such as changing a value.\n");
             ReadKey();
 
             Clear();
