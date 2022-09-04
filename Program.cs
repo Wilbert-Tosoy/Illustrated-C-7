@@ -3893,8 +3893,27 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nExpressions\n" +
+                "\t- An 'operator' is a symbol that represents an operation that returns a single result, An 'operand' is a data element " +
+                "used as input by the operator.\n\n" +
+                "\t- An operator does the following:\n" +
+                "\t\t- Takes its operands as inputs.\n" +
+                "\t\t- Performs an action.\n" +
+                "\t\t- Returns a value, based on the action.\n\n" +
+                "\t- An 'expression' is a string of operators and operands. The C# operators take one, two, or three operands.\n\n" +
+                "\t- The following are some of the constructs that can act as operands:\n" +
+                "\t\t- Literals\n" +
+                "\t\t- Constants\n" +
+                "\t\t- Variables\n" +
+                "\t\t- Method calls\n" +
+                "\t\t- Element accessors, such as array accessors and indexers\n" +
+                "\t\t- Other expressions\n\n" +
+                "\t- Expressions can be combined, using operators, to create more complex expressions.\n\n" +
+                "\t- 'Evaluating' an expression is the process of applying each operator to its operands, in the proper sequence, to " +
+                "produce a value.\n" +
+                "\t\t- The value is returned to the position at which the expression was evaluated. There, it might in turn be used " +
+                "as an operand in an enclosing expression.\n" +
+                "\t\t- Besides the value returned, some expressions also have side effects, such as setting a value in memory.\n");
             ReadKey();
 
             Clear();
