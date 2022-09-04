@@ -4071,8 +4071,15 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nSimple Arithmetic Operators\n\n" +
+                "\t- The Simple Arithmetic Operators\n\n" +
+                "\t\tOperator\t\tName\t\tDescription\n\n" +
+                "\t\t+\t\t\tAddition\t\tAdds the two operands.\n" +
+                "\t\t-\t\t\tSubtraction\t\tSubstracts the second operand from the first.\n" +
+                "\t\t*\t\t\tMultiplication\t\tMultiplies the two operands.\n" +
+                "\t\t/\t\t\tDivision\t\tDivides the first operand by the second. Integer division rounds the results toward " +
+                "0 to the neares integer.\n\n" +
+                "\t- The arithmetic operators perform the standard aritmetic operations on al the predefined simple arithmetic types.\n");
             ReadKey();
 
             Clear();
