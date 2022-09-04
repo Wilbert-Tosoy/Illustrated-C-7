@@ -4135,8 +4135,23 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nIncrement and Decrement Operators\n" +
+                "\t- The increment operators adds 1 to the operand. The decrement operators substract 1 from the operand.\n\n" +
+                "\t- These operators are unary and have two forms. the 'pre-' form and the 'post-' form, which acts differently.\n" +
+                "\t\t- In the pre- form, the operator is placed before the operand.\n" +
+                "\t\t- In the post- form, the operator is placed after the operand.\n\n" +
+                "\t- The Increment and Decrement Operators\n" +
+                "\t\tOperator\tName\t\t\tDescription\n\n" +
+                "\t\t++\t\tPre-increment ++var\tIncrement the value of the variable by 1 and save it back into the variable. Return the new value of the variable.\n" +
+                "\t\t\t\tPost-increment ++var\tIncrement the value of the variable by 1 and save it back into the variable. Return the old value of the variable " +
+                "before it was incremented.\n" +
+                "\t\t--\t\tPre-decrement --var\tDecrement the value of the variable by 1 and save it back into the variable. Return the new value of the variable.\n" +
+                "\t\t\t\tPost-decrement var--\tDecrement the value of the variable by 1 and save it back into the variable. Retunr the old value of the variable " +
+                "before it was decremented.\n\n" +
+                "\t- In comparing the pre- and post- forms of the operators,\n" +
+                "\t\t- The final, stored value of the operand variable after the statement is executed is the same regardless of whether the pre- or post- form " +
+                "of the operator is used.\n" +
+                "\t\t- The only differnce is the value 'returned' by the operator to the expression.\n");
             ReadKey();
 
             Clear();
