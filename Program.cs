@@ -3923,8 +3923,96 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nLiterals\n" +
+                "\t- Literals are numbers or strings typed into the source code that represent a specific, set value of specific type. \n" +
+                "\t- Because literals are written into the source code, their values must be known at compiler time. Several of the " +
+                "predefined types have their own forms of literal.\n" +
+                "\t\t- Type 'bool' has two literals: 'true' and 'false'. Note that these, like all C# keywords, are lowercase.\n" +
+                "\t\t- For reference type variables, literal 'null' means that the variable does not point to data in memory.\n");
+            WriteLine("\nInteger Literals\n" +
+                "\t- Integer literals are the most commonly used literals. They are written as a sequence of decimal digits, with the " +
+                "following characteristics:\n" +
+                "\t\t- No decimal point.\n" +
+                "\t\t- An optional suffix to specify the type of the integer.\n\n" +
+                "\t- Integer-type literals can also be written in hexadecimal (hex) form. The digits must be hex digits (0 through F), " +
+                "and the string must be prefaced with either 0x or 0X (numeral 0, letter x).\n" +
+                "\t- A third format for integer-type literals is binary notation. All digits must be either 0 or 1 and must be preceeded " +
+                "by either 0b or 0B (numeral 0, letter b).\n\n" +
+                "\t- Note that only integer-type literals can be expressed in hex or binary-form. Hex and binary notation are specified " +
+                "with a prefix, while the actual data type is specified using a suffix.\n\n" +
+                "\t- For a given suffix, the compiler will interpret the string of digits as the smallest of the four integer types that " +
+                "can represent the value without losing data.\n" +
+                "\t- Fortunately, you can now insert separators in a numeric literal to make it easier to interpret.\n");
+            WriteLine("\nReal Literals\n" +
+                "\t- C# has three real number data types: 'float', 'double' and 'decimal'. These correspond to 32 bits, 64 bits, and " +
+                "128 bits of precision.\n" +
+                "\t- All three are floating-point data types, meaning that they are represented internally by two components, one " +
+                "representing the digits comprising the actual number and one, an exponent, that specifies the location of the decimal " +
+                "point.\n" +
+                "\t- In practical usage, by far the most common real number data type is 'double'.\n\n" +
+                "\t- Literals for real numbers consist of the following:\n" +
+                "\t\t- Decimal digits\n" +
+                "\t\t- An optional decimal point\n" +
+                "\t\t- An optional exponent part\n" +
+                "\t\t- An optional suffix\n\n" +
+                "\t- Components with names in square brackets are optional. The exponent part consist of:\n" +
+                "\t\t- An E, either upper- or lowercase\n" +
+                "\t\t- An optional sign\n" +
+                "\t\t- Decimal digits\n\n" +
+                "\t- Suffixes for the Real Literals\n\n" +
+                "\t\tSuffix\t\tReal Type\n\n" +
+                "\t\tNone\t\tdouble\n" +
+                "\t\tF, f\t\tfloat\n" +
+                "\t\tD, d\t\tdouble\n" +
+                "\t\tM, m\t\tdecimal\n\n" +
+                "\t- Note that real literals without a suffix are of type 'double', not 'float'.\n");
+            WriteLine("\nCharacter Literals\n" +
+                "\t- A character literals consists of a character representation between two single quote marks. \n" +
+                "\t- Character literals are used to represent single character (a), nonprinting characters (\\n)(newline), " +
+                "or characters that otherwise perform special task such as escape (\\\\).\n" +
+                "\t- Even though it might require multiple characters to express a character literal, each character literal " +
+                "represents only a single character. To refer to multiple characters, you must use a string literal.\n\n" +
+                "\t- A character representation can be any of the following: a single character, a simple escape sequence, a " +
+                "hex escape sequence, or a Unicode escape sequence. \n\n" +
+                "\t- Important things to know about character literals are the following:\n" +
+                "\t\t- A type of a character literal is 'char'.\n" +
+                "\t\t- A 'simple escape sequence' is a backlash followed by a single character.\n" +
+                "\t\t- A hex escape sequence is a backlash, followed by an uppercase or lowercase 'x', followed by up to four " +
+                "hex digits.\n" +
+                "\t\t- A Unicode escape sequence is a backlash, followed by an uppercase or lowercase 'u', followed by up to " +
+                "four hex digits.\n\n" +
+                "\t- Important Special Characters\n\n" +
+                "\t\tName\t\t\tEscape Sequence\t\tHex Encoding\n\n" +
+                "\t\tNull\t\t\t\\0\t\t\t0x0000\n" +
+                "\t\tAlert\t\t\t\\a\t\t\t0x0007\n" +
+                "\t\tBackspace\t\t\\b\t\t\t0x0008\n" +
+                "\t\tHorizontal tab\t\t\\t\t\t\t0x0009\n" +
+                "\t\tNew line\t\t\\n\t\t\t0x000A\n" +
+                "\t\tVertical tab\t\t\\v\t\t\t0x000B\n" +
+                "\t\tForm feed\t\t\\f\t\t\t0x000C\n" +
+                "\t\tCarriage return\t\t\\r\t\t\t0x000D\n" +
+                "\t\tDouble quote\t\t\\\"\t\t\t0x0022\n" +
+                "\t\tSingle quote\t\t\\\'\t\t\t0x0027\n" +
+                "\t\tBackslash\t\t\\\\\t\t\t0x005C\n");
+            WriteLine("\nString Literals\n" +
+                "\t- String literals use double quotes marks rather than the single quote marks used in character literals.\n\n" +
+                "\t- There are two types of string literals.\n" +
+                "\t\t- Regular string literals\n" +
+                "\t\t- Verbatim string literal\n\n" +
+                "\t- A regular string literal consists of a sequence of characters between a set of double quotes.\n\n" +
+                "\t- A regular string literal can include the following:\n" +
+                "\t\t- Characters\n" +
+                "\t\t- Simple escape sequences\n" +
+                "\t\t- Hex and Unicode escape sequences\n\n" +
+                "\t- A verbatim string literal is written like a regular string but is prefaced with an '@' character. \n\n" +
+                "\t- The important characteristics of verbatim string literals are the following:\n" +
+                "\t\t- Verbatim literals differ from regular string literals in that escape sequences within the string are " +
+                "not evaluated. Everything between the set of double qoutes - including what would normally be considered " +
+                "escape sequences - is printed exactly as it is listed in the string.\n" +
+                "\t\t- The only exceptions with verbatim literals are sets of contiguous double quotes, which are interpreted " +
+                "as a single double qoute character.\n\n" +
+                "\t- Note that the compiler saves memory by having identical string literals share the same memory location in " +
+                "the heap.\n");
             ReadKey();
 
             Clear();
