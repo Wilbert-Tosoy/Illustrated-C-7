@@ -4182,8 +4182,19 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nLogical Operators\n" +
+                "\t- The bitwise logical operators are often used to set the bit patterns for parameters to methods.\n" +
+                "\t- These operators, except for the bitwise negation operator, are binary and left-associative. The bitwise negation is unary.\n\n" +
+                "\t- The Logical Operators\n\n" +
+                "\t\tOperator\tName\t\t\tDescription\n\n" +
+                "\t\t&\t\tBitwise AND\t\tProduces the bitwise AND of the two operands. The resulting bit is 1 only if both operand bits are 1.\n" +
+                "\t\t|\t\tBitwise OR\t\tProduces the bitwise OR of the two operands. The resulting bit is 1 either corresponding operand bit is 1.\n" +
+                "\t\t^\t\tBitwise XOR\t\tProduces the bitwise XOR of the two operands. The resulting bit is 1 if one, but not both, of the corresponding " +
+                "operand bits is 1.\n" +
+                "\t\t~\t\tBitwise negation\tEach bit in the operand is switched to its opposite. This produces the one's complement of the operand. " +
+                "(The 'one's complement' of a number is the inversion of every bit of its binary representation).\n\n" +
+                "\t- The binary bitwise operators compare the corresponding bits at each position in each of their two operands, and they set the bit " +
+                "in the return value according to the logical operation.\n");
             ReadKey();
 
             Clear();
