@@ -4022,8 +4022,46 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOrder of Evaluation\n" +
+                "\t- An expression can be made up od many nested subexpressions. The order in which the subexpressions are evaluated can make a difference " +
+                "in the final value of the expression.\n");
+            WriteLine("\nPrecedence\n" +
+                "\t- Operator Precedence: Highest to Lowest\n\n" +
+                "\t\tCategory\t\t\tOperators\n\n" +
+                "\t\tPrimary\t\t\t\ta.x, f(x), a[x], x++, x--, new, typeof, checked, unchecked\n" +
+                "\t\tUnary\t\t\t\t+, -, !, ~, ++x, --x, (T)x\n" +
+                "\t\tMultiplicative\t\t\t*, /, %\n" +
+                "\t\tAdditive\t\t\t+, -\n" +
+                "\t\tShift\t\t\t\t<<, >>\n" +
+                "\t\tRelational and type\t\t<, >, <=, >=, is, as\n" +
+                "\t\tEquality\t\t\t==, !=\n" +
+                "\t\tLogical AND\t\t\t&\n" +
+                "\t\tLogical XOR\t\t\t^\n" +
+                "\t\tLogical OR\t\t\t|\n" +
+                "\t\tConditional AND\t\t\t&&\n" +
+                "\t\tConditional OR\t\t\t||\n" +
+                "\t\tConditional\t\t\t?:\n" +
+                "\t\tAssignment\t\t\t=, *=, /=, %=, +=, -=, <<=, >>=, &=, ^=, |=\n");
+            WriteLine("\nAssociativity\n" +
+                "\t- When the compiler is evaluating an expression where all the operators have different levels of precedence, then each subexpression is " +
+                "evaluated, starting at the one with the highest level and working down the precedence scale.\n" +
+                "\t- When sequential operators have the same level of precedence, the order of evaluation is determined by 'operator associativity'. \n" +
+                "\t- That is, given two operators of the same level of precedence, one or the other will have precedence, depending on the operators' " +
+                "associativity.\n\n" +
+                "\t- Some important characteristics of operator associativity are the following:\n" +
+                "\t\t- 'Left-associative' operators are evaluated from left to right.\n" +
+                "\t\t- 'Right-associative' operators are evaluated from right to left.\n" +
+                "\t\t- Binary operators, except the assignment operators, are left-associative.\n" +
+                "\t\t- The assignment operators and the conditional operator are right-associative.\n\n" +
+                "\t- Summary of Operator Associativity\n\n" +
+                "\t\tType of Operator\t\tAssociativity\n\n" +
+                "\t\tAssignment operators\t\tRight-associative\n" +
+                "\t\tOther binary operators\t\tLeft-associative\n" +
+                "\t\tConditional operator\t\tRight-associative\n\n" +
+                "\t- You can explicitly set the order of evaluation of the subexpression of the an expression by using parentheses. Parenthesized " +
+                "subexpressions have the following qualities:\n" +
+                "\t\t- They override the precedence and associativity rules.\n" +
+                "\t\t- They are evaluated in order from the innermost nested set to the outermost.\n");
             ReadKey();
 
             Clear();
