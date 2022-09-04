@@ -4102,8 +4102,30 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nRelational and Equality Comparison Operators\n" +
+                "\t- The relational and equality comparison operators are binary operators that compare their operands and return a value of type 'bool'.\n" +
+                "\t- The relational and equality operators are binary and left-associative.\n\n" +
+                "\t- The Relational and Equality Comparison Operators\n" +
+                "\t\tOperator\tName\t\t\t\tDescription\n\n" +
+                "\t\t<\t\tLess than\t\t\t'true' if the first operand is less than the second operand; 'false' otherwise.\n" +
+                "\t\t>\t\tGreater than\t\t\t'true' if the first operand is greater is greater than the second operand; 'false' otherwise.\n" +
+                "\t\t<=\t\tLess than or equal to\t\t'true' if the first operand is less than or equal to the second operand; 'false' otherwise.\n" +
+                "\t\t>=\t\tGreater than or equal to\t'true' if the first operand is greater than or equal to the second operand; 'false' otherwise.\n" +
+                "\t\t==\t\tEqual to\t\t\t'true' if the first operand is equal to the second operand; 'false' otherwise.\n" +
+                "\t\t!=\t\tNot equal to\t\t\t'true' if the first operand is not equal to the second operand; 'false' otherwise.\n\n" +
+                "\t- A binary expression with a relational or equality operator returns a value of type 'bool'.\n\n" +
+                "\t- Note that unlike C and C++, numbers in C# do not have a Boolean interpretations.\n");
+            WriteLine("\nComparison and Equality Operations\n" +
+                "\t- When comparing most reference types for equality, only the references are compared.\n\n" +
+                "\t- Objects of type 'string' are also reference types but are compared differently. When strings are compared for equality, they " +
+                "are compared for length and case-sensitive content.\n" +
+                "\t\t- If two strings have the same length and the same case-sensitive content, the equality comparison returns 'true', even if " +
+                "they occupy different areas of memory.\n" +
+                "\t\t- This is called a 'deep comparison'.\n\n" +
+                "\t- Delegats are also referenced types and also use deep comparison. When delegates are compared for equality, the comparison returns " +
+                "'true' if both delegates are 'null' or if both have the same number of members in their invocation list and the invocation lists match.\n\n" +
+                "\t- When comparing numeric expressions, the types and values are compared. When comparing 'enum' types, the comparisons are done on the " +
+                "underlying values of the operands.\n");
             ReadKey();
 
             Clear();
