@@ -4204,8 +4204,33 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nShift Operators\n" +
+                "\t- The bitwise shift operators shift the bit pattern either right or left a specified number of positions, with the vacated bits " +
+                "filled with 0s or 1s.\n" +
+                "\t- The shift operators are binary and left-associative. The syntax of the bitwise shift operators is shown here. The number of positions " +
+                "to shift is given by 'Count'.\n\n" +
+                "\t\tOperand << Count\t\t<- Left Shift\n" +
+                "\t\tOperand >> Count\t\t<- Right Shift\n\n" +
+                "\t- The Shift Operators\n\n" +
+                "\t\tOperator\tName\t\t\tDescription\n\n" +
+                "\t\t<<\t\tLeft shift\t\tShifts the bit pattern left by the given number of positions. The bits shifted off the left end are lost. Bit positions " +
+                "opening up on the right are filled with 0s.\n" +
+                "\t\t>>\t\tRight shift\t\tShifts the bit pattern right by the given number of positions. Bits shifted off the right end are lost.\n\n" +
+                "\t- For the vast majority of programming in C#, you don't need to know anything about the hardware underneath. If you're doing bitwise manipulation " +
+                "of signed numbers, however, it can be helpful to know about the numeric representation.\n" +
+                "\t- The underlying hardware represents signed binary numbers in a form called 'two's complement'. In two's-complement representation, positive " +
+                "numbers have their normal binary form. To negate a number, you take the bitwise negation of the number and add 1 to it.\n" +
+                "\t- This process turns a positive number into its negative representation, and vice versa. In two's complement, all negative numbers have a " +
+                "1 in the leftmost bit position.\n\n" +
+                "\t- The underlying representation is important when shifting signed numbers because the result of shifting an integral value one bit to the left " +
+                "is the same as multiplying it by two. Shifting it to the right is the same as dividing it by two.\n" +
+                "\t- If, however, you were to shift a negative number to the right and the leftmost bit were to be filled with a 0, it would produce the wrong " +
+                "result. The 0 in the most leftmost position would indicate a positive number.\n" +
+                "\t- But that is incorrect, because dividing a negative number by 2 doesn't produce a positive number.\n\n" +
+                "\t- To address this situation, when the operand is a signed integer, if the leftmost bit of the operand is a 1 (indicating a negative number), " +
+                "bit positions opening up on the left are filled with 1s rather than 0s.\n" +
+                "\t- This maintains the correct two's-complement representations. For positive or unsigned numbers, bit positions opening up on the left are " +
+                "filled with 0s.\n");
             ReadKey();
 
             Clear();
