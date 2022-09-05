@@ -4405,8 +4405,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe nameof Operator\n" +
+                "\t- The 'nameof' operator returns a string representation of the item given as its parameter.\n" +
+                "\t- The 'nameof' operator returns only the unqualified name of its argument, even if the argument uses a fully qualified name. Also, " +
+                "the 'nameof' operator works with static classes and static methods.\n\n" +
+                "\t- It might not be clear as to why would you use the 'nameof' operator when the simple string would suffice.\n" +
+                "The reason, however, relates to changes in your code. If you use a hard-coded string to refer to the name of any element in a statement, " +
+                "that hard-coded string will not change if you later change the name of you property.\n");
             ReadKey();
 
             Clear();
