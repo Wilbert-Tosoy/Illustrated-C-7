@@ -4280,8 +4280,20 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe Conditional Operator\n" +
+                "\t- The conditional operator is a powerful and succint way of returning one of two values, based on the result of a condition.\n" +
+                "\t- It evaluates an expression and returns one two values, depending on whether the expression returns 'true' or 'false'.\n" +
+                "\t- The conditional operator is ternary.\n\n" +
+                "\t- The syntax for the conditional operator is shown next. It has a text expression and two resutl expressions.\n" +
+                "\t\t- 'Condition' must return a value of type 'bool'.\n" +
+                "\t\t- If 'Condition' evaluates to 'true', then 'Expression1' is evaluated and returned. Otherwise, 'Expression2' is evaluated " +
+                "and returned.\n\n" +
+                "\t\tCondition ? Expression1 : Expression2\n\n" +
+                "\t- The conditional operator can be compared with the 'if...else' construct.\n\n" +
+                "\t- The conditional operator can perform the same operation in a less verbose form.\n\n" +
+                "\t- Placing the condition and each return expression on separate lines makes the intent very easy to understand.\n\n" +
+                "\t- Note that 'if...else' statement is a flow-of-control statement. It should be used for doing one or the other of two actions. " +
+                "The conditional operator returns an expression. It should be used for returning one or the other of two values.\n");
             ReadKey();
 
             Clear();
