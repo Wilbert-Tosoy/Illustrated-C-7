@@ -4421,8 +4421,9 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOther Operators\n" +
+                "\t- There are other special-usage operators, the nullable types have a special operators called the 'null-coalescing operator' and the " +
+                "'null-conditional operator'.\n");
             ReadKey();
 
             Clear();
