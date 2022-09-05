@@ -4390,8 +4390,12 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe typeof Operator\n" +
+                "\t- The 'typeof' operator returns the 'System.Type' object of any type given as its parameter. \n" +
+                "\t- From this object, you can learn the characteristics of the type. (There is only one 'System.Type' object for any given type.) " +
+                "You cannot overload the 'typeof' operator.\n" +
+                "\t- The 'typeof' operator is unary.\n\n" +
+                "\t- The 'typeof' operator is also called by the 'GetType' method, which is available for every object of every type.\n");
             ReadKey();
 
             Clear();
