@@ -4303,8 +4303,10 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nUnary Arithmetic Operators\n" +
+                "\t- The unary operators set the sign of a numeric value.\n" +
+                "\t\t- The unary positive operator simply returns the value of the operand.\n" +
+                "\t\t- The unary negative operator returns the value of the operand subtracted from 0.\n");
             ReadKey();
 
             Clear();
