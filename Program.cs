@@ -4316,8 +4316,23 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nUser-Defined Type Conversion\n" +
+                "\t- You can define both implicit and explicit conversions for your own classes and structs. This allows you to convert an object " +
+                "of your user-defined type to some other type, and vice versa.\n" +
+                "\t- C# provides implicit and explicit conversions.\n" +
+                "\t\t- With an 'implicit conversion', the compiler automatically makes the conversion, if necessary, when it is resolving what types " +
+                "to use in a particular context.\n" +
+                "\t\t- With an 'explicit conversion', the compiler will make the conversion only when an explicit cast operator is used.\n\n" +
+                "\t- The syntax for declaring an implicit conversion is the following. The 'public' and 'static' modifiers are required for all " +
+                "user-defined conversions.\n\n" +
+                "\t\tpublic static implicit operator TargetType ( SourceType Identifier )\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t\treturn ObjectOfTargetType;\n" +
+                "\t\t}\n\n" +
+                "\t- The syntax of the explicit conversion is the same, except the 'explicit' is substituted for 'implicit'.\n\n" +
+                "\t- There are two other operators that take a value of one type and return a value of a different, specified type. These are " +
+                "the 'is' operator and the 'as' operator.\n");
             ReadKey();
 
             Clear();
