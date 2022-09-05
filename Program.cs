@@ -31,31 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }               
 
-        public static void Statements()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\nExpressions and Operators\n\n" +
-                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
-                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
-                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
-                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
-                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-            } while (choice != 19);
-
-            ReadKey();
-
-            Clear();
-        }
-
         public static void Structs()
         {
 
@@ -173,7 +148,7 @@ namespace Illustrated_CSharp_7
                     Nine.ExpressionsAndOperators();
                     break;
                 case 10:
-                    Statements();
+                    Ten.Statements();
                     break;
                 case 11:
                     Structs();
@@ -4424,6 +4399,214 @@ namespace Illustrated_CSharp_7
             WriteLine("\nOther Operators\n" +
                 "\t- There are other special-usage operators, the nullable types have a special operators called the 'null-coalescing operator' and the " +
                 "'null-conditional operator'.\n");
+            ReadKey();
+
+            Clear();
+        }
+    }
+
+    static class Ten
+    {
+        public static void Statements()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tStatements\n" +
+                "\n\t1. What are Statements?\n\t2. Expression Statements\n\t3. Flow-of-Control Statements\n\t4. The if Statement\n\t5. The if...else statement" +
+                "\n\t6. The while Loop\n\t7. The do Loop\n\t8. The for Loop" +
+                "\n\t9. The switch Statement\n\t10. Jump Statements\n\t11. The break Statement\n\t12. The continue Statement" +
+                "\n\t13. Labeled Statement\n\t14. The goto Statement\n\t15. The using Statement\n\t16. Other Statements\n\t17. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+            } while (choice != 17);
+
+            Clear();
+        }
+
+
+        /*WriteLine("\n\tStatements\n" +
+                "\n\t1. What are Statements?\n\t2. Expression Statements\n\t3. Flow-of-Control Statements\n\t4. The if Statement\n\t5. The if...else statement" +
+                "\n\t6. The while Loop\n\t7. The do Loop\n\t8. The for Loop" +
+                "\n\t9. The switch Statement\n\t10. Jump Statements\n\t11. The break Statement\n\t12. The continue Statement" +
+                "\n\t13. Labeled Statement\n\t14. The goto Statement\n\t15. The using Statement\n\t16. Other Statements\n\t17. Exit\n");*/
+
+        static void WhatAreStatements()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ExpressionStatements()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void FlowOfControlStatements()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheIfStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheIfElseStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheWhileLoop()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheDoLoop()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheForLoop()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheSwitchStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void JumpStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheBreakStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheContinueStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void LabeledStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheGotoStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void TheUsingStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void OtherStatement()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
             ReadKey();
 
             Clear();
