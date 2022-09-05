@@ -4342,8 +4342,45 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nOperator Overloading\n" +
+                "\t- The C# operators are defined to work using the predefined types as operands. If confronted with a user-defined type, an " +
+                "operator simply would not know to process it.\n" +
+                "\t- Operator overloading allows you to define how the C# operators should operate on operands of your user-defined types.\n" +
+                "\t\t- Operator overloading is available only for classes and structs.\n" +
+                "\t\t- You can overload an operator 'x' for use with your class or struct by declaring a method named 'operator x' that implements " +
+                "behavior.\n" +
+                "\t\t\t- The overload methods for unary operators take a single parameter of the 'class' or 'struct' type.\n" +
+                "\t\t\t- The overload methods for binary operators take two parameters, at least one of which must be of the 'class' or 'struct' type.\n\n" +
+                "\t- The declaration of an operator overload method requires the following:\n" +
+                "\t\t- The declaration must use both the 'static' and 'public' modifiers.\n" +
+                "\t\t- The operator must be a member of the class or struct for which it is an operator.\n\n" +
+                "\t- Note that your overloaded operators should conform to the intuitive meanings of the operators.\n");
+            WriteLine("\nRestrictions on Operator Overloading\n" +
+                "\t- Not all operators can be overloaded, and there are restrictions on the types of overloading that can be done.\n" +
+                "\t- Only the following operators can be overloaded. Prominently missing from the list is the assignment operator.\n" +
+                "\t\t\tOverloadable unary operators: +, -, !, ~, ++, --, true, false\n" +
+                "\t\t\tOverloadable binary operators: +, -, *, /, %, &, |, ^, <<, >>, ==, !=, >, <, >=, <=\n\n" +
+                "\t\t- You 'cannot' do the following things with operator overloading:\n" +
+                "\t\t\t- Create a new operator.\n" +
+                "\t\t\t- Change the syntax of an operator.\n" +
+                "\t\t\t- Redefine how an operator works on the predefined types.\n" +
+                "\t\t\t- Change the precedence or associativity of an operator.\n\n" +
+                "\t- The increment and decrement operators are overloadable. \n" +
+                "\t- For each of these operations, you write a piece of code that either increments or decrements the object: whatever that means for " +
+                "your user-defined type.\n\n" +
+                "\t\t- At runtime, when your code performs a 'pre-' operation (pre-increment or pre-decrement) on your object, the following happens:\n" +
+                "\t\t\t- Your increment or decrement code is executed on the object.\n" +
+                "\t\t\t- The object is returned.\n\n" +
+                "\t\t- At runtime, when your code performs a 'post-' operation (post-increment or post-decrement) on you object, the following happens:\n" +
+                "\t\t\t- If it a value typ, the system makes a copy of the object. If it is a reference type, a copy of the reference is made.\n" +
+                "\t\t\t- Your increment or decrement code is executed on the object.\n" +
+                "\t\t\t- The saved operand is returned.\n\n" +
+                "\t- If your operand object is a value type object, this should all work fine. But you need to be a bit careful when your user-defined " +
+                "type is a reference type.\n\n" +
+                "\t- For a reference type object, the pre- operations should work fine because no copies are made. But for the post- operations, since " +
+                "the copy that is saved is a copy of the reference, this means that both the original reference and the copy are pointing to the same object.\n" +
+                "\t- This means that the saved reference points to an object is no longer in its original state. Returning this reference to the altered object " +
+                "is probably not what was expected.\n");
             ReadKey();
 
             Clear();
