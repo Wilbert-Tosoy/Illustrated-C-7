@@ -4424,17 +4424,70 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
+                TenDecision(ref choice);
+
             } while (choice != 17);
 
             Clear();
         }
 
-
-        /*WriteLine("\n\tStatements\n" +
-                "\n\t1. What are Statements?\n\t2. Expression Statements\n\t3. Flow-of-Control Statements\n\t4. The if Statement\n\t5. The if...else statement" +
-                "\n\t6. The while Loop\n\t7. The do Loop\n\t8. The for Loop" +
-                "\n\t9. The switch Statement\n\t10. Jump Statements\n\t11. The break Statement\n\t12. The continue Statement" +
-                "\n\t13. Labeled Statement\n\t14. The goto Statement\n\t15. The using Statement\n\t16. Other Statements\n\t17. Exit\n");*/
+        static void TenDecision(ref int choice)
+        {
+            switch (choice)
+            {
+                case 1:
+                    WhatAreStatements();
+                    break;
+                case 2:
+                    ExpressionStatements();
+                    break;
+                case 3:
+                    FlowOfControlStatements();
+                    break;
+                case 4:
+                    TheIfStatement();
+                    break;
+                case 5:
+                    TheIfElseStatement();
+                    break;
+                case 6:
+                    TheWhileLoop();
+                    break;
+                case 7:
+                    TheDoLoop();
+                    break;
+                case 8:
+                    TheForLoop();
+                    break;
+                case 9:
+                    TheSwitchStatement();
+                    break;
+                case 10:
+                    JumpStatement();
+                    break;
+                case 11:
+                    TheBreakStatement();
+                    break;
+                case 12:
+                    TheContinueStatement();
+                    break;
+                case 13:
+                    LabeledStatement();
+                    break;
+                case 14:
+                    TheGotoStatement();
+                    break;
+                case 15:
+                    TheUsingStatement();
+                    break;
+                case 16:
+                    OtherStatement();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
 
         static void WhatAreStatements()
         {
