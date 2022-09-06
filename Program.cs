@@ -4624,8 +4624,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe break Statement\n" +
+                "\t- 'break' is usually used in the 'switch' statement. It can also be used in the following types:\n" +
+                "\t\t- for\n" +
+                "\t\t- foreach\n" +
+                "\t\t- while\n" +
+                "\t\t- do\n\n" +
+                "\t- In the body of one of these statements, 'break' causes execution to exit the 'innermost enlosing loop'.\n");
             ReadKey();
 
             Clear();
