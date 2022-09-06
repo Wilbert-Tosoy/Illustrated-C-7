@@ -4632,7 +4632,20 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe do Loop\n" +
-                "\t- ");
+                "\t- The 'do' loop is a simple loop construct in which the test expression is performed at the bottom of the loop.\n" +
+                "\t- The syntax for the 'do' loop is the following:\n\n" +
+                "\t\tdo\n" +
+                "\t\t\tStatement\n" +
+                "\t\twhile( TestExpression );\n\n" +
+                "\t\t- First, 'Statement' is executed.\n" +
+                "\t\t- Then, 'TestExpression' is evaluated.\n" +
+                "\t\t- If 'TestExpression' returns 'true', then 'Statement' is executed again.\n" +
+                "\t\t- Each time 'TestExpression' returns 'true', 'Statement' is executed again.\n" +
+                "\t\t- When 'TestExpression' returns 'false', control passes to the statement following the end of the loop construct.\n\n" +
+                "\t- The 'do' loop has several characteristics that set it apart from other flow-of-control constructs. They are the following:\n" +
+                "\t\t- The body of the loop, 'Statement', is always executed at least once, even if 'TestExpression' is initially 'false'. The reason for this is the " +
+                "'TestExpression' isn't evaluated until the bottom of the loop.\n" +
+                "\t\t- The semicolon is required after the closing parentheses of the test expression.\n");
             ReadKey();
 
             Clear();
