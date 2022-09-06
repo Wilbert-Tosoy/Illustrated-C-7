@@ -4635,8 +4635,12 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe continue Statements\n" +
+                "\t- The 'continue' statement causes program execution to go to the 'top' of the 'innermost enclosing loop' of the following types:\n" +
+                "\t\t- while\n" +
+                "\t\t- do\n" +
+                "\t\t- for\n" +
+                "\t\t- foreach\n");
             ReadKey();
 
             Clear();
