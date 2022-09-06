@@ -3795,7 +3795,6 @@ namespace Illustrated_CSharp_7
 
             } while (choice != 19);
 
-            ReadKey();
 
             Clear();
         }
@@ -4573,9 +4572,9 @@ namespace Illustrated_CSharp_7
                 "\t- The syntax for the 'if' statement is the following:\n\n" +
                 "\t\tif( TestExpression )\n" +
                 "\t\t\tStatement\n\n" +
-                "\t\t'TestExpression' must evaluate to a value of type 'bool'.\n" +
-                "\t\tIf 'TestExpression' evaluates to 'true', 'Statement' is executed.\n" +
-                "\t\tIf it evaluates to 'false', 'Statement' is skipped.\n");
+                "\t\t- 'TestExpression' must evaluate to a value of type 'bool'.\n" +
+                "\t\t- If 'TestExpression' evaluates to 'true', 'Statement' is executed.\n" +
+                "\t\t- If it evaluates to 'false', 'Statement' is skipped.\n");
             ReadKey();
 
             Clear();
@@ -4586,7 +4585,25 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe if...else Statement\n" +
-                "\t- ");
+                "\t- The 'if...else' statement implements a two-way branch.\n" +
+                "\t- The syntax for the 'if...else' is the following:\n\n" +
+                "\t\tif( TestExpression )\n" +
+                "\t\t\tStatement1\n" +
+                "\t\telse\n" +
+                "\t\t\tStatement2\n\n" +
+                "\t\t- If 'TestExpression' evaluates to true, 'Statement1' is executed.\n" +
+                "\t\t- Otherwise, 'Statement2' is executed instead.\n\n" +
+                "\t- Of course, 'Statement1', 'Statement2', or both could themselves be 'if' or 'if...else' statements, which could be nested further.\n" +
+                "\t- If you're looking at code containing nested 'if...else' statements and need to determine which 'else' goes with which 'if', there is a simple " +
+                "rule. Every 'else' belongs to the 'closest previous if' that doesn't have an associated 'else clause'.\n\n" +
+                "\t- When 'Statement2' is an 'if' or 'if...else' statement, it's common to format the construct as in the following code, putting the second 'if' clause " +
+                "on the same line as the 'else' clause. This examples shows two 'if...else' statements, but you can make an arbitrarily long chain.\n\n" +
+                "\t\tif( TestExpression1 )\n" +
+                "\t\t\tStatement1\n" +
+                "\t\telse if ( TestExpression2 )\n" +
+                "\t\t\tStatement2\n" +
+                "\t\telse\n" +
+                "\t\t\tStatement3\n");
             ReadKey();
 
             Clear();
