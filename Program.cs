@@ -4569,7 +4569,13 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe if Statement\n" +
-                "\t- ");
+                "\t- The 'if' statement implements conditional execution.\n" +
+                "\t- The syntax for the 'if' statement is the following:\n\n" +
+                "\t\tif( TestExpression )\n" +
+                "\t\t\tStatement\n\n" +
+                "\t\t'TestExpression' must evaluate to a value of type 'bool'.\n" +
+                "\t\tIf 'TestExpression' evaluates to 'true', 'Statement' is executed.\n" +
+                "\t\tIf it evaluates to 'false', 'Statement' is skipped.\n");
             ReadKey();
 
             Clear();
