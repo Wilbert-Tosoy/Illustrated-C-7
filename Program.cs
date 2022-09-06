@@ -4614,7 +4614,13 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\n\n" +
-                "\t- ");
+                "\t- When the flow of control reaches jump statements. program execution is unconditionally transferred to another part of the program.\n" +
+                "\t- The jump statements are the following:\n" +
+                "\t\t- break\n" +
+                "\t\t- continue\n" +
+                "\t\t- return\n" +
+                "\t\t- goto\n" +
+                "\t\t- throw\n");
             ReadKey();
 
             Clear();
