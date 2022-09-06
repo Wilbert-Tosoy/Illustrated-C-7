@@ -4493,8 +4493,24 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nWhat Are Statements?\n" +
+                "\t- The statements in C# are similar to those of C and C++.\n" +
+                "\t\t- A 'statement' is a source code instruction describing a type or telling the program to perform an action.\n" +
+                "\t\t- There are three major categories of statements.\n" +
+                "\t\t\t- 'Declaration statement' : Statements that declare types or variables.\n" +
+                "\t\t\t- 'Embedded statement'    : 'Statements that performs actions or manage flow of control'.\n" +
+                "\t\t\t- 'Labeled statement'     : Statement to which control can jump.\n\n" +
+                "\t- A 'simple statement' consists of an expression followed by a semicolon.\n" +
+                "\t- A 'block' is a sequence of statements enclosed by matching curly braces. The enclosed statements can include the following:\n" +
+                "\t\t- Declaration statements\n" +
+                "\t\t- Embedded statements\n" +
+                "\t\t- Labeled statements\n" +
+                "\t\t- Nested blocks\n\n" +
+                "\t- Note that a block counts syntactically as a single embedded statement. Anywhere that an embedded statement is required syntactically, " +
+                "you can use a block.\n\n" +
+                "\t- An 'empty statement' consists of just a semicolon.\n" +
+                "\t- You can use an empty statement at any position where the syntax of the language requires an embedded statement but your program logic " +
+                "does not require any action.\n");
             ReadKey();
 
             Clear();
