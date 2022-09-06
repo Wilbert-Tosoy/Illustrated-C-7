@@ -4614,7 +4614,14 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe while Loop\n" +
-                "\t- ");
+                "\t- The 'while' loop is a simple loop construct in which the test expression is performed at the top of the loop.\n" +
+                "\t- The syntax of the 'while' loop is the following:\n\n" +
+                "\t\twhile( TestExpression )\n" +
+                "\t\t\tStatement\n\n" +
+                "\t\t- First, 'TestExpression' is evaluated.\n" +
+                "\t\t- If 'TestExpression' evaluates to 'false', then execution continues after the end of the 'while' loop.\n" +
+                "\t\t- Otherwise, when 'TestExpression' evaluates to 'true', then 'Statement' is executed, and 'TestExpression' is evaluated again. Each time 'TestExpression' " +
+                "evaluates to 'true', 'Statement' is executed another time. The loop ends when 'TestExpression' evaluates to 'false'.\n");
             ReadKey();
 
             Clear();
