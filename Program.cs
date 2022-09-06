@@ -4601,7 +4601,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nThe do Loop\n" +
                 "\t- ");
             ReadKey();
 
