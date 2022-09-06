@@ -4536,8 +4536,29 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nFlow-of-Control Statements\n" +
+                "\t- C# provides the flow-of-control constructs common to modern programming languages.\n\n" +
+                "\t\t- 'Conditional execution' executes or skips a section of code depending on a condition.\n" +
+                "\t\t- The conditional execution statements are the following:\n" +
+                "\t\t\t- if\n" +
+                "\t\t\t- if...else\n" +
+                "\t\t\t- switch\n\n" +
+                "\t\t- 'Looping statements' repeatedly execute a section of code. \n" +
+                "\t\t- The looping statements are the following:\n" +
+                "\t\t\t- while\n" +
+                "\t\t\t- do\n" +
+                "\t\t\t- for\n" +
+                "\t\t\t- foreach\n\n" +
+                "\t\t- 'Jump statements' change the flow of control from one section of code to a specific statement in another section of code.\n" +
+                "\t\t- The jump statements are the following:\n" +
+                "\t\t\t- break\n" +
+                "\t\t\t- continue\n" +
+                "\t\t\t- return\n" +
+                "\t\t\t- goto\n" +
+                "\t\t\t- throw\n\n" +
+                "\t- Conditional execution and looping constructs (other than foreach) require a test expression, or 'condition', to determine where " +
+                "the program should continue execution.\n\n" +
+                "\t- Note that unlike C and C++, in C# test expressions must return a value of type 'bool'. Numbers do not have a Boolean representation in C#.\n");
             ReadKey();
 
             Clear();
