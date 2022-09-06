@@ -4590,7 +4590,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nThe while Loop\n" +
                 "\t- ");
             ReadKey();
 
