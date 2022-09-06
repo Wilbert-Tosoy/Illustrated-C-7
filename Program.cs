@@ -4520,8 +4520,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nExpression Statements\n" +
+                "\t- Expression return values, but they can also have 'side effects'.\n" +
+                "\t\t- A side effect is an action that affects the state of the program.\n" +
+                "\t\t- Many expressions are evaluated only for their side effects.\n\n" +
+                "\t- You can create a statement from an expression by placing a statement terminator (a semicolon) afte the expression. \n" +
+                "\t- Any value returned by the expression is discarded.\n\n" +
+                "\t- The whole reason for evaluating the expression is to achieve the side effect.\n");
             ReadKey();
 
             Clear();
