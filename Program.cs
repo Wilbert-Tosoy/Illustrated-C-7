@@ -31,89 +31,420 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }               
 
-        public static void Structs()
-        {
-
-        }
-
         public static void Enumerations()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Arrays()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Delegates()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Events()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Interface()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Conversion()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Generic()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void EnumeratorsAndIterators()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void IntroductionToLINQ()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void IntroductionToAsynchronousProgramming()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void NamespaceAndAssemblies()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Exceptions()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void PreprocessorDirectives()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void ReflectionsAndAttributes()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void WhatIsNewInCSharp6And7()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void OtherTopics()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
+                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
+                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
+                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
+                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
 
         public static void Decision(ref int choice, ref bool exit)
@@ -4910,6 +5241,14 @@ namespace Illustrated_CSharp_7
             ReadKey();
 
             Clear();
+        }
+    }
+
+    static class Eleven
+    {
+        public static void Structs()
+        {
+
         }
     }
 
