@@ -4901,7 +4901,12 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nOther Statement\n" +
-                "\t- ");
+                "\t- There are other statements that are associated with particular features of the language.\n\n" +
+                "\t\tStatement\t\t\tDescription\n\n" +
+                "\t\tchecked, unchecked\t\tThese statements control the overflow checking context.\n" +
+                "\t\tforeach\t\t\t\tThis statement iterates through each member of a collection.\n" +
+                "\t\ttry, throw, finally, return\tThese statements are associated with exceptions.\n" +
+                "\t\tyield\t\t\t\tThis statement is used with iterators.\n");
             ReadKey();
 
             Clear();
