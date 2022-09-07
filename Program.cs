@@ -4830,7 +4830,18 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe goto Statement\n" +
-                "\t- ");
+                "\t- The 'goto' statement unconditionally transfer control to a 'labeled statement'. Its general form is the following, where " +
+                "'Identifier' is the identifer of a labeled statement:\n\n" +
+                "\t\tgoto Identifier;\n\n" +
+                "\t- The 'goto' statement must be 'within' the scope of the labeled statement.\n" +
+                "\t\t- A 'goto' statement can jump to any labeled statement within its own block or jump 'out' to any block in which it is nested.\n" +
+                "\t\t- A 'goto' statement cannot jump 'into' any blocks nested within its own block.\n\n" +
+                "\t- Using the 'goto' statement is strongly discouraged because it can lead to code that is poorly structured and difficult to debug and " +
+                "maintain.\n");
+            WriteLine("\nThe goto Statement Inside a switch Statement\n" +
+                "\t- There are also two forms of the 'goto' statement, for use inside 'switcht' statement. These 'goto' statements transfer control to the " +
+                "correspondingly named switch label in the switch statement.\n" +
+                "\t- However, it is only possible to use 'goto' labels that reference compile-time constants (as were used in pre-C# 7.0 switch statements).\n");
             ReadKey();
 
             Clear();
@@ -4841,7 +4852,12 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe using Statement\n" +
-                "\t- ");
+                "\t- Certain types of unmanaged objects are limited in number or are expensive with system resources. It's important that when your code is done " +
+                "with them, they be released as soon as possible.\n" +
+                "\t- The 'using' statement helps simplify the process and ensures that these resources are properly disposed of.\n\n" +
+                "\t- A 'resource' is a class or struct that implements the 'System.IDisposable' interface. An interface is a collection of unimplemented function " +
+                "members that classes and structs can choose to implement. The 'IDisposable' interface contains a single method, named 'Dispose'.\n\n" +
+                "\t- The phase ");
             ReadKey();
 
             Clear();
