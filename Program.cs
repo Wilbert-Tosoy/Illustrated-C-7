@@ -5248,7 +5248,26 @@ namespace Illustrated_CSharp_7
     {
         public static void Structs()
         {
+            Clear();
 
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tStructs\n" +
+                "\n\t1. What are Structs?\n\t2. Structs are Value Types\n\t3. Assigning to a Struct\n\t4. Constructors and Destructors\n\t5. Property and Field Initializer" +
+                "\n\t6. Structs are Sealed\n\t7. Boxing and Unboxing\n\t8. Structs as Return Values and Parameters" +
+                "\n\t9. Additional Information About Structs\n\t10. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
         }
     }
 
