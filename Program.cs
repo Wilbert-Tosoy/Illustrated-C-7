@@ -4803,7 +4803,23 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nLabeled Statement\n" +
-                "\t- ");
+                "\t- A 'labeled statement' consists of an identifier, followed by a colon, followed by a statement.\n" +
+                "\t- It has the following form:\n\n" +
+                "\t\tIdentifier: Statement\n\n" +
+                "\t- A labeled statement is executed exactly as if the label were not there and consisted of just the 'Statement' part.\n" +
+                "\t\t- Adding a label to a statement allow control to be transferred to the statement from  another part of the code.\n" +
+                "\t\t- Labeled statements are allowed only inside blocks.\n");
+            WriteLine("\nLabels\n" +
+                "\t- Labels have their own declaration space, so the identifier in a labeled statement can be any valid identifier - including those " +
+                "that might be declared in an overlapping scope, such as local variables or parameter names.\n\n" +
+                "\t- There are restrictions, however, the identifier cannot be either\n" +
+                "\t\t- A keyword\n" +
+                "\t\t- The same as another label identifier with an overlapping scope\n");
+            WriteLine("\nThe Scope of Labeled Statements\n" +
+                "\t- Labeled statements cannot be seen or accessed from 'outside' the block in which they are declared.\n" +
+                "\t- The scope of a labeled statement is the following:\n" +
+                "\t\t- The block in which it is declared.\n" +
+                "\t\t- Any blocks nested inside that block.\n");
             ReadKey();
 
             Clear();
