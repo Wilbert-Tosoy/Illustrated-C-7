@@ -4570,8 +4570,8 @@ namespace Illustrated_CSharp_7
             WriteLine("\nThe if Statement\n" +
                 "\t- The 'if' statement implements conditional execution.\n" +
                 "\t- The syntax for the 'if' statement is the following:\n\n" +
-                "\t\tif( TestExpression )\n" +
-                "\t\t\tStatement\n\n" +
+                "\t\t\tif( TestExpression )\n" +
+                "\t\t\t\tStatement\n\n" +
                 "\t\t- 'TestExpression' must evaluate to a value of type 'bool'.\n" +
                 "\t\t- If 'TestExpression' evaluates to 'true', 'Statement' is executed.\n" +
                 "\t\t- If it evaluates to 'false', 'Statement' is skipped.\n");
@@ -4587,10 +4587,10 @@ namespace Illustrated_CSharp_7
             WriteLine("\nThe if...else Statement\n" +
                 "\t- The 'if...else' statement implements a two-way branch.\n" +
                 "\t- The syntax for the 'if...else' is the following:\n\n" +
-                "\t\tif( TestExpression )\n" +
-                "\t\t\tStatement1\n" +
-                "\t\telse\n" +
-                "\t\t\tStatement2\n\n" +
+                "\t\t\tif( TestExpression )\n" +
+                "\t\t\t\tStatement1\n" +
+                "\t\t\telse\n" +
+                "\t\t\t\tStatement2\n\n" +
                 "\t\t- If 'TestExpression' evaluates to true, 'Statement1' is executed.\n" +
                 "\t\t- Otherwise, 'Statement2' is executed instead.\n\n" +
                 "\t- Of course, 'Statement1', 'Statement2', or both could themselves be 'if' or 'if...else' statements, which could be nested further.\n" +
@@ -4598,12 +4598,12 @@ namespace Illustrated_CSharp_7
                 "rule. Every 'else' belongs to the 'closest previous if' that doesn't have an associated 'else clause'.\n\n" +
                 "\t- When 'Statement2' is an 'if' or 'if...else' statement, it's common to format the construct as in the following code, putting the second 'if' clause " +
                 "on the same line as the 'else' clause. This examples shows two 'if...else' statements, but you can make an arbitrarily long chain.\n\n" +
-                "\t\tif( TestExpression1 )\n" +
-                "\t\t\tStatement1\n" +
-                "\t\telse if ( TestExpression2 )\n" +
-                "\t\t\tStatement2\n" +
-                "\t\telse\n" +
-                "\t\t\tStatement3\n");
+                "\t\t\tif( TestExpression1 )\n" +
+                "\t\t\t\tStatement1\n" +
+                "\t\t\telse if ( TestExpression2 )\n" +
+                "\t\t\t\tStatement2\n" +
+                "\t\t\telse\n" +
+                "\t\t\t\tStatement3\n");
             ReadKey();
 
             Clear();
@@ -4616,8 +4616,8 @@ namespace Illustrated_CSharp_7
             WriteLine("\nThe while Loop\n" +
                 "\t- The 'while' loop is a simple loop construct in which the test expression is performed at the top of the loop.\n" +
                 "\t- The syntax of the 'while' loop is the following:\n\n" +
-                "\t\twhile( TestExpression )\n" +
-                "\t\t\tStatement\n\n" +
+                "\t\t\twhile( TestExpression )\n" +
+                "\t\t\t\tStatement\n\n" +
                 "\t\t- First, 'TestExpression' is evaluated.\n" +
                 "\t\t- If 'TestExpression' evaluates to 'false', then execution continues after the end of the 'while' loop.\n" +
                 "\t\t- Otherwise, when 'TestExpression' evaluates to 'true', then 'Statement' is executed, and 'TestExpression' is evaluated again. Each time 'TestExpression' " +
@@ -4634,9 +4634,9 @@ namespace Illustrated_CSharp_7
             WriteLine("\nThe do Loop\n" +
                 "\t- The 'do' loop is a simple loop construct in which the test expression is performed at the bottom of the loop.\n" +
                 "\t- The syntax for the 'do' loop is the following:\n\n" +
-                "\t\tdo\n" +
-                "\t\t\tStatement\n" +
-                "\t\twhile( TestExpression );\n\n" +
+                "\t\t\tdo\n" +
+                "\t\t\t\tStatement\n" +
+                "\t\t\twhile( TestExpression );\n\n" +
                 "\t\t- First, 'Statement' is executed.\n" +
                 "\t\t- Then, 'TestExpression' is evaluated.\n" +
                 "\t\t- If 'TestExpression' returns 'true', then 'Statement' is executed again.\n" +
@@ -4658,8 +4658,8 @@ namespace Illustrated_CSharp_7
             WriteLine("\nThe for Loop\n" +
                 "\t- The 'for' loop construct executes the body of the loop as long as the test expression returns 'true' when it is evaluated at the top of the loop.\n" +
                 "\t- The syntax of the 'for' loop is the following:\n\n" +
-                "\t\tfor( Intializer ; TestExpression ; IterationExpression )\n" +
-                "\t\t\tStatement\n\n" +
+                "\t\t\tfor( Intializer ; TestExpression ; IterationExpression )\n" +
+                "\t\t\t\tStatement\n\n" +
                 "\t\t- At the beginning of the 'for' loop, 'Initializer' is executed once.\n" +
                 "\t\t- 'TextExpression' is then evaluated.\n" +
                 "\t\t- If 'TestExpression' returns 'true', 'Statement' is executed, followed by 'IterationExpression'.\n" +
@@ -4691,8 +4691,60 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe switch Statement\n" +
+                "\t- The 'switch' statement implements multiway branching. \n" +
+                "\t- The structure and syntax of the 'switch' statement are the following:\n\n" +
+                "\t\t\tswitch( TestExpression )\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\tcase Expression1:\n" +
+                "\t\t\t\t\tStatementList\n" +
+                "\t\t\t\t\t\tbreak;\n" +
+                "\t\t\t\t\t...\n" +
+                "\t\t\t\tcase ExpressionN:\n" +
+                "\t\t\t\t\tStatementList\n" +
+                "\t\t\t\t\t\tbreak;\n" +
+                "\t\t\t\tdefault:\n" +
+                "\t\t\t\t\tStatementList\n" +
+                "\t\t\t\t\t\tbreak;\n" +
+                "\t\t\t}\n\n" +
+                "\t\t- The 'switch' statement has a single parameter generally referred to as the 'test' or 'matching expression'. Previously, these test expressions " +
+                "had to be one of the following data types: 'char', 'string', 'bool', 'integer', or 'enum'. C# 7.0 now allows the test expression to be of any type.\n" +
+                "\t\t- The 'switch' statement contains zero or more 'switch sections'.\n" +
+                "\t\t- Each switch section starts with one or more 'switch labels'. Each switch label is followed by a pattern expression that will be compared to the " +
+                "test expression. If both the test and pattern expressions are integral types, the comparison is peformed using the C# equality operator (==).\n" +
+                "\t\t- In all other cases, the comparison is executed using the static method 'Object.Equals(test, pattern)'. In other words, for nonintegral types, " +
+                "C# uses a deep comparison.\n" +
+                "\t\t- Each switch section must adhere to the 'no fall through rule'.\n" +
+                "\t\t- This means that the flow of control of the statement list in the switch section cannot reach the end and meet the next section. This rule is " +
+                "usually implemented by ending the statement list with a 'break' statement or one of the other four jump statements.\n" +
+                "\t\t- Note, however, that the 'goto' jump statement cannot be used with nonconstant 'switch' expressions.\n" +
+                "\t\t\t- The jump statements are 'break', 'return', 'continue', 'goto', and 'throw'.\n" +
+                "\t\t\t- Of the five jump statements, the 'break' statement is the most commonly used for ending a switch section. The 'break' statement branches execution " +
+                "to the end of the 'switch' statement.\n" +
+                "\t\t- Switch sections are evaluated in order. If one matches the value of the test expression, its switch section is executed, and then control jumps to " +
+                "the location specified by the jump statement used in that switch section.\n" +
+                "\t\t- Since the 'break' statement is most commonly used jump statement, usually control jumps to the first line of executable code following the end " +
+                "of the 'switch' statement.\n\n" +
+                "\t- Switch labels have the following form:\n\n" +
+                "\t\tcase PatternExpression:\n");
+            WriteLine("\nOther Types of Pattern Expressions\n" +
+                "\t- A case label consists of the keyword case followed by a pattern.\n" +
+                "\t- Patterns can be a simple value, an expression that evaluates to a simple value, or type.\n" +
+                "\t- A pattern can include a filter introduced by the keyword 'when'.\n" +
+                "\t- Note also that there is no requirement that all case expressions must be either constant values or types. These can be intermingled as desired.\n");
+            WriteLine("\nMore on the switch Statement\n" +
+                "\t- A 'switch' statement can have any number of switch sections, including none.\n" +
+                "\t- The 'default' section is not required. It is, however, generally considered good practice to include it, since it can catch potential errors.\n");
+            WriteLine("\nSwitch Labels\n" +
+                "\t- The expression following the keyword 'case' in a switch label can be a pattern of any type.\n" +
+                "\t- Before C# 7.0, it had to be a constant expression and therefore had to be completely evaluable by the compiler at 'compile time'. This constraints " +
+                "no longer applies.\n\n" +
+                "\t- Note that unlike C and C++, in C# each 'switch' section, including the optional default section, must end with one of the jump statements. In C#, " +
+                "you cannot execute the code in one switch section and then 'fall through' to the next.\n\n" +
+                "\t- Although C# does not allow falling through from one switch section to another, you can attach multiple switch labels to any switch section as long " +
+                "as there are 'no intervening executable statements' between the switch labels.\n\n" +
+                "\t- Although the most common way to end a switch section is to use one of the five jump statements, the compiler is smart enough to determine that a " +
+                "particular construct will allow the statement list to meet the 'no fall through rule'.\n");
             ReadKey();
 
             Clear();
