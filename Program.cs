@@ -4802,7 +4802,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\nLabeled Statements\n" +
+            WriteLine("\nLabeled Statement\n" +
                 "\t- ");
             ReadKey();
 
@@ -4813,7 +4813,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nThe goto Statement\n" +
                 "\t- ");
             ReadKey();
 
