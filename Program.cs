@@ -4655,8 +4655,33 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nThe for Loop\n" +
+                "\t- The 'for' loop construct executes the body of the loop as long as the test expression returns 'true' when it is evaluated at the top of the loop.\n" +
+                "\t- The syntax of the 'for' loop is the following:\n\n" +
+                "\t\tfor( Intializer ; TestExpression ; IterationExpression )\n" +
+                "\t\t\tStatement\n\n" +
+                "\t\t- At the beginning of the 'for' loop, 'Initializer' is executed once.\n" +
+                "\t\t- 'TextExpression' is then evaluated.\n" +
+                "\t\t- If 'TestExpression' returns 'true', 'Statement' is executed, followed by 'IterationExpression'.\n" +
+                "\t\t- Control then returns to the top of the loop, and 'TestExpression' is evaluated again.\n" +
+                "\t\t- As long as 'TestExpression' returns 'true', 'Statement', followed by the 'IterationExpression', is executed.\n\n" +
+                "\t- As soon as 'TestExpression' returns 'false', execution continues at the statement following 'Statement'.\n\n" +
+                "\t- Some parts of the statement are optional, and others are required.\n" +
+                "\t\t- 'Initializer', 'TestExpression', and 'IterationExpression' are all optional. Their positions can be left blank. If the 'TestExpression' is left blank, " +
+                "the test is 'assumed to return true'. Therefore, there must be some other means of exiting the statement if the program is to avoid going into an infinite loop.\n" +
+                "\t\t- The two semicolons are always required as field separators, even if any of the optional items are ommitted.\n\n" +
+                "\t- Some important things to know about 'for' loop are the following:\n" +
+                "\t\t- 'Initializer' is executed only once, before any other part of the 'for' construct. It is usually used to declare and initialize local values to be used " +
+                "in the loop.\n" +
+                "\t\t- 'TestExpresion' is evaluated to determine whether 'Statement' should be executed or skipped. It must evaluate to a value of type 'bool'. As stated " +
+                "previously, if 'TestExpression' is left blank, it is assumed to always be true.\n" +
+                "\t\t- 'IterationExpression' is executed immediatedly after the 'Statement' and before returning to the top of the loop to 'TestExpression'.\n");
+            WriteLine("\nThe Scope of Variables in a for Statement\n" +
+                "\t- Variables declared in the 'initializer', called 'loop variables', are visible 'only within the for statement'.\n" +
+                "\t\t- This is different form C and C++, where the declaration introduces the variable into the closing block.\n" +
+                "\t\t- The local variables declared within the body of the loop are known only within the loop.\n");
+            WriteLine("\nMultiple Expressions in the Initializer and Iteration Expression\n" +
+                "\t- Bothe the initializer expression and the iteration expression can contain multiple expressions as long as they are separated by commas.\n");
             ReadKey();
 
             Clear();
