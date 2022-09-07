@@ -482,7 +482,7 @@ namespace Illustrated_CSharp_7
                     Ten.Statements();
                     break;
                 case 11:
-                    Structs();
+                    Eleven.Structs();
                     break;
                 case 12:
                     Enumerations();
@@ -5262,13 +5262,111 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //NineDecision(ref choice);
+                //ElevenDecision(ref choice);
 
-            } while (choice != 19);
+            } while (choice != 10);
 
 
             Clear();
         }
-    }
 
+        static void WhatAreStructs()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void StructsAreValueTypes()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AssigningToAStruct()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void ConstructorsAndDestructors()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void PropertyAndFieldInitializer()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void StructsAreSealed()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void BoxingAndUnboxing()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void StructsAsReturnValuesAndParameters()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AdditionalInformationAboutStructs()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- \n");
+            ReadKey();
+
+            Clear();
+        }
+    }
 }
