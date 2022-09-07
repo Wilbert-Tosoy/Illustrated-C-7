@@ -4857,7 +4857,40 @@ namespace Illustrated_CSharp_7
                 "\t- The 'using' statement helps simplify the process and ensures that these resources are properly disposed of.\n\n" +
                 "\t- A 'resource' is a class or struct that implements the 'System.IDisposable' interface. An interface is a collection of unimplemented function " +
                 "members that classes and structs can choose to implement. The 'IDisposable' interface contains a single method, named 'Dispose'.\n\n" +
-                "\t- The phase ");
+                "\t- The phase of using a resource consist of the following:\n" +
+                "\t\t- Allocating the resource\n" +
+                "\t\t- Using the resource\n" +
+                "\t\t- Disposing of the resource\n\n" +
+                "\t- If an unexpected runtime error occurs during the portion of the code using the resource, the code disposing of the resource might not get " +
+                "executed.\n\n" +
+                "\t- Note that the 'using' statement is different from 'using' directives.\n");
+            WriteLine("\nPackaging the Use of a Resource\n" +
+                "\t- The 'using' statement helps reduce the potential proble, of an unexpected runtime error by neatly packaging the use of a resource.\n" +
+                "\t- There are two forms of the 'using' statement. The first form is the following:\n\n" +
+                "\t\tusing ( ResourceType Identifier = Expression ) Statement\n\n" +
+                "\t- The code between the parentheses allocates the resource.\n" +
+                "\t- 'Statement' is the code that uses the resource.\n" +
+                "\t- The 'using' statement 'implicitly generates' the code to dispose of the resource.\n\n" +
+                "\t- Unexpected runtime errors are called 'exceptions'. The standard way of handling the possibility of exceptions is to place the code that might cause " +
+                "an exception in a 'try' block and place any code that 'must' be executed, whether or not there is an exception, into a 'finally' block.\n" +
+                "\t- This form of the 'using' statement dose exactly that. It performs the following:\n" +
+                "\t\t- Allocating the resource\n" +
+                "\t\t- Placing 'Statement' in a 'try' block\n" +
+                "\t\t- Creating a call to the resource's 'Dispose' method and placing it in a finally block.\n");
+            WriteLine("\nMultiple Resources and Nesting\n" +
+                "\t- The 'using' statement can also be used with multiple resources of the same type, with the resource declarations separated by commas.\n" +
+                "\t- The syntax is the following:\n\n" +
+                "\t\tusing ( ResourceType Identifier1 = Expression1, Identifier2 = Expression2, ... ) Embedded Statement\n\n" +
+                "\t- The 'using' statement can also be nested. \n" +
+                "\t- Beside the nesting of the 'using' statements, also note that it is not necessary to use a block with the second 'using' because it consists " +
+                "only a single, simple statement.\n");
+            WriteLine("\nAnother Form of the using Statement\n" +
+                "\t- Another form of the 'using' statement is the following:\n\n" +
+                "\t\tusing ( Expression ) EmbeddedStatement\n\n" +
+                "\t- In this form, the resource is declared before using the statement.\n\n" +
+                "\t- Although this form ensures that the 'Dispose' method will always be called after you finish using the resource, it does not protect you from " +
+                "attempting to use the resource after the 'using' statement has released its unmanaged resources, leaving it in an inconsistent state. \n" +
+                "\t- It therefore gives less protection and is discouraged.\n");
             ReadKey();
 
             Clear();
