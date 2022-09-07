@@ -4835,7 +4835,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nOther Statement\n" +
                 "\t- ");
             ReadKey();
 
