@@ -5262,12 +5262,49 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //ElevenDecision(ref choice);
+                ElevenDecision(ref choice);
 
             } while (choice != 10);
 
 
             Clear();
+        }
+
+        static void ElevenDecision(ref int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    WhatAreStructs();
+                    break;
+                case 2:
+                    StructsAreValueTypes();
+                    break;
+                case 3:
+                    AssigningToAStruct();
+                    break;
+                case 4:
+                    ConstructorsAndDestructors();
+                    break;
+                case 5:
+                    PropertyAndFieldInitializer();
+                    break;
+                case 6:
+                    StructsAreSealed();
+                    break;
+                case 7:
+                    BoxingAndUnboxing();
+                    break;
+                case 8:
+                    StructsAsReturnValuesAndParameters();
+                    break;
+                case 9:
+                    AdditionalInformationAboutStructs();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
         }
 
         static void WhatAreStructs()
