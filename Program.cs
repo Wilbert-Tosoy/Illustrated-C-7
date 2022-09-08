@@ -5311,7 +5311,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nWhat Are Structs?\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5322,7 +5322,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nStructs Are Value Types\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5333,7 +5333,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nAssigning to a Struct\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5344,7 +5344,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nConstructors and Destructors\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5355,7 +5355,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nProperty and Field Initializers\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5366,7 +5366,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nStructs Are Sealed\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5377,7 +5377,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nBoxing and Unboxing\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5388,7 +5388,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nStructs As Return Values and Parameters\n" +
                 "\t- \n");
             ReadKey();
 
@@ -5399,7 +5399,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nAdditional Information About Structs\n" +
                 "\t- \n");
             ReadKey();
 
