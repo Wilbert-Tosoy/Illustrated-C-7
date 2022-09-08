@@ -5346,7 +5346,8 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAssigning to a Struct\n" +
-                "\t- \n");
+                "\t- Assigning one struct to another copies the values from one to the other.\n" +
+                "\t- This is quite different from copying from a class variable, where only the reference is copied.\n");
             ReadKey();
 
             Clear();
