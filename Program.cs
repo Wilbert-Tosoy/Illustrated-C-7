@@ -5323,7 +5323,9 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nStructs Are Value Types\n" +
-                "\t- \n");
+                "\t- As with all value types, a variable of a struct type contains its own data. Consequently,\n" +
+                "\t\t- A variable of a struct type cannot be 'null'.\n" +
+                "\t\t- Two structs variables cannot refer to the same object.");
             ReadKey();
 
             Clear();
