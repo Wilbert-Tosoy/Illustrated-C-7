@@ -5312,7 +5312,17 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nWhat Are Structs?\n" +
-                "\t- \n");
+                "\t- Structs are programmer-defined data types, similar to classes.\n" +
+                "\t- They have data members and function members. Although structs are similar to classes, there are a number of important differences.\n" +
+                "\t- The most important ones are the following:\n" +
+                "\t\t- Classes are reference types, and structs are value types.\n" +
+                "\t\t- Structs are implicitly sealed, which means they cannot be derived from.\n\n" +
+                "\t- The syntax for declaring a struct is similar to that of declaring a classs.\n" +
+                "\t\tstruct StructName\n" +
+                "\t\t{\n" +
+                "\t\t\tMemberDeclarations\n" +
+                "\t\t}\n" +
+                "\n");
             ReadKey();
 
             Clear();
