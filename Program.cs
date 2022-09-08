@@ -5358,7 +5358,34 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nConstructors and Destructors\n" +
-                "\t- \n");
+                "\t- Structs can have instance and static constructors, but destructors are not allowed.\n");
+            WriteLine("\nInstance Constructors\n" +
+                "\t- The language implicitly supplies a parameterless constructor for every struct. \n" +
+                "\t- This constructor sets each of the struct's members to the default value for that type.\n" +
+                "\t- Value members are set ot their default values. Reference members are set ot 'null'.\n\n" +
+                "\t- The predefined parameterless constructor exist for every struct - and you cannot delete or redefine it.\n" +
+                "\t- You can, however, create additional constructors, as long as they have parameters.\n" +
+                "\t- Notice that this is different from classes. 'For classes', the compiler supplies an implicit parameterless constructor 'only if no other " +
+                "constructors are declared'.\n\n" +
+                "\t- To invoke a constructor, including the implicit parameterless constructor, use the 'new' operator. \n" +
+                "\t- Notice that the 'new' operator is used even though the memory is not allocated from the heap.\n\n" +
+                "\t- You can also create an instance of a struct without using the 'new' operator. If you do this, however, there are several restrictions, which " +
+                "are the following:\n" +
+                "\t\t- You cannot use the value of a data member until you have explicitly set it.\n" +
+                "\t\t- You cannot call 'any' function member of the struct until 'all' the data members have been assigned.\n");
+            WriteLine("\nStatic Constructors\n" +
+                "\t- As with classes, the static construtors of structs create and initialize the static data members and cannot reference instance members.\n" +
+                "\t- Static constructors for structs follows the same rules as those for classes, except that parameterless static constructors are permitted.\n" +
+                "\t- A static constructor is called before the first of either of the following two actions:\n" +
+                "\t\t- A call to an explicitly declared constructor.\n" +
+                "\t\t- A reference to a static member of a struct.\n");
+            WriteLine("\nSummary of Constructors and Destructors\n\n" +
+                "\tType\t\t\t\t\tDescription\n\n" +
+                "\tInstance constructor (parameterless)\tCannot be declared in the program. An implicit constructor is always supplied by the system for all structs. " +
+                "It cannot be deleted or refefined by the program.\n" +
+                "\tInstance construtor (with parameters)\tCan be declared in the program.\n" +
+                "\tStatic constructor\t\t\tCan be declared in the program.\n" +
+                "\tDestructor\t\t\t\tCannot be declared in the program. Destructors are not allowed.\n");
             ReadKey();
 
             Clear();
