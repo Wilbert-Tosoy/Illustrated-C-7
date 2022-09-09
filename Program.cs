@@ -5460,7 +5460,12 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAdditional Information About Structs\n" +
-                "\t- \n");
+                "\t- Allocating structs requires less overhead than creating instances of a classs, so using structs instead of classes can sometimes improve " +
+                "performance - but beware of the high cost of boxing and unboxing.\n\n" +
+                "\t- Finally, some last things you should know about structs are the following:\n" +
+                "\t\t- The predefined simple types, although considered primitives in .NET and C#, are all actually implemented under the covers in .NET as structs.\n" +
+                "\t\t- You can declare 'partial' structs in the same way as 'partial classes'.\n\n" +
+                "\t- Structs, like classes, can implement interfaces.");
             ReadKey();
 
             Clear();
