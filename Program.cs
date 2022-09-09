@@ -31,32 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }               
 
-        public static void Enumerations()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\n\tExpressions and Operators\n" +
-                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
-                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
-                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
-                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
-                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-                //NineDecision(ref choice);
-
-            } while (choice != 19);
-
-
-            Clear();
-        }
-
         public static void Arrays()
         {
             Clear();
@@ -485,7 +459,7 @@ namespace Illustrated_CSharp_7
                     Eleven.Structs();
                     break;
                 case 12:
-                    Enumerations();
+                    Twelve.Enumerations();
                     break;
                 case 13:
                     Arrays();
@@ -5471,4 +5445,30 @@ namespace Illustrated_CSharp_7
             Clear();
         }
     }
+
+    static class Twelve
+    {
+        public static void Enumerations()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tExpressions and Operators\n" +
+                "\n\t1. Enumerations\n\t2. Bit Flags\n\t3. More About Enums\n\t4. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //TwelveDecision(ref choice);
+
+            } while (choice != 4);
+
+
+            Clear();
+        }
+    }
+
 }
