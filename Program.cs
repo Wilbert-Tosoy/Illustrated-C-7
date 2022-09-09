@@ -5539,7 +5539,37 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nBit Flags\n" +
-                "\t- ");
+                "\t- Programmers have long used the different bits in a single word as a compact way of representing a set of on/off flags. We call this word 'flag word'.\n" +
+                "\t- Enums offer a convenient way to implement this.\n\n" +
+                "\t- The general steps are the following:\n" +
+                "\t\t- Determine how many bit flags you need and choose an unsigned integer type.\n" +
+                "\t\t- Determine what each bit position represents and give it a name. Declare an enum of the chosen integer type, with each member represented by a bit position.\n" +
+                "\t\t- Use the bitwise OR operator to set the appropriate bits in a word holding the bit flags.\n" +
+                "\t\t- You can check whether a particular bit flag is set by using either the 'HasFlag' method or the bitwise AND operator.\n\n" +
+                "\t- Take note of the following:\n" +
+                "\t\t- The members have names that represent binary options.\n" +
+                "\t\t\t- Each option is represented by a particular bit position in the word. Bit positions hold either a 0 or a 1.\n" +
+                "\t\t\t- Since a bit flag represents a set of bits that are either on or off, you do not want to use 0 as a member value. It already has a meaning - that all the " +
+                "bits flags are off.\n" +
+                "\t\t- With hexadecimal representation, every hexadecimal digits represents exact bits. Because of this direct correlation between the bit patterns and hexadecimal " +
+                "representation, when working with bit patterns, hex is often used rather than decimal representation.\n" +
+                "\t\t- Starting with C# 7.0 binary representation is also now available.\n" +
+                "\t\t- Decorating the enum with the 'Flags' attribute is not actually necessary but gives some additional convenience. An attribute appears as a string between square " +
+                "brackets, immediately preceding a language construct. In this case, the attribute is immediately before the enum declaration.\n");
+            WriteLine("\nThe Flags Attribute\n" +
+                "\t- The preceding code used te 'Flags' attribute just before declaring the enum:\n\n" +
+                "\t\t[ Flags ]\n" +
+                "\t\tenum EnumName : IntegerType\n" +
+                "\t\t{\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t- The 'Flags' attribute does not change the calculation at all. It does, however, provide several convenient features.\n" +
+                "\t- First, it informs the compiler, object browsers, and other tools looking at the code that the members of the enum are meant to be combined as bit flags, rather than " +
+                "used only as seperate values.\n" +
+                "\t- This allows the browsers to interpret variables of the enum type more appropriately.\n\n" +
+                "\t- Second, it allows the 'ToString' method of an enum to provide more appropriate formatting for the values of bit flags. \n" +
+                "\t- The 'ToString' method takes an enum value and compares it to the value of the constant member of the enum.\n" +
+                "\t- If it matches one of the members, 'ToString' returns the string name of the member.\n");
             ReadKey();
 
             Clear();
