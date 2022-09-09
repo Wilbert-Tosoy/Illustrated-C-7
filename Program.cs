@@ -5432,7 +5432,8 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nBoxing and Unboxing\n" +
-                "\t- \n");
+                "\t- As with other value type data., if you want to use a struct instance as a reference type object, you must make a boxed copy.\n" +
+                "\t- Boxing is the process of making a reference type copy of a value type variable.\n");
             ReadKey();
 
             Clear();
