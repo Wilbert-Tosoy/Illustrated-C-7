@@ -5409,7 +5409,19 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nStructs Are Sealed\n" +
-                "\t- \n");
+                "\t- Structs are always implicitly sealed, and hence you cannot derive other structs from them.\n\n" +
+                "\t- Since structs do not support inheritance, the use of several of the class member modifiers with struct members would not make sense; thus, " +
+                "you cannot use them in their declarations.\n" +
+                "\t- The modifiers that cannot be used with structs are the following:\n" +
+                "\t\t- protected\n" +
+                "\t\t- protected internal\n" +
+                "\t\t- abstract\n" +
+                "\t\t- sealed\n" +
+                "\t\t- virtual\n\n" +
+                "\t- Structs themselves are, under the covers, derived from 'System.ValueType', which is derived from 'object'.\n\n" +
+                "\t- There are two-inheritance-associated keywords that you 'can' use with struct members: the 'new' and 'override' modifiers. \n" +
+                "\t- These keywords are appropriate when creating a member with the same name as a member of the base class 'System.ValueType', from which " +
+                "all structs are derived.\n");
             ReadKey();
 
             Clear();
