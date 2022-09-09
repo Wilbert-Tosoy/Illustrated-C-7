@@ -5495,7 +5495,40 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nEnumerations\n" +
-                "\t- ");
+                "\t- An 'enumearation', or enum, is a programmer-defined type, such as class or a struct.\n" +
+                "\t\t- Like structs, enums are value types and therefore store their data directly, rather than separately, with a reference and data.\n" +
+                "\t\t- Enums have only one type of member: named constants with integer values.\n" +
+                "\t- Note that the list of member declarations is a comma-separated list; there are no semicolons in an enum declaration.\n\n" +
+                "\t\tenum EnumName\n" +
+                "\t\t{\n" +
+                "\t\t\tMember1,\n" +
+                "\t\t\tMember2,\n" +
+                "\t\t\tMember3,\n" +
+                "\t\t\t...\n" +
+                "\t\t\tMemberN\n" +
+                "\t\t}\n\n" +
+                "\t- Every enum type has an underlying integer type, which by default is 'int'.\n" +
+                "\t\t- Each enum member is assigned a constant value of underlying type.\n" +
+                "\t\t- By default, the compiler assigns 0 to the first member and assigns each subsequent member of the value one more than the previous member.\n\n" +
+                "\t- You can assign enum values to variables of the enum type.\n" +
+                "\t- You can assign member literals to variables, or you can copy the value from another variable of the same type.\n");
+            WriteLine("\nSetting the Underlying Type and Explicit Values\n" +
+                "\t- You can use an integer type other than 'int' by placing a colon and the type name after the enum name. The type can be any integer type.\n" +
+                "\t- All the member constants are of the enum's underlying type.\n\n" +
+                "\t\tenum EnumName : IntegerType\n" +
+                "\t\t{\n" +
+                "\t\t\tMember1 = SetValue,\n" +
+                "\t\t\tMember2 = SetValue,\n" +
+                "\t\t\tMember3 = SetValue,\n" +
+                "\t\t\t...\n" +
+                "\t\t}\n\n" +
+                "\t- The values of the member constants can be any values of the underlying type. \n" +
+                "\t- To explicitly set the value of a member, use an initializer after its name in the enum declaration.\n" +
+                "\t- There can duplicate values, although not duplicate names.\n");
+            WriteLine("\nImplicit Member Numbering\n" +
+                "\t- You can explicitly assign the values for any of the member constants. \n" +
+                "\t- If you don't initialize a member constant, the compiler implicitly assigns it a value.\n" +
+                "\t- The values associated with the member names do not need to be distinct.\n");
             ReadKey();
 
             Clear();
