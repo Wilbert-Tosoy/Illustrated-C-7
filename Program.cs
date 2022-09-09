@@ -5396,7 +5396,9 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nProperty and Field Initializers\n" +
-                "\t- \n");
+                "\t- Instance property and field initializers are not allowed in struct declarations.\n" +
+                "\t- However, both static properties and static fields of a struct can be initialized in their declaration, even though structs themselves cannot be " +
+                "static.\n");
             ReadKey();
 
             Clear();
