@@ -5444,7 +5444,12 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nStructs As Return Values and Parameters\n" +
-                "\t- \n");
+                "\t- Structs can be used as return values and parameters.\n" +
+                "\t\t- 'Return value'           : When a struct is a return value, a copy is created and returned from the function member.\n" +
+                "\t\t- 'Value parameter'        : When a struct is used as a value parameter, a copy of the actual parameter struct is created. The copy " +
+                "is used in the execution of the method.\n" +
+                "\t\t- 'ref and out parameters' : If you use a struct as a 'ref' or 'out' parameter, a reference to the struct is passed into the method " +
+                "so that the data members can be changed.\n");
             ReadKey();
 
             Clear();
