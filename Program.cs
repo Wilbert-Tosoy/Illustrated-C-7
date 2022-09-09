@@ -4973,7 +4973,8 @@ namespace Illustrated_CSharp_7
                 "\t- As soon as 'TestExpression' returns 'false', execution continues at the statement following 'Statement'.\n\n" +
                 "\t- Some parts of the statement are optional, and others are required.\n" +
                 "\t\t- 'Initializer', 'TestExpression', and 'IterationExpression' are all optional. Their positions can be left blank. If the 'TestExpression' is left blank, " +
-                "the test is 'assumed to return true'. Therefore, there must be some other means of exiting the statement if the program is to avoid going into an infinite loop.\n" +
+                "the test is 'assumed to return true'. \n" +
+                "\t- Therefore, there must be some other means of exiting the statement if the program is to avoid going into an infinite loop.\n" +
                 "\t\t- The two semicolons are always required as field separators, even if any of the optional items are ommitted.\n\n" +
                 "\t- Some important things to know about 'for' loop are the following:\n" +
                 "\t\t- 'Initializer' is executed only once, before any other part of the 'for' construct. It is usually used to declare and initialize local values to be used " +
@@ -5291,7 +5292,7 @@ namespace Illustrated_CSharp_7
                 "\t- The most important ones are the following:\n" +
                 "\t\t- Classes are reference types, and structs are value types.\n" +
                 "\t\t- Structs are implicitly sealed, which means they cannot be derived from.\n\n" +
-                "\t- The syntax for declaring a struct is similar to that of declaring a classs.\n" +
+                "\t- The syntax for declaring a struct is similar to that of declaring a classs.\n\n" +
                 "\t\tstruct StructName\n" +
                 "\t\t{\n" +
                 "\t\t\tMemberDeclarations\n" +
