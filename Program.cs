@@ -5580,7 +5580,17 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nMore About Enums\n" +
-                "\t- ");
+                "\t- Enums have only a single member type: the declared member constants.\n" +
+                "\t\t- You cannot use modifiers with the members. They all implicitly have the same accessibility as the enum.\n" +
+                "\t\t- The members are 'static', which means that they are accessible even if there are no variables of the enum type.\n" +
+                "\t\t- As with all statics, there are two ways of accessing their members.\n" +
+                "\t\t\t- You can use the type name, followed by a dot and the member name.\n" +
+                "\t\t\t- Starting with C# 6.0 you can use the 'using static' directive to avoid the extra work and clutter of having to include the class name with every usage. This " +
+                "can make your code considerably cleaner.\n\n" +
+                "\t- An enum type is a distinct type. Comparing enum members of different enum types results in a compile-time error.\n\n" +
+                "\t- There are also several useful 'static' methods of the .NET Enum type, on which 'enum' is based.\n" +
+                "\t\t- The 'GetName' method takes an enum type object and an integer and returns the name of the corresponding enum member.\n" +
+                "\t\t- The 'GetName' method takes an enum type object and returns all the names of all the members in the enum.\n");
             ReadKey();
 
             Clear();
