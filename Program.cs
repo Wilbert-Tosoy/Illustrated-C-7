@@ -5462,13 +5462,64 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //TwelveDecision(ref choice);
+                TwelveDecision(ref choice);
 
             } while (choice != 4);
 
 
             Clear();
         }
-    }
 
+        static void TwelveDecision(ref int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    Enumeration();
+                    break;
+                case 2:
+                    BitFlags();
+                    break;
+                case 3:
+                    MoreAboutEnums();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
+
+        static void Enumeration()
+        {
+            Clear();
+
+            WriteLine("\nEnumerations\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void BitFlags()
+        {
+            Clear();
+
+            WriteLine("\nBit Flags\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void MoreAboutEnums()
+        {
+            Clear();
+
+            WriteLine("\nMore About Enums\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+    }
 }
