@@ -5755,7 +5755,9 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAccessing Array Elements\n" +
-                "\t- ");
+                "\t- An array element is accessed using an integer value as an index into the array.\n" +
+                "\t\t- Each dimension uses 0-based indexing.\n" +
+                "\t\t- The index is placed between square brackets following the array name.\n");
             ReadKey();
 
             Clear();
