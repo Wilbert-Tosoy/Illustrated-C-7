@@ -5656,10 +5656,10 @@ namespace Illustrated_CSharp_7
                 "\t\tArrayName[ index ]\n");
             WriteLine("\nDefinitions\n" +
                 "\t- Let's start with some important definitions having to do with arrays in C#.\n" +
-                "\t\t- 'Elements' : The individual data items of an array are called 'elements'. All elements of an array must be of the same type or derived from the same type.\n" +
-                "\t\t- 'Rank/dimensions : Arrays can have any positive number of dimensions. The number of dimensions an array has is called its 'rank'.\n" +
+                "\t\t- 'Elements'         : The individual data items of an array are called 'elements'. All elements of an array must be of the same type or derived from the same type.\n" +
+                "\t\t- 'Rank/dimensions   : Arrays can have any positive number of dimensions. The number of dimensions an array has is called its 'rank'.\n" +
                 "\t\t- 'Dimension length' : Each dimension of an array has a 'length', which is the same number of positions in that direction.\n" +
-                "\t\t- 'Array length' : The total number of elements contained in an array, in 'all' dimensions, is called the 'length' of the array.\n");
+                "\t\t- 'Array length'     : The total number of elements contained in an array, in 'all' dimensions, is called the 'length' of the array.\n");
             WriteLine("\nImportant Details\n" +
                 "\t- The following are some important general facts about C# arrays:\n" +
                 "\t\t- Once an array is created, its sized is fixed. C# does not support dynamic arrays.\n" +
@@ -5674,7 +5674,18 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nTypes of Arrays\n" +
-                "\t- ");
+                "\t- C# provides two kinds of arrays.\n" +
+                "\t\t- One-dimensional arrays can be thought of as a single line, or 'vector', of elements.\n" +
+                "\t\t- Multidimensional arrays are composed such that each position in the primary vector is itself an array, called a 'subarray'. " +
+                "Positions in the subarray vectors can themselves be subarrays.\n\n" +
+                "\t- Additionally, there are two types of multidimensional arrays : 'rectangular arrays' and 'jagged arrays'; they have the following characteristics:\n\n" +
+                "\t\t- Rectangular Arrays\n" +
+                "\t\t\t- Are multidimensional arrays where all the subarrays in particular dimension have the same length.\n" +
+                "\t\t\t- Always use a single set of square brackets, regardless of the number of dimensions.\n\n" +
+                "\t\t- Jagged Arrays\n" +
+                "\t\t\t- Are multidimensional arrays where each subarray is an independent array.\n" +
+                "\t\t\t- Can have subarrays of 'different lengths'.\n" +
+                "\t\t\t- Use a separate set of square brackets for each dimension of the array.\n");
             ReadKey();
 
             Clear();
