@@ -5743,7 +5743,7 @@ namespace Illustrated_CSharp_7
                 "\t- To instantiate an array, you use an 'array-creation expresion'. \n" +
                 "\t- An array-creation expression consists of the 'new' operator, followed by the base type, followed by a pair of square brackets.\n" +
                 "\t- The length of each dimension is placed in a comma-seperated list between the brackets.\n\n" +
-                "\t\tArrayType[ RankSpecifier ] ArrayName = new ArrayName[ DimensionLength ];\n\n" +
+                "\t\tArrayType[ ] ArrayName = new ArrayName[ ];\n\n" +
                 "\t- Note that unlike object-creation expressions, array-creation expressions do not contain parentheses - even for reference type arrays.\n");
             ReadKey();
 
@@ -5768,7 +5768,43 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInitializing an Array\n" +
-                "\t- ");
+                "\t- When an array is created, each  of the elements is automatically initialized to the default value for the type.\n" +
+                "\t- The default values for the predefined types are 0 for integer types, 0.0 for floating-point types, false for Booleans and null " +
+                "for reference types.\n");
+            WriteLine("\nExplicit Initialization of One-Dimensional Array\n" +
+                "\t- For a one-dimensional array, you can set explicit initial values by including an 'initialization list' immediately after the " +
+                "array-creation expression of an array instantation.\n\n" +
+                "\t\tArrayType[ ] ArrayName = new ArrayType[ ] { InitializationList };\n\n" +
+                "\t- The initialization values must be separated by commas and enclosed in a set of curly braces.\n" +
+                "\t- The dimension lengths are optional since the compiler can infer the lengths from the number of initializing values.\n");
+            WriteLine("\nExplicit Initialization of Rectangular Arrays\n" +
+                "\t- To explicitly initialize a rectangular array, you need to follow these rules:\n\n" +
+                "\t\tArrayType[ , ] ArrayName = new ArrayType[ , ] { { InitializationList } { InitializationList } ... }\n\ns" +
+                "\t- Each 'vector of initial values' must be enclosed in curly braces.\n" +
+                "\t- Each 'dimension' must also be nested and enclosed in curly braces.\n" +
+                "\t- In addition to the initial values, the initialization lists and components of each dimension must also be separated by commas.\n");
+            WriteLine("\nSyntax Points for Initializing Rectangular Arrays\n" +
+                "\t- Rectangular arrays are initialized with nested, comma-separated initialization list.\n" +
+                "\t- This initialization lists are nested in curly braces.\n" +
+                "\t- This can sometimes be confusing, so to get the nesting, grouping, and commas right, consider the following tips:\n" +
+                "\t\t- Commas are used as 'separators' between all 'elements' and 'groups'.\n" +
+                "\t\t- Commas are 'never' placed between left curly braces.\n" +
+                "\t\t- Commas are 'never' placed before a right curly brace.\n" +
+                "\t\t- If possible, use identation and carriage returns to arrange the groups so that they're visually distinct.\n" +
+                "\t\t- Read the rank specifications from left to right, designating the last number as 'elements' and all the others as 'groups'.\n");
+            WriteLine("\nShortcut Syntax\n" +
+                "\t- When combining declaration, array creation, and initialization in a single statement, you can omit the array-creation expression " +
+                "part of the syntax entirely and provide just the initialization portion.\n" +
+                "\t- Shortcut syntax, both are equivalent.\n\n" +
+                "\t\tArrayType[ ] ArrayName = new ArrayType[ DimensionLength ] { InitializationList };\n" +
+                "\t\tArrayType[ ] ArrayName =                                  { InitializationList };\n");
+            WriteLine("\nImplicitly Typed Arrays\n" +
+                "\t- Like other variables, your local arrays can also be implicitly typed. This means the following:\n" +
+                "\t\t- When initializing an array, you can let the compiler infer the array's type from the type of the initializers. This is allowed as long " +
+                "as all the initializers can be implicitly converted to a single type.\n" +
+                "\t\t- Just as with implicitly typed local variables, use the keyword 'var' instead of the array type.\n\n" +
+                "\t\t\tArrayType[ ] ArrayName = new ArrayType[ ] { InitializationList };\n" +
+                "\t\t\tvar          ArrayName = new          [ ] { InitializationList };\n");
             ReadKey();
 
             Clear();
