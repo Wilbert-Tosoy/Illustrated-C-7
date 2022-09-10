@@ -31,32 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }               
 
-        public static void Arrays()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\n\tExpressions and Operators\n" +
-                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
-                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
-                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
-                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
-                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-                //NineDecision(ref choice);
-
-            } while (choice != 19);
-
-
-            Clear();
-        }
-
         public static void Delegates()
         {
             Clear();
@@ -462,7 +436,7 @@ namespace Illustrated_CSharp_7
                     Twelve.Enumerations();
                     break;
                 case 13:
-                    Arrays();
+                    Thirteen.Arrays();
                     break;
                 case 14:
                     Delegates();
@@ -5457,7 +5431,7 @@ namespace Illustrated_CSharp_7
 
             do
             {
-                WriteLine("\n\tExpressions and Operators\n" +
+                WriteLine("\n\tEnumerations\n" +
                 "\n\t1. Enumerations\n\t2. Bit Flags\n\t3. More About Enums\n\t4. Exit\n");
 
                 Write("-> ");
@@ -5595,5 +5569,100 @@ namespace Illustrated_CSharp_7
 
             Clear();
         }
+    }
+
+    static class Thirteen
+    {
+        public static void Arrays()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tArrays\n" +
+                "\n\t1. Arrays\n\t2. Types of Arrays\n\t3. An Array as an Object\n\t4. One-Dimensional and Rectangular Arrays\n\t5. Instantiating a One-Dimensional or Rectangular Array" +
+                "\n\t6. Accessing Array Elements\n\t7. Initializing an Array\n\t8. Jagged Array\n\t9. Comparing Rectangular and Jagged Arrays\n\t10. The foreach Statement" +
+                "\n\t11. Array Covariance\n\t12. Useful Inherited Array Members\n\t13. Comparing Array Types\n\t14. Arrays Ref Local and Ref Return\n\t15. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //ThirteenDecision(ref choice);
+
+            } while (choice != 19);
+
+
+            Clear();
+        }
+
+
+
+        static void Array()
+        {
+
+        }
+
+        static void TypesOfArrays()
+        {
+
+        }
+
+        static void AnArrayAsAnObject()
+        {
+
+        }
+
+        static void OneDimensionalAndRectangularArrays()
+        {
+
+        }
+
+        static void AccessingArrayElements()
+        {
+
+        }
+
+        static void InitializingAnArray()
+        {
+
+        }
+
+        static void JaggedArrays()
+        {
+
+        }
+
+        static void ComparingRectangularAndJaggedArrays()
+        {
+
+        }
+
+        static void TheForEachStatement()
+        {
+
+        }
+
+        static void ArrayCovariance()
+        {
+
+        }
+
+        static void UsefulInheritedArrayMembers()
+        {
+
+        }
+
+        static void ComparingArrayTypes()
+        {
+
+        }
+
+        static void ArraysRefLocalAndRefReturn()
+        {
+
+        }
+
     }
 }
