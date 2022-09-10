@@ -5651,7 +5651,19 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nArrays\n" +
-                "\t- ");
+                "\t- An array is a set of uniform data elements represented by a single variable name.\n" +
+                "\t- The individual elements are accessed using the variable name together with one or more indexes between square bracket.\n\n" +
+                "\t\tArrayName[ index ]\n");
+            WriteLine("\nDefinitions\n" +
+                "\t- Let's start with some important definitions having to do with arrays in C#.\n" +
+                "\t\t- 'Elements' : The individual data items of an array are called 'elements'. All elements of an array must be of the same type or derived from the same type.\n" +
+                "\t\t- 'Rank/dimensions : Arrays can have any positive number of dimensions. The number of dimensions an array has is called its 'rank'.\n" +
+                "\t\t- 'Dimension length' : Each dimension of an array has a 'length', which is the same number of positions in that direction.\n" +
+                "\t\t- 'Array length' : The total number of elements contained in an array, in 'all' dimensions, is called the 'length' of the array.\n");
+            WriteLine("\nImportant Details\n" +
+                "\t- The following are some important general facts about C# arrays:\n" +
+                "\t\t- Once an array is created, its sized is fixed. C# does not support dynamic arrays.\n" +
+                "\t\t- Array indexes are 0-based. That is, if the length of a dimension is n, the index values range from 0 to n - 1.\n");
             ReadKey();
 
             Clear();
