@@ -5589,7 +5589,7 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //ThirteenDecision(ref choice);
+                ThirteenDecision(ref choice);
 
             } while (choice != 19);
 
@@ -5597,72 +5597,207 @@ namespace Illustrated_CSharp_7
             Clear();
         }
 
-
+        static void ThirteenDecision(ref int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    Array();
+                    break;
+                case 2:
+                    TypesOfArrays();
+                    break;
+                case 3:
+                    AnArrayAsAnObject();
+                    break;
+                case 4:
+                    OneDimensionalAndRectangularArrays();
+                    break;
+                case 5:
+                    InstantiatingAOneDimensionalOrRectangularArray();
+                    break;
+                case 6:
+                    AccessingArrayElements();
+                    break;
+                case 7:
+                    InitializingAnArray();
+                    break;
+                case 8:
+                    JaggedArrays();
+                    break;
+                case 9:
+                    ComparingRectangularAndJaggedArrays();
+                    break;
+                case 10:
+                    TheForEachStatement();
+                    break;
+                case 11:
+                    ArrayCovariance();
+                    break;
+                case 12:
+                    UsefulInheritedArrayMembers();
+                    break;
+                case 13:
+                    ComparingArrayTypes();
+                    break;
+                case 14:
+                    ArraysRefLocalAndRefReturn();
+                    break;
+            }
+        }
 
         static void Array()
         {
+            Clear();
 
+            WriteLine("\nArrays\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void TypesOfArrays()
         {
+            Clear();
 
+            WriteLine("\nTypes of Arrays\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void AnArrayAsAnObject()
         {
+            Clear();
 
+            WriteLine("\nAn Array as an Object\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void OneDimensionalAndRectangularArrays()
         {
+            Clear();
 
+            WriteLine("\nOne-Dimensional and Rectangular Arrays\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InstantiatingAOneDimensionalOrRectangularArray()
+        {
+            Clear();
+
+            WriteLine("\nInstantiating a One-Dimensional or Rectangular Array\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void AccessingArrayElements()
         {
+            Clear();
 
+            WriteLine("\nAccessing Array Elements\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void InitializingAnArray()
         {
+            Clear();
 
+            WriteLine("\nInitializing an Array\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void JaggedArrays()
         {
+            Clear();
 
+            WriteLine("\nJagged Arrays\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ComparingRectangularAndJaggedArrays()
         {
+            Clear();
 
+            WriteLine("\nComparing Rectangular and Jagged Arrays\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void TheForEachStatement()
         {
+            Clear();
 
+            WriteLine("\nThe foreach Statement\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ArrayCovariance()
         {
+            Clear();
 
+            WriteLine("\nArray Covariance\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void UsefulInheritedArrayMembers()
         {
+            Clear();
 
+            WriteLine("\nUseful Inherited Array Members\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ComparingArrayTypes()
         {
+            Clear();
 
+            WriteLine("\nComparing Array Types\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
 
         static void ArraysRefLocalAndRefReturn()
         {
+            Clear();
 
+            WriteLine("\nArrays Ref Local and Ref Return\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
         }
-
     }
 }
