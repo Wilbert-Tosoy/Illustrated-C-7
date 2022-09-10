@@ -5815,7 +5815,31 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nJagged Arrays\n" +
-                "\t- ");
+                "\t- A jagged array is an array of arrays. Unlike rectangular arrays, the subarrays of a jagged array can have different numbers of elements.\n");
+            WriteLine("\nDeclaring a Jagged Array\n" +
+                "\t- The declaration syntax for jagged arrays requires a separate set of square brackets for each dimension.\n" +
+                "\t- The number of sets of square brackets in the declaration of the array variable determines the rank of the array.\n" +
+                "\t\t- A jagged array can be of any number of dimensions greater than one.\n" +
+                "\t\t- As with rectangular arrays, dimension lengths cannot be included in the array type section of the declaration.\n\n" +
+                "\t\t\tArrayType[ ][ ] ArrayName;\n");
+            WriteLine("\nShortcut Instantiation\n" +
+                "\t- You can combine the jagged array declaration with the creation of the first-level array using an array-creation expression.\n\n" +
+                "\t\tArrayType[ ][ ] ArrayName = new ArrayType[ Subarray ][ ];\n\n" +
+                "\t- You cannot instantiate more than the first-level array in the declaration statement.\n");
+            WriteLine("\nInstantiating a Jagged Array\n" +
+                "\t- Unlike other types of arrays, you cannot fully instantiate a jagged array in a single step.\n" +
+                "\t- Since a jagged array is an array of independent arrays, each array must be created separately.\n" +
+                "\t- Instantiating a full jagged array requires the following:\n" +
+                "\t\t- Instantiate the top-level array.\n" +
+                "\t\t- Instantiate each subarray separately, assigning the reference of the newly created array to the appropriate element of its containing " +
+                "of its containing array.\n\n" +
+                "\t\t\tArrayType[ ][ ] ArrayName = new ArrayType[ DimensionLength ][ ];\n" +
+                "\t\t\tArrayName[ index[ 0 ] ] = new ArrayType[ ] { InitializationList };\n" +
+                "\t\t\tArrayName[ index[ 1 ] ] = new ArrayType[ ] { InitializationList };\n" +
+                "\t\t\tArrayName[ index[ 2 ] ] = new ArrayType[ ] { InitializationList };\n");
+            WriteLine("\nSubarrays in Jagged Arrays\n" +
+                "\t- Since the subarrays in a jagged array are themselves array, it is possible to have rectangular arrays inside jagged arrays.\n" +
+                "\t- Use the 'Get.Length( int n )' method of arrays, inherited from 'System.Array', to get the length of the specified dimension of the array.\n");
             ReadKey();
 
             Clear();
