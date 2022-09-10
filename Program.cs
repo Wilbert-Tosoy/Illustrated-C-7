@@ -5740,7 +5740,11 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInstantiating a One-Dimensional or Rectangular Array\n" +
-                "\t- ");
+                "\t- To instantiate an array, you use an 'array-creation expresion'. \n" +
+                "\t- An array-creation expression consists of the 'new' operator, followed by the base type, followed by a pair of square brackets.\n" +
+                "\t- The length of each dimension is placed in a comma-seperated list between the brackets.\n\n" +
+                "\t\tArrayType[ RankSpecifier ] ArrayName = new ArrayName[ DimensionLength ];\n\n" +
+                "\t- Note that unlike object-creation expressions, array-creation expressions do not contain parentheses - even for reference type arrays.\n");
             ReadKey();
 
             Clear();
