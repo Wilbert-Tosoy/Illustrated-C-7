@@ -5715,7 +5715,21 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nOne-Dimensional and Rectangular Arrays\n" +
-                "\t- ");
+                "\t- Syntactically, one-dimensional arrays and rectangular arrays are similar, so we will treat them together. We will treat jagged " +
+                "arrays separately.\n");
+            WriteLine("\nDeclaring a One-Dimensional or Rectangular Array\n" +
+                "\t- To declare a one-dimensional or rectangular array, use a single set of square brackets between the type and the variable name.\n\n" +
+                "\t- The 'rank-specifiers' are commas between the brackets. They specify the number of dimensions the array will have.\n" +
+                "\t- The rank is the number of commas, plus one. Having no commas indicates a one-dimensional array, one comma indicates a two-dimensional array, and so forth.\n\n" +
+                "\t- The base type, together with the rank specifiers, is the 'type' of the array. \n\n" +
+                "\t\tArrayType[ RankSpecifiers ] ArrayName;\n\n" +
+                "\t- Take note of the following:\n" +
+                "\t\t- You can have as many rank specifiers as you need.\n" +
+                "\t\t- You cannot place array dimension lengths in the array type section. The rank part of the array's type, but the lengths of the dimensions are " +
+                "'not' part of the type.\n" +
+                "\t\t- While an array is declared, the 'number' of dimensions is fixed. The 'length' of the dimensions, however, is not determined until the array " +
+                "is instantiated.\n\n" +
+                "\t- Note that unlike in C or C++, in C# the brackets follow the base type, not the variable name.\n");
             ReadKey();
 
             Clear();
