@@ -5696,7 +5696,15 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAn Array as an Object\n" +
-                "\t- ");
+                "\t- An array instance is an object whose type derives from class 'System.Array'. \n" +
+                "\t- Since arrays are derived from this BCL base class, they inherit a number of useful members from it, such as the following:\n" +
+                "\t\t- 'Rank'   : A property that returns the number of dimensions of the array.\n" +
+                "\t\t- 'Length' : A property that returns the length or the total number of elements of the array.\n\n" +
+                "\t- Array are reference types, and as with all reference types, they have both a reference to the data and the data object itself.\n" +
+                "\t- The reference is either on the stack or in the heap, and the data object itself is always in the heap.\n\n" +
+                "\t- Although an array is always a reference type, the elements of the array can be either value types of reference types.\n" +
+                "\t\t- An array is called a 'value type array' if the elements stored are value types.\n" +
+                "\t\t- An array is called a 'reference type array' if the elements stored in the array are references of references type objects.\n");
             ReadKey();
 
             Clear();
