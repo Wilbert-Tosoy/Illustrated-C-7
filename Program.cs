@@ -5867,7 +5867,39 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nThe foreach Statement\n" +
-                "\t- ");
+                "\t- The 'foreach' statement allows you to sequentially access each element in an array.\n" +
+                "\t- It is actually a more general construct in that it also work with other collection types.\n\n" +
+                "\t- The important points of the foreach statement are the following:\n" +
+                "\t\t- The 'iteration variable' is a temporary variable of the same type as the elements of the array. The 'foreach' statement uses the iteration " +
+                "variable to sequentially represent each element in the array.\n" +
+                "\t\t- The syntax of the 'foreach' statement is shown next, where:\n" +
+                "\t\t\t- Type is the type of the elements of the array. You can explicitly supply its type, or you can use 'var' and let it be implicitly typed and " +
+                "inferred by the compiler since the compiler knows the type of the array.\n" +
+                "\t\t\t- 'Identifier' is the name of the iteration variable.\n" +
+                "\t\t\t- 'ArrayName' is the name of the array to be iterated through.\n" +
+                "\t\t\t- 'Statement' is a simple statement or a block that is executed once for each element in the array.\n\n" +
+                "\t- Explicitly Typed Iteration Variable Declaration\n\n" +
+                "\t\tforeach ( Type Identifier in ArrayName )\n" +
+                "\t\t\tStatement\n\n" +
+                "\t- Implicitly Typed Iteration Variable Declaration\n\n" +
+                "\t\tforeach ( var Identifier in ArrayName )\n" +
+                "\t\t\tStatement\n\n" +
+                "\t- The 'foreach' statement works in the following way:\n" +
+                "\t\t- It starts with the first element of the array and assigns that value to the 'iteration variable'.\n" +
+                "\t\t- It then executes the body of the statement. Inside the body, you can use the iteration variable as a read-only alias for the array element.\n" +
+                "\t\t- After the body is executed, the 'foreach' statement selects the next element in the array and repeats the process.\n\n" +
+                "\t- In this way, it cycles through the array, allowing you to access each element one by one.\n");
+            WriteLine("\nThe Iteration Variable Is Read-Only\n" +
+                "\t- Since the value of the iteration variable is read-only, clearly it cannot be changed. But this has different effects on value type arrays and " +
+                "reference type arrays.\n\n" +
+                "\t- For value type arrays, this means you cannot change an element of the array when it is being represented by the iteration variable.\n" +
+                "\t- Attempting to change the data in the iteration varaible produces a compile-time error message.\n\n" +
+                "\t- For reference type arrays, you still cannot change the iteration variable, but the iteration variable only holds the reference to the data, not the " +
+                "data itself.\n" +
+                "\t- So although, you cannot change the reference, you can change the 'data' through the iteration variable.\n");
+            WriteLine("\nThe foreach Statement with Multidimensional Arrays\n" +
+                "\t- In a multidimensional array, the elements are processed in the order in which the rightmost index is incremented fastest.\n" +
+                "\t- When the index has gone from 0 to length - 1, the next index to the left is incremented, and the indexes to the right are reset to 0.\n");
             ReadKey();
 
             Clear();
