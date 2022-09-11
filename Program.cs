@@ -5811,7 +5811,7 @@ namespace Illustrated_CSharp_7
         }
 
         static void JaggedArrays()
-        {
+        { 
             Clear();
 
             WriteLine("\nJagged Arrays\n" +
@@ -5850,7 +5850,13 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nComparing Rectangular and Jagged Arrays\n" +
-                "\t- ");
+                "\t- The structure of rectangular and jagged arrays is significantly different.\n\n" +
+                "\t- One-dimensional arrays have specific instructions in the CIL that allow them to be optimized for performance. Rectangular arrays do not " +
+                "have these instructions and are not optimized to the same level.\n" +
+                "\t- Because of this, it can sometimes be more efficient to use jagged arrays of one-dimensional arrays - which can be optimized - than " +
+                "rectangular arrays, which cannot.\n\n" +
+                "\t- On the other hand, the programming complexity can be significantly less for for a rectangular array because it can be treated as a single " +
+                "unit, rather than an array of arrays.\n");
             ReadKey();
 
             Clear();
