@@ -5950,7 +5950,22 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nComparing Array Types\n" +
-                "\t- ");
+                "\t- Some of the important similiraties and differences between three types of arrays.\n\n" +
+                "\t\t- One Dimensional\n" +
+                "\t\t\t- Has opitimizing instructions in CIL\n" +
+                "\t\t\t- One array object\n" +
+                "\t\t\t- Single set brackets\n" +
+                "\t\t\t- No commas\n\n" +
+                "\t\t- Rectangular \n" +
+                "\t\t\t- Multidimensional and all subarrays in a multidimensional array must be of the same length\n" +
+                "\t\t\t- One array object\n" +
+                "\t\t\t- Single set of brackets\n" +
+                "\t\t\t- There is commas\n\n" +
+                "\t\t- Jagged\n" +
+                "\t\t\t- Multidimensional and subarrays can be of different lengths\n" +
+                "\t\t\t- Multiple array object\n" +
+                "\t\t\t- Multiple sets of brackets\n" +
+                "\t\t\t- No commas\n");
             ReadKey();
 
             Clear();
