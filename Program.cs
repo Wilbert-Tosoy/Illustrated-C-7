@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 using static System.Console;
 using static System.Convert;
 
@@ -6044,7 +6043,11 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nWhat Is a Delegate?\n" +
-                "\t- ");
+                "\t- You can think of a delegates as an object that holds one or more methods.\n" +
+                "\t- Normally, of course, you wouldn't think of 'executing' an 'object', but delegate is different from a typical object.\n" +
+                "\t- You can execute a delegate, and when you do so, it executes the method that it 'holds'.\n\n" +
+                "\t- If you are coming from a C++ background, the fastest way for you to understand delegates is to think of them as type-safe, " +
+                "object-orinted C++ function pointers on steriods.\n");
             ReadKey();
 
             Clear();
