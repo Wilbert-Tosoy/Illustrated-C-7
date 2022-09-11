@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using static System.Console;
 using static System.Convert;
 
@@ -5978,10 +5979,216 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //FourteenDecision(ref choice);
+                FourteenDecision(ref choice);
 
             } while (choice != 15);
 
+
+            Clear();
+        }
+
+        static void FourteenDecision(ref int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    WhatIsADelegates();
+                    break;
+                case 2:
+                    AnOverviewOfDelegates();
+                    break;
+                case 3:
+                    DeclaringTheDelegateType();
+                    break;
+                case 4:
+                    CreatingTheDelegateObject();
+                    break;
+                case 5:
+                    AssigningDelegates();
+                    break;
+                case 6:
+                    CombiningDelegate();
+                    break;
+                case 7:
+                    AddingMethodsToDelegates();
+                    break;
+                case 8:
+                    RemovingMethodsFromADelegate();
+                    break;
+                case 9:
+                    InvokingADelegate();
+                    break;
+                case 10:
+                    DelegateExample();
+                    break;
+                case 11:
+                    InvokingDelegateWithReturnValues();
+                    break;
+                case 12:
+                    InvokingDelegatesWithReferenceParameters();
+                    break;
+                case 13:
+                    AnonymousMethods();
+                    break;
+                case 14:
+                    LambdaExpressions();
+                    break;
+                default:
+                    Clear();
+                    break;
+            }
+        }
+
+        static void WhatIsADelegates()
+        {
+            Clear();
+
+            WriteLine("\nWhat Is a Delegate?\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AnOverviewOfDelegates()
+        {
+            Clear();
+
+            WriteLine("\nAn Overview of Delegates\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void DeclaringTheDelegateType()
+        {
+            Clear();
+
+            WriteLine("\nDeclaring the Delegate Type\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void CreatingTheDelegateObject()
+        {
+            Clear();
+
+            WriteLine("\nCreating the Delegate Object\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AssigningDelegates()
+        {
+            Clear();
+
+            WriteLine("\nAssignig Delegates\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void CombiningDelegate()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Combining Delegates");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AddingMethodsToDelegates()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Adding Methods to Delegates");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void RemovingMethodsFromADelegate()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Removing Methods from a Delegate");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InvokingADelegate()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Invoking a Delegate");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void DelegateExample()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Delegate Example");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InvokingDelegateWithReturnValues()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Invoking Delegate with Return Values");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void InvokingDelegatesWithReferenceParameters()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Invoking Delegates with Reference Parameters");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void AnonymousMethods()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Anonymous Methods");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void LambdaExpressions()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- Lambda Expressions");
+            ReadKey();
 
             Clear();
         }
