@@ -5928,7 +5928,18 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nUseful Inherited Array Members\n" +
-                "\t- ");
+                "\t- C# arrays are derived from class System.Array. From that base class they inherit a number of useful properties and methods.\n\n" +
+                "\t\tMember\t\t\tType\t\tLifetime\t\tMeaning\n\n" +
+                "\t\tRank\t\t\tProperty\tInstance\t\tGets the number of dimensions of the array.\n" +
+                "\t\tLength\t\t\tProperty\tInstance\t\tGets the total number of elements in all the dimensions of the array.\n" +
+                "\t\tGetLength\t\tMethod\t\tInstance\t\tReturns the length of a particular dimension of the array.\n" +
+                "\t\tClear\t\t\tMethod\t\tStatic\t\t\tSets a range of elements to 0 or 'null'.\n" +
+                "\t\tSort\t\t\tMethod\t\tStatic\t\t\tSorts the elements in a one-dimensional array.\n" +
+                "\t\tBinarySearch\t\tMethod\t\tStatic\t\t\tSearches a one-dimensional array for a value, using binary search.\n" +
+                "\t\tClone\t\t\tMethod\t\tInstance\t\tPerforms a shallow copy of the array - copying only the elements, both for arrays of value types and reference types.\n" +
+                "\t\tIndexOf\t\t\tMethod\t\tStatic\t\t\tReturns the index of the first occurence of a value in a one-dimensional array.\n" +
+                "\t\tReverse\t\t\tMethod\t\tStatic\t\t\tReverses the order of the elements of a range of a one-dimensional array.\n" +
+                "\t\tGetUpperBound\t\tMethod\t\tInstance\t\tGets the upper bound at the specified dimension.\n\n");
             ReadKey();
 
             Clear();
