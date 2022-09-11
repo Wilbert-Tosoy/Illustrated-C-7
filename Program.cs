@@ -29,33 +29,7 @@ namespace Illustrated_CSharp_7
                 Decision(ref choice, ref exit);
 
             } while (exit != true);
-        }               
-
-        public static void Delegates()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\n\tExpressions and Operators\n" +
-                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
-                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
-                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
-                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
-                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-                //NineDecision(ref choice);
-
-            } while (choice != 19);
-
-
-            Clear();
-        }
+        }                      
 
         public static void Events()
         {
@@ -439,7 +413,7 @@ namespace Illustrated_CSharp_7
                     Thirteen.Arrays();
                     break;
                 case 14:
-                    Delegates();
+                    Fourteen.Delegates();
                     break;
                 case 15:
                     Events();
@@ -5980,6 +5954,34 @@ namespace Illustrated_CSharp_7
                 "\t- Remember that using the 'ref return' feature allows you to pass reference back out of a method as a return value, and a 'ref local' allows " +
                 "you to use that reference in the calling scope.");
             ReadKey();
+
+            Clear();
+        }
+    }
+
+    static class Fourteen
+    {
+        public static void Delegates()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tDelegates\n" +
+                "\n\t1. What Is a Delegate? \n\t2. An Overview of Delegates\n\t3. Declaring the Delegate Type\n\t4. Creating the Delegate Object" +
+                "\n\t5. Assigning Delegates\n\t6. Combining Delegates\n\t7. Adding Methods to Delegates\n\t8. Removing Methods from a Delegate" +
+                "\n\t9. Invoking a Delegate\n\t10. Delegate Example\n\t11. Invoking Delegates with Return Values" +
+                "\n\t12. Invoking Delegates with Reference Parameters\n\t13. Anonymous Methods\n\t14. Lambda Expressions\n\t15. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //FourteenDecision(ref choice);
+
+            } while (choice != 15);
+
 
             Clear();
         }
