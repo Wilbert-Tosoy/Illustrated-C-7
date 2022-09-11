@@ -6058,7 +6058,25 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAn Overview of Delegates\n" +
-                "\t- ");
+                "\t- A delegate is a user-defined type, just as a class is a user-defined type.\n" +
+                "\t- But whereas class represents a collection of data and methods, a delegate holds one or more methods and a predefined operations.\n" +
+                "\t- You use a delegate by performing the following steps:\n" +
+                "\t\t- Declare a delegate type. A delegate declarations looks like a method declaration, except that it doesn't have an " +
+                "implementation block.\n" +
+                "\t\t- Declare a delegate variable of the delegate type.\n" +
+                "\t\t- Create an object of the delegate type and assign it to the delegate variable. The new delegate object includes a reference to a " +
+                "method that must have the same signature and return type as the delegate type defined in the first step.\n" +
+                "\t\t- You can optionally add additional methods into the delegate object. These methods must have the same signature and return type " +
+                "as the delegate type defined in the first step.\n" +
+                "\t\t- Throughout your code you can then invoke the delegate, just as if it were a method. When you invoke the delegate, each of the " +
+                "methods it contains is executed.\n\n" +
+                "\t- You can think of a delegate as an object that contains an ordered list of methods with the same signature and return type.\n" +
+                "\t\t- The list of methods is called the 'invocation list'.\n" +
+                "\t\t- Methods held by a delegate 'can be from any class or struct', as long as they match 'both' of the following:\n" +
+                "\t\t\t- The delegate's return type.\n" +
+                "\t\t\t- The delegates signature (including 'ref' and 'out' modifiers).\n" +
+                "\t\t- Methods in the invocation list can be either instance methods or static methods.\n" +
+                "\t\t- When a delegate is invoked, each method in its invocation list is executed.\n");
             ReadKey();
 
             Clear();
