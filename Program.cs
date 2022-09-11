@@ -6087,7 +6087,17 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nDeclaring the Delegate Type\n" +
-                "\t- ");
+                "\t- Delegates are types, just as classes are types.\n" +
+                "\t- And as with classes, a delegate type must be declare before you can use it to create variables and objects of the type.\n" +
+                "\t- The following is the syntax of a delegate type:\n\n" +
+                "\t\tdelegate ReturnType DelegateTypeName( Signature );\n\n" +
+                "\t- The declaration of a delegate type looks much like the declaration of a method, in that it has both a 'return type' and a 'signature'. \n" +
+                "\t- The return type and signature specify the form of the methods that the delegate will accept.\n\n" +
+                "\t- The delegate type declaration differs from a method declaration in two ways. The delegate type declaration \n" +
+                "\t\t- Is prefaced with the keyword 'delegate'\n" +
+                "\t\t- Does not have a method body\n\n" +
+                "\t- Even though the delegate type declaration looks like a method declaration, it doesn't need to be declared inside a class because " +
+                "it is a type declaration.\n");
             ReadKey();
 
             Clear();
