@@ -5910,7 +5910,14 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nArray Covariance\n" +
-                "\t- ");
+                "\t- Under certain conditions, you can assign an object to an array element even if the object is not of the array's base type.\n" +
+                "\t- This property of arrays is called 'array covariance'.\n" +
+                "\t- You can use array covariance if the following are true:\n" +
+                "\t\t- The array is a reference type array.\n" +
+                "\t\t- There is an implicit or explicit conversion between the type of the object you are assigning and the array's base type.\n\n" +
+                "\t- Since there is always an implicit conversion between a derived class and its base class, you can always assign an object of a derived class " +
+                "to an array declared for the base class.\n\n" +
+                "\t- Note that there is no covariance for value type arrays.\n");
             ReadKey();
 
             Clear();
