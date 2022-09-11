@@ -5976,7 +5976,9 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nArrays Ref Local and Ref Return\n" +
-                "\t- ");
+                "\t- One of the common uses of 'ref return' and 'ref local', however, is to pass a reference to an array 'element' back to the calling scope.\n" +
+                "\t- Remember that using the 'ref return' feature allows you to pass reference back out of a method as a return value, and a 'ref local' allows " +
+                "you to use that reference in the calling scope.");
             ReadKey();
 
             Clear();
