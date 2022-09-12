@@ -6216,8 +6216,41 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Delegate Example");
+            WriteLine("\nDelegate Example\n" +
+                "\t- The following code defines and uses a delegate with no parameters and no return value. Note the following about the code:\n" +
+                "\t\t- Class Test defines two print functions.\n" +
+                "\t\t- Method Main creates an instance of the delegate and then adds three more methods.\n" +
+                "\t\t- The program then invokes the delegate, which calls the methods. Before invoking the delegate, however, it checks to make sure it " +
+                "is not null.\n\n" +
+                "\t// Define a delegate type with no return value and no parameters.\n\n" +
+                "\tdelegate void PrintFunction();\n\n" +
+                "\tclass Test \n" +
+                "\t{\n" +
+                "\t\tpublic void Print1()\n" +
+                "\t\t{\n" +
+                "\t\t\tConsole.WriteLine(\"Print1 -- instance\");\n" +
+                "\t\t}\n\n" +
+                "\t\tpublic static void Print2()\n" +
+                "\t\t{\n" +
+                "\t\t\tConsole.WriteLine(\"Print2 -- static\");\n" +
+                "\t\t}\n" +
+                "\t}\n\n" +
+                "\tclass Program\n" +
+                "\t{\n" +
+                "\t\tstatic void Main()\n" +
+                "\t\t{\n" +
+                "\t\t\tTest t = new Test();\n" +
+                "\t\t\tPrintFunction pf;\n\n" +
+                "\t\t\tpf = t.Print1;\n\n" +
+                "\t\t\tpf += Test.Print2;\n" +
+                "\t\t\tpf += t.Print1;\n" +
+                "\t\t\tpf += Test.Print2;\n\n" +
+                "\t\t\tif (null != pf )\n" +
+                "\t\t\t\tpf();\n" +
+                "\t\t\telse\n" +
+                "\t\t\t\tConsole.WriteLine(\"Delegate is Empty!\");\n" +
+                "\t\t}\n" +
+                "\t}\n");
             ReadKey();
 
             Clear();
