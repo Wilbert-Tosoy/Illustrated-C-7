@@ -6146,8 +6146,13 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Combining Delegates");
+            WriteLine("\nCombining Delegates\n" +
+                "\t- All delegate's can be 'combined' by using the addition operator.\n" +
+                "\t- The result of the operation is the creation of a new delegate, with an invocation list that is the concatenation of copies of the " +
+                "invocation list of the two operand delegates.\n\n" +
+                "\t- Although the term 'combining delegates' might give the impression that the operand delegates are modified, they are not changed " +
+                "at all.\n" +
+                "\t- In fact, 'delegates are immutable'. After a delegate object is created, it cannot be changed.\n");
             ReadKey();
 
             Clear();
