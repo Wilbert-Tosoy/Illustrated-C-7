@@ -6197,8 +6197,16 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Invoking a Delegate");
+            WriteLine("\nInvoking a Delegate\n" +
+                "\t- The important things to know about invoking a delegate are the following:\n" +
+                "\t\t- You can invoke a delegate in either two of two ways. First you can call the delegate as if it were simply a method. Second, you " +
+                "can use the 'Invoke' method on the delegate.\n" +
+                "\t\t- Place the parameters within the parentheses of the call. The parameters used to invoke the delegate are used to invoke each of the " +
+                "methods on the invocation list (unless one of the parameters is an output parameter).\n" +
+                "\t\t- If a method is in the invocation list more than once, then when the delegate is invoked, the method will be called each time it is " +
+                "encountered in the list.\n" +
+                "\t\t- The delegate must not be empty (null) when invoked, or it will throw an exception. You can use an 'if' statement to check, or you " +
+                "can use the null condiitonal operator and the 'Invoke' method.\n");
             ReadKey();
 
             Clear();
