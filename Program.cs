@@ -6135,7 +6135,8 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAssignig Delegates\n" +
-                "\t- ");
+                "\t- Because delegates are reference types, you can change the reference contained in a delegate variable by assigning to it.\n" +
+                "\t- The old delegate object will be disposed of by the garbage collector (GC) when it gets around to it.\n");
             ReadKey();
 
             Clear();
