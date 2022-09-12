@@ -6162,8 +6162,12 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Adding Methods to Delegates");
+            WriteLine("\nAdding Methods to Delegates\n" +
+                "\t- Delegates are immutable, C# provides syntax for making it appear that you can add a method to a delegate, using the += operator.\n\n" +
+                "\t- What is actually happening, of course, is that when the += operator is used, a new delegate is created, with an invocation list that " +
+                "is the combination of the delegate on the left and the method listed in the right.\n" +
+                "- This new delegate is then assigned to the variable.\n\n" +
+                "\t- You can add a method to a delegate more than once. Each time you add it, it creates a new element in the invocation list.\n");
             ReadKey();
 
             Clear();
