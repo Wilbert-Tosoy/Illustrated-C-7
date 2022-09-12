@@ -6177,8 +6177,17 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Removing Methods from a Delegate");
+            WriteLine("\nRemoving Methods from a Delegate\n" +
+                "\t- You can also remove a method from a delegate, using the -= operator.\n\n" +
+                "\t- As with adding a method to a delegate, the resulting delegate is actually a new delegate.\n" +
+                "\t- The new delegate is the copy of the old delegate - but its invocation list no longer contains the reference to the method that was " +
+                "removed.\n\n" +
+                "\t- The following are some things to remember when removing methods:\n" +
+                "\t\t- If there are multiple entries for a method in the invocation list, the -= operator 'starts searching at the bottom of the list' and " +
+                "removes the first instance of the matching method it finds.\n" +
+                "\t\t- Attempting to delete a method that is not in the invocation list has no effect.\n" +
+                "\t\t- Attempting to invoke an empty delegate throws an exception. You an check whether a delegate's invocation list is empty by comparing " +
+                "the delegate to 'null'. If the invocation list is empty, the delegate is 'null'.\n");
             ReadKey();
 
             Clear();
