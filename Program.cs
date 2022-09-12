@@ -6108,7 +6108,23 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nCreating the Delegate Object\n" +
-                "\t- ");
+                "\t- A delegate is a reference type and therefore has both a reference and an object.\n" +
+                "\t- After a delegate type is declared, you can declare variables and create objects of the type.\n" +
+                "\t- The following code shows the declaration of a variable of a delegate type:\n\n" +
+                "\t\tDelegateTypeName VariableName;\n\n" +
+                "\t- There are two ways you can create a delegate object. The first is to use an object-creation expression with the 'new' operator.\n" +
+                "\t- The operand of the 'new' operator consist of the following:\n" +
+                "\t\t- The delegate type name\n" +
+                "\t\t- A set of parentheses containing the name of a method to use as the first member in the invocation list. 'The method can be either " +
+                "an instance method or static method'.\n\n" +
+                "\t\tVariableName = new DelegateTypeName( Instance | Static Method );\n\n" +
+                "\t- You can also use the shortcut syntax, which consists of just the method specifier. This code and the preceeding code are sementically " +
+                "equivalent. \n" +
+                "\t- Using the shortcut syntax works because there is an implicit conversion between a method name and compatible delegate type.\n\n" +
+                "\t\tVariableName = Instance | Static Method;\n\n" +
+                "\t- Besides allocating the memory for the delegate, creating a delegate object also places the first method in the delegate's invocation " +
+                "list.\n" +
+                "\t- You can also create the variable and instantiate the object in the same statement, using the initializer syntax.\n");
             ReadKey();
 
             Clear();
