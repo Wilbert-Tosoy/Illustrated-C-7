@@ -6293,8 +6293,8 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Lambda Expressions");
+            WriteLine("\nLambda Expressions\n" +
+                "\t- ");
             ReadKey();
 
             Clear();
