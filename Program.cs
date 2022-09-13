@@ -6260,8 +6260,8 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Invoking Delegate with Return Values");
+            WriteLine("\nInvoking Delegate with Return Values\n" +
+                "\t- ");
             ReadKey();
 
             Clear();
