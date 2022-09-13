@@ -6271,8 +6271,8 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Invoking Delegates with Reference Parameters");
+            WriteLine("\nInvoking Delegates with Reference Parameters\n" +
+                "\t- ");
             ReadKey();
 
             Clear();
