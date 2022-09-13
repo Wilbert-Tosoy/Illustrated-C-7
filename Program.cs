@@ -6261,7 +6261,7 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInvoking Delegate with Return Values\n" +
-                "\t- If a delegate has a");
+                "\t- If a delegate has a return");
             ReadKey();
 
             Clear();
