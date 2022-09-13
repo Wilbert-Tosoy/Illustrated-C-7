@@ -6261,7 +6261,7 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInvoking Delegate with Return Values\n" +
-                "\t- ");
+                "\t- If ");
             ReadKey();
 
             Clear();
