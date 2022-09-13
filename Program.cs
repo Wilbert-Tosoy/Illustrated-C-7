@@ -6282,8 +6282,8 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- Anonymous Methods");
+            WriteLine("\nAnonymous Methods\n" +
+                "\t- ");
             ReadKey();
 
             Clear();
