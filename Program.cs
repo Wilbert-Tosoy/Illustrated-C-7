@@ -6261,7 +6261,7 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInvoking Delegate with Return Values\n" +
-                "\t- If a delegate has a return value and more than one method in its");
+                "\t- If a delegate has a return value and more than one method in its invocation");
             ReadKey();
 
             Clear();
