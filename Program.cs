@@ -6384,6 +6384,9 @@ namespace Illustrated_CSharp_7
                 case 7:
                     EventAccessors();
                     break;
+                default:
+                    Clear();
+                    break;
             }
         }
 
