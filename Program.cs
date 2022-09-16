@@ -6286,7 +6286,45 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nAnonymous Methods\n" +
-                "\t- ");
+                "\t- You can use either static methods or instance methods to instantiate a delegate. \n" +
+                "\t- In either case, the method itself can be called explicitly from other parts of the code and, of course, must be a member of some class or struct.\n\n" +
+                "\t- What if, however, the method is used only one time - to instantiate the delegate?\n" +
+                "\t- In that case, other than the syntactic requirement for creating the delegate, there is no real need for a separate, named method.\n" +
+                "\t- Anonymous methods allow you to dispense with separate, named method.\n\n" +
+                "\t- An 'anonymous method' is a method that is declared inline, at the point of instantiating a delegate.");
+            WriteLine("\nUsing Anonymous Methods\n" +
+                "\t- You can use an anonymous method in the following places:\n" +
+                "\t\t- As an initializer expression when declaring a delegate variable.\n" +
+                "\t\t- On the right side of an assignment statement when combining delegates.\n" +
+                "\t\t- On the right side of an assignment statement adding a delegate to an event.\n");
+            WriteLine("\nSyntax of Anonymous Methods\n" +
+                "\t- The syntax of an anonymous method expression includes the following components:\n" +
+                "\t\t- The type keyword 'delegate'\n" +
+                "\t\t- The 'parameter list', which can be omitted if the statement block doesn't use any parameters.\n" +
+                "\t\t- The 'statement block', which contains the code of the anonymous method.\n\n" +
+                "\t\t\tdelegate ( ParameterList ) { ImplementationCode }\n");
+            WriteLine("\nReturn Type\n" +
+                "\t- An anonymous method does not explicitly declare a return type. \n" +
+                "\t- The behavior of the implementation code itself, however, must match the delegate's return type by returning a value of that type.\n" +
+                "\t- If the delegate has a return type of 'void', then the anonymous method code cannot return a value.\n");
+            WriteLine("\nParameters\n" +
+                "\t- Except in the case of array parameters, the parameter list of an anonymous method must match that of the delegate with respect to the following three characteristics:\n" +
+                "\t\t- Number of parameters\n" +
+                "\t\t- Types and positions of the parameters\n" +
+                "\t\t- Modifiers\n\n" +
+                "\t- You can simplify the parameter list of an anonymous method by leaving the parentheses empty or omitting them altogether, but only if 'both' of the following are true:\n" +
+                "\t\t- The delegate's parameter list does not contain any 'out' parameters.\n" +
+                "\t\t- The anonymous method does not use 'any' parameters.\n");
+            WriteLine("\nThe params Parameters\n" +
+                "\t- If the delegate declaration's parameter list contains a 'params' parameter, then the 'params' keyword is omitted from the parameter list of the anonymous method.\n");
+            WriteLine("\nScope of Variables and Parameters\n" +
+                "\t- The scopes of parameters and local variables declared inside an anonymous method are limited to the body of the implementation code.\n");
+            WriteLine("\nOuter Variables\n" +
+                "\t- Unlike the named methods of a delagates, anonymous methods have access to the local variables and environment of the scope surrounding them.\n" +
+                "\t\t- Variables from the surrounding scope are called 'outer variables'.\n" +
+                "\t\t- An outer variables used in the implementation code od an anonymous method is said to be 'captured' by the method.\n");
+            WriteLine("\nExtension of a Captured Variable's Lifetime\n" +
+                "\t- A captured outer variable remains alive as long as its capturing method is part of the delegate, even if the variable would have normally gone out of scope.");
             ReadKey();
 
             Clear();
