@@ -6261,7 +6261,9 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInvoking Delegate with Return Values\n" +
-                "\t- If a delegate has a return value and more than one method in its invocation");
+                "\t- If a delegate has a return value and more than one method in its invocation list, the following occurs:\n" +
+                "\t\t- The value returned by the last method in the invocation list is the value returned from the delegate invocation.\n" +
+                "\t\t- The return values from all other methods in the invocation list are ignored.\n");
             ReadKey();
 
             Clear();
