@@ -31,32 +31,6 @@ namespace Illustrated_CSharp_7
             } while (exit != true);
         }                      
 
-        public static void Events()
-        {
-            Clear();
-
-            int choice;
-
-            do
-            {
-                WriteLine("\n\tExpressions and Operators\n" +
-                "\n\t1. Expressions\n\t2. Literals\n\t3. Order of Evaluation\n\t4. Simple Arithmetic Operators\n\t5. The Remainder Operator" +
-                "\n\t6. Relational and Equality Comparison Operators\n\t7. Increment and Decrement Operators\n\t8. Conditional Logical Operators" +
-                "\n\t9. Logical Operators\n\t10. Shift Operators\n\t11. Assignment Operators\n\t12. The Conditional Operator" +
-                "\n\t13. Unary Arithmetic Operators\n\t14. User-Defined Type Conversions\n\t15. Operator Overloading\n\t16. The typeof Operator" +
-                "\n\t17. The nameof Operator\n\t18. Other Operators\n\t19. Exit\n");
-
-                Write("-> ");
-                choice = ToInt32(ReadLine());
-
-                //NineDecision(ref choice);
-
-            } while (choice != 19);
-
-
-            Clear();
-        }
-
         public static void Interface()
         {
             Clear();
@@ -416,7 +390,7 @@ namespace Illustrated_CSharp_7
                     Fourteen.Delegates();
                     break;
                 case 15:
-                    Events();
+                    Fifteen.Events();
                     break;
                 case 16:
                     Interface();
@@ -6359,5 +6333,136 @@ namespace Illustrated_CSharp_7
 
             Clear();
         }
+    }
+
+    static class Fifteen
+    {
+        public static void Events()
+        {
+            Clear();
+
+            int choice;
+
+            do
+            {
+                WriteLine("\n\tEvents\n" +
+                "\n\t1. Publishers and Subscribers\n\t2. Overview of Source Code Components\n\t3. Declaring an Event\n\t4. Subscribing to an Event" +
+                "\n\t5. Raising an Event\n\t6. Standard Event Usage\n\t7. Event Accessors\n\t8. Exit\n");
+
+                Write("-> ");
+                choice = ToInt32(ReadLine());
+
+                //NineDecision(ref choice);
+
+            } while (choice != 8);
+
+            Clear();
+        }
+
+        static void FifteenDecision(ref int choice)
+        {
+            switch(choice)
+            {
+                case 1:
+                    PublishersAndSubscribers();
+                    break;
+                case 2:
+                    OverviewOfSourceCodeComponents();
+                    break;
+                case 3:
+                    DeclaringAnEvent();
+                    break;
+                case 4:
+                    SubscribingToAnEvent();
+                    break;
+                case 5:
+                    RaisingAnEvent();
+                    break;
+                case 6:
+                    StandardEventUsage();
+                    break;
+                case 7:
+                    EventAccessors();
+                    break;
+            }
+        }
+
+        static void PublishersAndSubscribers()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void OverviewOfSourceCodeComponents()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void DeclaringAnEvent()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void SubscribingToAnEvent()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void RaisingAnEvent()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void StandardEventUsage()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
+        static void EventAccessors()
+        {
+            Clear();
+
+            WriteLine("\n\n" +
+                "\t- ");
+            ReadKey();
+
+            Clear();
+        }
+
     }
 }
