@@ -6335,7 +6335,26 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nLambda Expressions\n" +
-                "\t- ");
+                "\t- C# 2.0 introduced anonymous methods. \n" +
+                "\t- The syntax for anonymous methods, however, is somewhat verbose and requires information that the compiler itself already knows.\n" +
+                "\t- Rather that requiring you to include this redundant information, C# 3.0 introduced 'lambda expressions', which pare down the syntax of anonymous methods.\n" +
+                "\t- You will probably want to use lambda expression instead of anonymous methods.\n" +
+                "\t- In fact, if lambda expression had been introduced first, there never would have been anonymous methods.\n\n" +
+                "\t- In the anonymous method syntax, the 'delegate' keyword is redundant because the compiler can already see that you are assigning the method to a delegate.\n" +
+                "\t- You can easily transform an anonymous method into a lambda expression by doing the following:\n" +
+                "\t\t- Delete the 'delegate' keyword\n" +
+                "\t\t- Place the lambda operator, =>, between the parameter list and the body of the anonymous method. The lambda operator is read as 'goes to'\n\n" +
+                "\t- Note that the term 'lambda expression' comes from the 'lambda calculus', which was developed in the 1920s and 1930s by mathematician Alonzo Churct and others.\n" +
+                "\t- The lambda calculus is a system for representing functions and uses the Greek letter lambda to represent a nameless function.\n" +
+                "\t- More recently, funcitonal programming languages such as Lisp and its dialects use the term to represent expression that can be used to directly describe the definition of a funciton, rather than using a name for it.\n\n" +
+                "\t- This simple transformation is less verbose and looks cleaner, but it only saves you six characters. \n" +
+                "\t- There is more, however, that the compiler can infer, allowing you to simplify the lambda expression further.\n" +
+                "\t- The final form of the lambda expression has about one-fourth the characters of the original anonymous method and is cleaner and easier to understand.\n\n" +
+                "Some important points about lambda expression parameter list are the following:\n" +
+                "\t\t- The parameters in the parameter list of a lambda expression must match that of the delegate in number, type, and position.\n" +
+                "\t\t- THe parameters in the parameter list of an expression do not have to include the type unless the delegate has either 'ref' or 'out' parameters - in which case the types are required.\n" +
+                "\t\t- If there are no parameters, you must use an empty set of parentheses.\n");
+
             ReadKey();
 
             Clear();
