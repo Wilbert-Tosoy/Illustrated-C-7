@@ -6274,7 +6274,8 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nInvoking Delegates with Reference Parameters\n" +
-                "\t- ");
+                "\t- If a delegate has a reference parameter, the value of the parameter can change upon return from one or more of the methods in the invocation list.\n" +
+                "\t- When calling the next method in the invocation list, the 'new value of the parameter - not the initial value' - is the one passed to the next method.\n");
             ReadKey();
 
             Clear();
