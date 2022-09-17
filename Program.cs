@@ -6352,7 +6352,7 @@ namespace Illustrated_CSharp_7
                 Write("-> ");
                 choice = ToInt32(ReadLine());
 
-                //NineDecision(ref choice);
+                FifteenDecision(ref choice);
 
             } while (choice != 8);
 
@@ -6394,8 +6394,28 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
-                "\t- ");
+            WriteLine("\nPublishers and Subscribers\n" +
+                "\t- One common requirement in many programs is that when a particular program event occurs, other parts of the program need to be notifierd that the event has occured.\n\n" +
+                "\t- One pattern for satisfying this requirement is called the 'publisher/subscriber pattern'. \n" +
+                "\t- In this pattern, a class, called the 'publisher', defines a set of events that other parts of the program might be interested in.\n" +
+                "\t- Other classes can then 'sign up' to be notified by the publisher when these events occur.\n" +
+                "\t- These 'subscriber' classes 'sign up' for notification by supplying a method to the publisher.\n" +
+                "\t- When the event occurs, the publisher 'raises the event', and all the methods submitted by the subscribers are executed.\n\n" +
+                "\t- The methods supplied by the subscribers are called 'callback methods' because the publisher 'calls the subscriber back' by executing their methods.\n" +
+                "\t- They are also called 'event handlers' because they are the code that is called to handle the event.\n\n" +
+                "\t- The following are some important terms related to events:\n" +
+                "\t\t- Publishers : A class or struct that publishes an event so that other classes can be notified when the event occurs.\n" +
+                "\t\t- Subscriber : A class or struct that registers to be notified when the event occurs.\n" +
+                "\t\t- Event handler : A method that is registered with the publisher, by the subscriber, and is executed when the publisher raises the event. The event handler method can be declared in the same class or struct as the event or in a different class or struct.\n" +
+                "\t\t- Raising an event : The term for 'invoking' or 'firing' an event. When an event is raised, all the methods registered with that event are invoked.\n\n" +
+                "\t- Many aspect of events are similar to those of delegates.\n" +
+                "\t- In fact, an event is like a simpler delegate that is specialized for a particular use.\n" +
+                "\t- There is a good reason for the similarities in the behaviors of delegates and events.\n" +
+                "\t- An event contains a private delegate.\n\n" +
+                "\t- The important things to know about an event's private delegate are the following:\n" +
+                "\t\t- An 'event' gives structured access to its privately controlled delegate. That is, you cannot directly access the delegate.\n" +
+                "\t\t- There are fewer operations available than with a delegate. With an event you can only add and remove event handlers and invoke the event.\n" +
+                "\t\t- When an event is raised, it invokes the delegate, which sequentially calls the methods in its invocation list.\n");
             ReadKey();
 
             Clear();
@@ -6405,7 +6425,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nOverview of Source Code Components\n" +
                 "\t- ");
             ReadKey();
 
@@ -6416,7 +6436,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nDeclaring an Event\n" +
                 "\t- ");
             ReadKey();
 
@@ -6427,7 +6447,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nSubscribing to an Event\n" +
                 "\t- ");
             ReadKey();
 
@@ -6438,7 +6458,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nRaising an Event\n" +
                 "\t- ");
             ReadKey();
 
@@ -6449,7 +6469,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nStandard Event Usage\n" +
                 "\t- ");
             ReadKey();
 
@@ -6460,7 +6480,7 @@ namespace Illustrated_CSharp_7
         {
             Clear();
 
-            WriteLine("\n\n" +
+            WriteLine("\nEvent Accessors\n" +
                 "\t- ");
             ReadKey();
 
