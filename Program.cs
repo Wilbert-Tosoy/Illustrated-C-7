@@ -6404,9 +6404,9 @@ namespace Illustrated_CSharp_7
                 "\t- The methods supplied by the subscribers are called 'callback methods' because the publisher 'calls the subscriber back' by executing their methods.\n" +
                 "\t- They are also called 'event handlers' because they are the code that is called to handle the event.\n\n" +
                 "\t- The following are some important terms related to events:\n" +
-                "\t\t- Publishers : A class or struct that publishes an event so that other classes can be notified when the event occurs.\n" +
-                "\t\t- Subscriber : A class or struct that registers to be notified when the event occurs.\n" +
-                "\t\t- Event handler : A method that is registered with the publisher, by the subscriber, and is executed when the publisher raises the event. The event handler method can be declared in the same class or struct as the event or in a different class or struct.\n" +
+                "\t\t- Publishers       : A class or struct that publishes an event so that other classes can be notified when the event occurs.\n" +
+                "\t\t- Subscriber       : A class or struct that registers to be notified when the event occurs.\n" +
+                "\t\t- Event handler    : A method that is registered with the publisher, by the subscriber, and is executed when the publisher raises the event. The event handler method can be declared in the same class or struct as the event or in a different class or struct.\n" +
                 "\t\t- Raising an event : The term for 'invoking' or 'firing' an event. When an event is raised, all the methods registered with that event are invoked.\n\n" +
                 "\t- Many aspect of events are similar to those of delegates.\n" +
                 "\t- In fact, an event is like a simpler delegate that is specialized for a particular use.\n" +
@@ -6426,7 +6426,13 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nOverview of Source Code Components\n" +
-                "\t- ");
+                "\t- There are five pieces of code that need to be in place to use events. \n" +
+                "\t- These pieces of code are the following:\n" +
+                "\t\t- Delegate Type Declaration  : The event and the event handler must have a common signature and return type, which are specified by the delegate type, described by a delegate type.\n" +
+                "\t\t- Event Handler Declarations : These are the declarations, in the subscriber classes, of the methods to be executed when the event is raised. These do not have to be explicitly named methods; they can also be anonymouse methods or lambda expressions.\n" +
+                "\t\t- Event Declaration          : The publisher class must declare an event member that subscribers can register with. When a class declares a 'public' event, it is said to have 'published the event'.\n" +
+                "\t\t- Event Registration         : The subscribers must register with an event in order to be notified when it has been raised. This is the code that connects the event handlers to the event.\n" +
+                "\t\t- Code that raises the event : This is the code in the publisher that 'fires' the event, causing it to invoke all the event handlers registered with it.\n");
             ReadKey();
 
             Clear();
