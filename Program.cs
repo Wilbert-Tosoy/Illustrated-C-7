@@ -6512,7 +6512,42 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nStandard Event Usage\n" +
-                "\t- ");
+                "\t- GUI programming is event driven, which means that while the program is running, it can be interrupted at any time by events such as button clicks, key presses, or system timers.\n" +
+                "\t- When this happens, the program needs to handle the event and then continue on its course.\n\n" +
+                "\t- Clearly, this asynchronous handling of program events is the perfect situation for using C# events.\n" +
+                "\t- Windows GUI programming uses events so extensively that there is a standard .NET Framework pattern for using them.\n" +
+                "\t- The foundation of the standard patter for event usage is the 'EventHandler' delegate type, which is declared in the 'System' namespace.\n" +
+                "\t- The following line of code shows the declaration of the 'EventHandler' delegate type. The things to notice about the declaration are the following:\n" +
+                "\t\t- The first parameter is meant to hold a reference to the object that raised the event. It is of type 'object' and can, therefore, match any instance of any type.\n" +
+                "\t\t- The second parameter is meant to hold state information of whatever type is appropriate for the application.\n" +
+                "\t\t- The return type is 'void'\n\n" +
+                "\t\t\tpublic delegate void EventHandler(object sender, EventArgs e);\n\n" +
+                "\t- The second parameter in the 'EventHandler' delegate type is an object of class 'EventArgs', which is declared in the 'System' namespace. \n" +
+                "\t- You might be tempted to think that since the second parameter is meant for passing dat, an 'EventArgs' class object would be able to store data of some sort. You would be wrong.\n" +
+                "\t\t- The 'EventsArg' class is designed to carry no data. It is used for event handlers that do not need to pass data - and is generally ignored by them.\n" +
+                "\t\t- If you want to pass data, you must declare a class 'derived' from 'EventArgs', with the appropriate fields to hold the data you want to pass.\n\n" +
+                "\t- Even thought the 'EventArgs' class do not actually pass data, it is an important part of the pattern of using the 'EventHandler' delegate.\n" +
+                "\t- These parameter, of types 'objects' and 'EventArgs', are the base classes for whatever actual types are used as the parameters.\n" +
+                "\t- This allows the 'EventHandler' delegate to provide a signature that is the lowest common denominator for all events and event handlers, allowing all events to have exactly two parameters, rather than having different signatures for each case.\n");
+            WriteLine("\nPassing Data by Extending EventArgs\n" +
+                "\t- To pass data in the second parameter of your event handler and adhere to the standard conventions, you need to declare a custom class derived from 'EventArgs' that can store the data you need passed.\n" +
+                "\t- By convention, the name of the class should end in 'EventArgs'.\n" +
+                "\t- For example, the following code declares a custom class that can store a string in a field called 'Message':\n\n" +
+                "\t\tpublic class IncrementEventArgs : EventArgs\n" +
+                "\t\t{\n" +
+                "\t\t\tpublic int IterationCount { get; set; }\n" +
+                "\t\t}\n\n" +
+                "\t- Now that you a have a custom class for passing data in the second parameter of your event handlers, you need a delegate type that uses the new custom class.\n" +
+                "\t- To obtain this, use the generic version of the delegate 'EventHandler<>'.\n" +
+                "\t- To use the generic delegate, do the following, as shown in the subsequent code:\n" +
+                "\t\t- Place the name of the custom class between the angle brackets.\n" +
+                "\t\t- Use the entier string wherever you would have use the name of you custom delegate type. \n" +
+                "\t\t- For example, this is what the event declaration would look like:\n\n" +
+                "\t\t\tpublic event EventHandler<CustomClass> EventName;\n");
+            WriteLine("\nRemoving Event Handlers\n" +
+                "\t- When you are done with an event handler, you can remove it from the event.\n" +
+                "\t- You remove an event handler from an event by using the -= operator.\n\n" +
+                "\t- If a handler is registered more than once with an event, then when you issue the command to remove the handler, only the last instance of that handler is removed from the list.\n");
             ReadKey();
 
             Clear();
