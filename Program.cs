@@ -6475,7 +6475,14 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nSubscribing to an Event\n" +
-                "\t- ");
+                "\t- Subscribers add event handlers to the event.\n" +
+                "\t- For an event handler to be added to an event, the handler must have the same return type and signature as the event's delegate.\n" +
+                "\t\t- Use the += operator to add an event handler to an event. The event handler is placed on the right side of the operator.\n" +
+                "\t\t- The event handler specification can be any of the following:\n" +
+                "\t\t\t- The name of an instance method\n" +
+                "\t\t\t- The name of a static method\n" +
+                "\t\t\t- An anonymous method\n" +
+                "\t\t\t- A lambda expression\n");
             ReadKey();
 
             Clear();
