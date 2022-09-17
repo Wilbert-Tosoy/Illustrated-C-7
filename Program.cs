@@ -6443,7 +6443,28 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nDeclaring an Event\n" +
-                "\t- ");
+                "\t- The publisher must provide the event object.\n" +
+                "\t- Creating an event is simple - it requires only a delegate type and a name.\n" +
+                "\t\t- The event is declared inside a class.\n" +
+                "\t\t- It requires the name of a delegate type. Any event handlers attached to the event must match the delegate type in signature and return type.\n" +
+                "\t\t- It is declared 'public' so that other classes and structs can register event handlers with it.\n" +
+                "\t\t- You do not use an object-creation expression (a 'new' expression) with an event.\n\n" +
+                "\t\t\tpublic event EventHandler NameOfEvent;\n\n" +
+                "\t- You can declare more than one event in a declaration statement by using a comma-separated list.\n\n" +
+                "\t\tpublic event EventHandler Event1, Event2, Event3, OtherEvent;\n\n" +
+                "\t- You can also make events static by including the 'static' keyword.\n\n" +
+                "\t\tpublic static event EventHandler NameOfEvent;\n");
+            WriteLine("\nAn Event Is a Member\n" +
+                "\t- A common error is to think of an event as a type - which it's not.\n" +
+                "\t- Like a method, or a property, an event is a 'member of a class' or a struct, and there are several important ramifications to this.\n" +
+                "\t\t- Because an event is a member,\n" +
+                "\t\t\t- You cannot declare an event in a block of executable code.\n" +
+                "\t\t\t- It must be declared in a class or struct, with the other members.\n" +
+                "\t\t- An event member is implicitly and automatically initialized to 'null' with the other members.\n\n" +
+                "\t- To declare an event, you must supply the name of a 'delegate type'.\n" +
+                "\t- You can either declare one or use one that already exists.\n" +
+                "\t- If you declare a delegate type, it must specify the signature and return type of the methods that will be registered by the event.\n" +
+                "\t- The BCL declares a delegate called 'EventHandler' specifically for use with system events.\n");
             ReadKey();
 
             Clear();
