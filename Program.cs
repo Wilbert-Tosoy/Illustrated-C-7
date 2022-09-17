@@ -6493,7 +6493,15 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nRaising an Event\n" +
-                "\t- ");
+                "\t- The event member itself holds the event handlers that need to be invoked.\n" +
+                "\t- Nothing happens with them unless the event is raised.\n" +
+                "\t- You need to make sure there is code to do just that, at the appropriate times.\n\n" +
+                "\t\t- Before raising the event, the code compares it to 'null' to see whether it contains any event handlers. If the event is 'null', it is empty and cannot be executed.\n" +
+                "\t\t- The syntax for raising the event is the same as that of invoking a method.\n" +
+                "\t\t\t- Use the name of the event, followed by the parameter list enclosed in parentheses.\n" +
+                "\t\t\t- The parameter list must match the delegate type of the event.\n\n" +
+                "\t- Putting together the event declaration and the code to raise the event gives the following class declaration for the publisher.\n" +
+                "\t- The code contains two members: the event and a method which raises the event when appropriate.\n\n");
             ReadKey();
 
             Clear();
