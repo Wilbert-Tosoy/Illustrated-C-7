@@ -6558,7 +6558,29 @@ namespace Illustrated_CSharp_7
             Clear();
 
             WriteLine("\nEvent Accessors\n" +
-                "\t- ");
+                "\t- The += and -= operators are the only operators allowed for an event.\n" +
+                "\t- These operators have the well-defined behaviors that you have seen so far.\n\n" +
+                "\t- It is possible, however, to change these operators' behavior and have the event perform whatever custom code you like when they are used.\n" +
+                "\t- This is an advanced topic, however, so we'll just mention it here, without going into too much detail.\n\n" +
+                "\t- To change the operation of these operators, you must define event accessor for the event.\n" +
+                "\t\t- These are two accessors: 'add' and 'remove'.\n" +
+                "\t\t- The declaration of an event with accessors looks similar to the declaration of a property.\n\n" +
+                "\t- The following example shows the form of an event declaration with accessors.\n" +
+                "\t- Both accessors have an implicit value parameter called 'value' that takes a reference to either an instance method or static method.\n\n" +
+                "\t\tpublic event EventHandler EventName\n" +
+                "\t\t{\n" +
+                "\t\t\tadd\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\t...\t// Code to implement  the += operator\n" +
+                "\t\t\t}\n\n" +
+                "\t\t\tremove\n" +
+                "\t\t\t{\n" +
+                "\t\t\t\t...\t// Code to implement the -= operator\n" +
+                "\t\t\t}\n" +
+                "\t\t}\n\n" +
+                "\t- When the event accessors are declared, the event does not contain an embedded delegate object.\n" +
+                "\t- You must implement your own storage mechanism for storing and removing the methods registered with the event.\n\n" +
+                "\t- The event accessors acts as 'void methods', meaning that they cannot use return statements that return a value.");
             ReadKey();
 
             Clear();
